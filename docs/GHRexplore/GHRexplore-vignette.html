@@ -208,13 +208,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
-  <ul class="collapse">
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#data-requirements" id="toc-data-requirements" class="nav-link" data-scroll-target="#data-requirements">Data requirements</a></li>
   <li><a href="#covariates-case-counts-and-incidence-rates" id="toc-covariates-case-counts-and-incidence-rates" class="nav-link" data-scroll-target="#covariates-case-counts-and-incidence-rates">Covariates, case counts, and incidence rates</a></li>
   <li><a href="#spatial-and-temporal-aggregations" id="toc-spatial-and-temporal-aggregations" class="nav-link" data-scroll-target="#spatial-and-temporal-aggregations">Spatial and temporal aggregations</a></li>
   <li><a href="#color-palettes" id="toc-color-palettes" class="nav-link" data-scroll-target="#color-palettes">Color palettes</a></li>
-  </ul></li>
   <li><a href="#plot-types" id="toc-plot-types" class="nav-link" data-scroll-target="#plot-types">Plot types</a>
   <ul class="collapse">
   <li><a href="#time-series" id="toc-time-series" class="nav-link" data-scroll-target="#time-series">Time series</a></li>
@@ -250,8 +248,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="overview" class="level1">
-<h1>Overview</h1>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <p><strong>GHRexplore</strong> is an R package for exploratory analysis of temporal and spatiotemporal health data including case counts, incidence rates, and covariates. It provides commonly used visualizations and supports data transformations such as temporal and spatial aggregations. The package also offers extensive customization options for the resulting figures. The output of all functions is a ggplot2 object that can be further modified if needed.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load GHRexplore</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(GHRexplore)</span>
@@ -259,6 +257,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Other necessary libraries for the vignette</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 <section id="data-requirements" class="level2">
 <h2 class="anchored" data-anchor-id="data-requirements">Data requirements</h2>
 <p>The data must be a long-format data frame containing a regularly spaced time series (e.g., daily, weekly, monthly) of a single or several spatial units. In this data frame, the time and optional space identifiers must be included as columns.</p>
@@ -328,7 +327,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>💡 <strong>Tip</strong>: Palettes can be reversed by preceding them with a minus sign, e.g.&nbsp;‘-IDE1’.</p>
 </blockquote>
-</section>
 </section>
 <section id="plot-types" class="level1">
 <h1>Plot types</h1>
