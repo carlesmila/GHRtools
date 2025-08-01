@@ -1,0 +1,21 @@
+/* css styles */
+
+pre.sourceCode {
+  background-color: #f4f4f4 !important; /* light gray */
+  border-radius: 6px;
+  padding: 1em;
+}
+
+/* Inline code */
+code {
+  background-color: #eaeaea;
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+}
+
+/* Output blocks (optional) */
+div.output pre {
+  background-color: #fef9e7;
+  padding: 1em;
+  border-radius: 6px;
+}
