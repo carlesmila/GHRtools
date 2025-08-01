@@ -1,5 +1,5 @@
 ---
-title: "GHRexplore overview"
+title: "GHRexplore"
 format: 
   html:
     toc: true

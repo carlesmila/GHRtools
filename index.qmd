@@ -1,12 +1,22 @@
 ---
 title: "Welcome to GHRtools"
 subtitle: "A suite of R packages for climate and health workflows created by the Global Health Resilience (GHR) group at the Barcelona Supercomputing Center."
+text: "  "
 title-block-banner: "#168c81"
 title-block-banner-color: white
 format:
   html:
+    page-layout: full
     toc: false
+    embed-resources: true
 ---
+<div class="full-banner">
+```{=html}
+<center><img src="figures/mosaic4.png" width="35%"></center>
+``` 
+</div>
+
+<br> <br>
 
 ## From health and climate data to disease forecasts
 

@@ -6,7 +6,7 @@ format:
     toc-expand: true
 ---
 
-# Overview
+## Overview
 
 **GHRexplore** is an R package for exploratory analysis of temporal and
 spatiotemporal health data including case counts, incidence rates, and

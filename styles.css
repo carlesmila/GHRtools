@@ -19,3 +19,42 @@ div.output pre {
   padding: 1em;
   border-radius: 6px;
 }
+
+.full-banner {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-color: #92e8d0;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: -65px;
+  border-top: 1px solid transparent; 
+  z-index: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.quarto-title-banner {
+  min-height: 200px; 
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quarto-title-banner .title {
+  font-size: 2.5rem;     /* Default is ~2rem */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Make the subtitle larger */
+.quarto-title-banner .subtitle {
+  font-size: 1.3rem;   /* Default is ~1.1rem */
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0.25rem;
+}
