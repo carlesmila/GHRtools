@@ -1,0 +1,193 @@
+---
+title: "Welcome to GHRtools"
+subtitle: "A suite of R packages for climate and health workflows created by the Global Health Resilience (GHR) group at the Barcelona Supercomputing Center."
+title-block-banner: "#168c81"
+title-block-banner-color: white
+format:
+  html:
+    toc: false
+---
+
+## From health and climate data to disease forecasts
+
+Our GHRsuite packages support **climate and health workflows** by streamlining health and climate data collection and harmonization, exploratory analysis, Bayesian modelling and forecasting.
+
+```{=html}
+<br> 
+<center><img src="figures/landing.png" width="80%"></center>
+<br> 
+```
+
+## Discover our tools
+
+```{=html}
+<br> 
+```
+
+::: columns
+::: {.column width="25%"}
+:::
+::: {.column width="20%"}
+```{=html}
+<a href="docs/data4health/data4health.html">
+<img src="figures/data4health.svg" width="100%">
+</a>
+```
+:::
+::: {.column width="10%"}
+:::
+::: {.column width="45%"}
+```{=html}
+<div class="card bg-secondary mb-3" style="max-width: 100%;">
+  <div class="card-header"> <strong> data4health </strong> </div>
+  <div class="card-body">
+    <p class="card-text">
+        <ul>
+  <li> Access, preprocess and aggregate of health data at customized spatiotemporal resolutions.</li>
+  <li> Use a set of functions to streamline health data pipelines or enjoy a user-friendly graphical interface provided as a Shiny app within the package.</li>
+  </ul>  
+    </p>
+  </div>
+</div>
+```
+:::
+::: {.column width="10%"}
+:::
+
+```{=html}
+<br> <br> 
+```
+
+::: columns
+::: {.column width="2.5%"}
+:::
+::: {.column width="45%"}
+```{=html}
+<div class="card bg-secondary mb-3" style="max-width: 100%;">
+  <div class="card-header"> <strong> clim4health </strong> </div>
+  <div class="card-body">
+    <p class="card-text"> 
+    <ul>
+  <li>Obtain, transform and export climate data including reanalyses, forecasts, hindcasts, and weather stations.</li>
+  <li>Apply common transformations including postprocessing, and downscaling, spatiotemporal aggregations and threshold-based suitability indicators.</li>
+  </ul>  
+  </p>
+  </div>
+</div>
+```
+:::
+::: {.column width="10%"}
+:::
+::: {.column width="20%"}
+```{=html}
+<a href="docs/clim4health/clim4health.html">
+<img src="figures/clim4health.svg" width="100%">
+</a>
+```
+:::
+::: {.column width="25%"}
+:::
+
+```{=html}
+<br> <br> 
+```
+
+::: columns
+::: {.column width="25%"}
+:::
+::: {.column width="20%"}
+```{=html}
+<a href="docs/GHRexplore/GHRexplore.html">
+<img src="figures/GHRexplore.svg" width="100%">
+</a>
+```
+:::
+::: {.column width="10%"}
+:::
+::: {.column width="45%"}
+```{=html}
+<div class="card bg-secondary mb-3" style="max-width: 100%;">
+  <div class="card-header"> <strong> GHRexplore </strong> </div>
+  <div class="card-body">
+        <p class="card-text"> 
+    <ul>
+  <li> Perform exploratory analysis of temporal and spatiotemporal health data including case counts, incidence rates, and covariates.</li>
+  <li> Produce high-quality time series, heatmaps, seasonality and bivariate plots and choropleth maps with many customization options.</li>
+  </ul>  
+  </p>
+  </div>
+</div>
+```
+:::
+::: {.column width="10%"}
+:::
+
+```{=html}
+<br> <br> 
+```
+
+::: columns
+::: {.column width="10%"}
+:::
+::: {.column width="45%"}
+```{=html}
+<div class="card bg-secondary mb-3" style="max-width: 100%;">
+  <div class="card-header"> <strong> GHRmodel </strong> </div>
+  <div class="card-body">
+        <p class="card-text"> 
+    <ul>
+  <li> A modular and flexible approach to modeling health outcomes using INLA</li>
+  <li> It addresses common challenges when fitting INLA models, including covariate transformations, formula definitions with complex covariate effects, model fitting, and diagnostic plots and model statistics.
+</li>
+  </ul>  
+  </p>
+  </div>
+</div>
+```
+:::
+::: {.column width="10%"}
+:::
+::: {.column width="20%"}
+```{=html}
+<a href="docs/GHRmodel/GHRmodel.html">
+<img src="figures/GHRmodel.svg" width="100%">
+</a>
+```
+:::
+::: {.column width="25%"}
+:::
+
+```{=html}
+<br> <br> 
+```
+
+::: columns
+::: {.column width="25%"}
+:::
+::: {.column width="20%"}
+```{=html}
+<a href="docs/GHRpredict/GHRpredict.html">
+<img src="figures/GHRpredict.svg" width="100%">
+</a>
+```
+:::
+::: {.column width="10%"}
+:::
+::: {.column width="45%"}
+```{=html}
+<div class="card bg-secondary mb-3" style="max-width: 100%;">
+  <div class="card-header"> <strong> GHRpredict </strong> </div>
+  <div class="card-body">
+        <p class="card-text"> 
+    <ul>
+  <li> Generate predictions of models fitted with GHRmodel.</li>
+  <li> Obtain out-of-sample statistics and diagnostics for case predictions and outbreak detection using cross-validation</li>
+  </ul>  
+  </p>
+  </div>
+</div>
+```
+:::
+::: {.column width="10%"}
+:::
+

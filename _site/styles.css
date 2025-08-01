@@ -1,0 +1,13 @@
+/* css styles */
+
+/* Override the navbar background and link colors */
+.navbar.navbar-dark.bg-primary {
+  background-color: #302461 !important;
+}
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-brand {
+  color: #ffffff !important;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ccccff !important;  /* Optional hover color */
+}

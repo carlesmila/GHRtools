@@ -1,0 +1,56 @@
+project:
+  type: website
+
+website:
+  title: "GHRtools"
+  back-to-top-navigation: true
+  search: false
+  navbar:
+    background: light
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "data4health"
+        menu:
+          - docs/data4health/data4health.qmd
+          - docs/data4health/data4health-vignette1.qmd 
+      - text: "clim4health"
+        menu:
+          - docs/clim4health/clim4health.qmd
+          - docs/clim4health/clim4health-vignette1.qmd 
+      - text: "GHRexplore"
+        menu:
+          - docs/GHRexplore/GHRexplore.qmd
+          - docs/GHRexplore/GHRexplore-vignette1.qmd          
+      - text: "GHRmodel"
+        menu:
+          - docs/GHRmodel/GHRmodel.qmd
+          - docs/GHRmodel/GHRmodel-vignette1.qmd 
+      - text: "GHRpredict"
+        menu:
+          - docs/GHRpredict/GHRpredict.qmd
+          - docs/GHRpredict/GHRpredict-vignette1.qmd 
+      
+    right:
+      - text: "About GHR"
+        href: about.qmd
+  page-footer: 
+    left: "Copyright 2025, GHR" 
+    background: "#168c81"
+    right: 
+      - icon: github
+        href: https://github.com/
+      - icon: twitter 
+        href: https://twitter.com/ 
+
+format:
+  html:
+    page-layout: full
+    theme: 
+      - simplex
+      - styles.scss
+    toc: true
+    css: styles.scss
+
+resources:
+  - dropdown-hover.js

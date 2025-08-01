@@ -1,0 +1,177 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "Harmonize.html",
+    "href": "Harmonize.html",
+    "title": "Harmonize",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "IDExtremes.html",
+    "href": "IDExtremes.html",
+    "title": "IDExtremes",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "GHRmodel.html",
+    "href": "GHRmodel.html",
+    "title": "GHRtools",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to GHRtools",
+    "section": "",
+    "text": "Our GHRsuite packages support climate and health workflows by streamlining health and climate data collection and harmonization, exploratory analysis, Bayesian modelling and forecasting."
+  },
+  {
+    "objectID": "GHRexplore.html",
+    "href": "GHRexplore.html",
+    "title": "GHRexplore",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "docs/projects/IDExtremes.html",
+    "href": "docs/projects/IDExtremes.html",
+    "title": "IDExtremes",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore.html",
+    "href": "docs/GHRexplore/GHRexplore.html",
+    "title": "Overview",
+    "section": "",
+    "text": "Under construction.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/projects/Harmonize.html",
+    "href": "docs/projects/Harmonize.html",
+    "title": "Harmonize",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-vignette1.html",
+    "href": "docs/GHRexplore/GHRexplore-vignette1.html",
+    "title": "Tutorial",
+    "section": "",
+    "text": "Under construction.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "index.html#from-health-and-climate-data-to-disease-forecasts",
+    "href": "index.html#from-health-and-climate-data-to-disease-forecasts",
+    "title": "Welcome to GHRtools",
+    "section": "",
+    "text": "Our GHRsuite packages support climate and health workflows by streamlining health and climate data collection and harmonization, exploratory analysis, Bayesian modelling and forecasting."
+  },
+  {
+    "objectID": "index.html#discover-our-tools",
+    "href": "index.html#discover-our-tools",
+    "title": "Welcome to GHRtools",
+    "section": "Discover our tools",
+    "text": "Discover our tools\n \n\n\n\n\n\n\n\n\n\n\n\n    data4health  \n  \n    \n        \n   Access, preprocess and aggregate of health data at customized spatiotemporal resolutions.\n   Use a set of functions to streamline health data pipelines or enjoy a user-friendly graphical interface provided as a Shiny app within the package.\n    \n    \n  \n\n\n\n  \n\n\n\n\n    clim4health  \n  \n     \n    \n  Obtain, transform and export climate data including reanalyses, forecasts, hindcasts, and weather stations.\n  Apply common transformations including postprocessing, and downscaling, spatiotemporal aggregations and threshold-based suitability indicators.\n    \n  \n  \n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n    GHRexplore  \n  \n         \n    \n   Perform exploratory analysis of temporal and spatiotemporal health data including case counts, incidence rates, and covariates.\n   Produce high-quality time series, heatmaps, seasonality and bivariate plots and choropleth maps with many customization options.\n    \n  \n  \n\n\n\n  \n\n\n\n\n    GHRmodel  \n  \n         \n    \n   A modular and flexible approach to modeling health outcomes using INLA\n   It addresses common challenges when fitting INLA models, including covariate transformations, formula definitions with complex covariate effects, model fitting, and diagnostic plots and model statistics.\n\n    \n  \n  \n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n    GHRpredict  \n  \n         \n    \n   Generate predictions of models fitted with GHRmodel.\n   Obtain out-of-sample statistics and diagnostics for case predictions and outbreak detection using cross-validation"
+  },
+  {
+    "objectID": "docs/data4health/data4health-vignette1.html",
+    "href": "docs/data4health/data4health-vignette1.html",
+    "title": "Tutorial",
+    "section": "",
+    "text": "Under construction.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/GHRmodel/GHRmodel-vignette1.html",
+    "href": "docs/GHRmodel/GHRmodel-vignette1.html",
+    "title": "Tutorial",
+    "section": "",
+    "text": "Under construction.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/clim4health/clim4health.html",
+    "href": "docs/clim4health/clim4health.html",
+    "title": "Overview",
+    "section": "",
+    "text": "Under construction.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/GHRpredict/GHRpredict.html",
+    "href": "docs/GHRpredict/GHRpredict.html",
+    "title": "Overview",
+    "section": "",
+    "text": "Under construction.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/GHRpredict/GHRpredict-vignette1.html",
+    "href": "docs/GHRpredict/GHRpredict-vignette1.html",
+    "title": "Tutorial",
+    "section": "",
+    "text": "Under construction.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/clim4health/clim4health-vignette1.html",
+    "href": "docs/clim4health/clim4health-vignette1.html",
+    "title": "Tutorial",
+    "section": "",
+    "text": "Under construction.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/GHRmodel/GHRmodel.html",
+    "href": "docs/GHRmodel/GHRmodel.html",
+    "title": "Overview",
+    "section": "",
+    "text": "Under construction.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/data4health/data4health.html",
+    "href": "docs/data4health/data4health.html",
+    "title": "Overview",
+    "section": "",
+    "text": "Under construction.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore.html#overview",
+    "href": "docs/GHRexplore/GHRexplore.html#overview",
+    "title": "GHRexplore overview",
+    "section": "Overview",
+    "text": "Overview\nGHRexplore is an R package for exploratory analysis of temporal and spatio-temporal health data including case counts, incidence rates, and covariates. It provides commonly used visualizations and supports standard data transformations such as temporal and spatial aggregations. The package also offers extensive customization options for the resulting figures. Currently available plotting functions include:\n\nplot_timeseries: Plots time series of covariates, case counts or incidence rates.\nplot_heatmap: Plots a time series of covariates, case counts or incidence rates as heatmaps.\nplot_seasonality: Plots yearly time series to detect seasonal patterns of covariates, case counts or incidence rates.\nplot_correlation: Plots a correlation matrix of a series of variables.\nplot_map: Plots a choropleth map of covariates, case counts or incidence rates.\nplot_bivariate: Plots a bivariate plot of two numerical and/or categorical variables.\nplot_multiple, plot_combine and plot_compare: Used to generate graphs of several variables at the same time.\n\n\nGHRexplore is one of the packages developed by the Global Health Resilience (GHR) team at the Barcelona Supercomputing Center (BSC) within the IDExtremes project."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore.html#installation",
+    "href": "docs/GHRexplore/GHRexplore.html#installation",
+    "title": "GHRexplore overview",
+    "section": "Installation",
+    "text": "Installation\n# Install from CRAN\ninstall.packages(\"GHRexplore\")\n\n# Get the development version from Gitlab\ndevtools::install_git('https://earth.bsc.es/gitlab/ghr/ghrexplore.git')"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore.html#usage",
+    "href": "docs/GHRexplore/GHRexplore.html#usage",
+    "title": "GHRexplore overview",
+    "section": "Usage",
+    "text": "Usage\nlibrary(\"GHRexplore\")\n\n# Use data included in the package to plot a heatmap with spatial aggregation\ndata(\"dengue_MS\")\nplot_heatmap(data = dengue_MS,\n             var = \"dengue_cases\",\n             type = \"inc\",\n             pop = \"population\",\n             time = \"date\",          \n             area = \"micro_code\",   \n             aggregate_space = \"meso_code\",\n             transform = \"log10p1\",\n             title = \"Dengue incidence in Brazil\")"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore.html#developers",
+    "href": "docs/GHRexplore/GHRexplore.html#developers",
+    "title": "GHRexplore overview",
+    "section": "Developers",
+    "text": "Developers\nGiovenale Moirano, PhD \nBarcelona Supercomputing Center\nGlobal Health Resilience\nCarles Milà, PhD \nBarcelona Supercomputing Center\nGlobal Health Resilience\nAnna B. Kawiecki, PhD \nBarcelona Supercomputing Center\nGlobal Health Resilience\nRachel Lowe, PhD \nBarcelona Supercomputing Center\nGlobal Health Resilience (Group leader)"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore.html#description",
+    "href": "docs/GHRexplore/GHRexplore.html#description",
+    "title": "GHRexplore overview",
+    "section": "Description",
+    "text": "Description\n\n\nGHRexplore is an R package for exploratory analysis of temporal and spatio-temporal health data including case counts, incidence rates, and covariates. It provides commonly used visualizations and supports standard data transformations such as temporal and spatial aggregations. The package also offers extensive customization options for the resulting figures. Currently available plotting functions include:\n\n\n\n\n\n\n\nplot_timeseries: Plots time series of covariates, case counts or incidence rates.\nplot_heatmap: Plots a time series of covariates, case counts or incidence rates as heatmaps.\nplot_seasonality: Plots yearly time series to detect seasonal patterns of covariates, case counts or incidence rates.\nplot_correlation: Plots a correlation matrix of a series of variables.\nplot_map: Plots a choropleth map of covariates, case counts or incidence rates.\nplot_bivariate: Plots a bivariate plot of two numerical and/or categorical variables.\nplot_multiple, plot_combine and plot_compare: Used to generate graphs of several variables at the same time.\n\nGHRexplore is one of the packages developed by the Global Health Resilience (GHR) team at the Barcelona Supercomputing Center (BSC) within the IDExtremes project."
+  }
+]
