@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -109,16 +75,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <span class="nav-link">
-<span class="menu-text">data4health</span>
-    </span>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-data4health" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">data4health</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-data4health">    
+        <li>
+    <a class="dropdown-item" href="./docs/data4health/data4health.html">
+ <span class="dropdown-text">Overview</span></a>
   </li>  
-  <li class="nav-item">
-    <span class="nav-link">
-<span class="menu-text">clim4health</span>
-    </span>
+        <li>
+    <a class="dropdown-item" href="./docs/data4health/data4health-vignette1.html">
+ <span class="dropdown-text">Tutorial</span></a>
   </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-clim4health" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">clim4health</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-clim4health">    
+        <li>
+    <a class="dropdown-item" href="./docs/clim4health/clim4health.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./docs/clim4health/clim4health-vignette1.html">
+ <span class="dropdown-text">Tutorial</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ghrexplore" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">GHRexplore</span>
@@ -126,7 +112,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="dropdown-menu" aria-labelledby="nav-menu-ghrexplore">    
         <li>
     <a class="dropdown-item" href="./docs/GHRexplore/GHRexplore.html">
- <span class="dropdown-text">Overview</span></a>
+ <span class="dropdown-text">GHRexplore overview</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./docs/GHRexplore/GHRexplore-vignette1.html">
@@ -134,33 +120,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
     </ul>
   </li>
-  <li class="nav-item">
-    <span class="nav-link">
-<span class="menu-text">GHRmodel</span>
-    </span>
-  </li>  
-  <li class="nav-item">
-    <span class="nav-link">
-<span class="menu-text">GHRpredict</span>
-    </span>
-  </li>  
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Projects</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ghrmodel" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">GHRmodel</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-projects">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ghrmodel">    
         <li>
-    <a class="dropdown-item" href="./docs/projects/Harmonize.html">
- <span class="dropdown-text">Harmonize</span></a>
+    <a class="dropdown-item" href="./docs/GHRmodel/GHRmodel.html">
+ <span class="dropdown-text">Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./docs/projects/IDExtremes.html">
- <span class="dropdown-text">IDExtremes</span></a>
+    <a class="dropdown-item" href="./docs/GHRmodel/GHRmodel-vignette1.html">
+ <span class="dropdown-text">Tutorial</span></a>
   </li>  
     </ul>
   </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ghrpredict" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">GHRpredict</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ghrpredict">    
+        <li>
+    <a class="dropdown-item" href="./docs/GHRpredict/GHRpredict.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./docs/GHRpredict/GHRpredict-vignette1.html">
+ <span class="dropdown-text">Tutorial</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./about.html" aria-current="page"> 
 <span class="menu-text">About GHR</span></a>
@@ -201,17 +192,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>About this site</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
 
 
 
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -633,6 +617,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Copyright 2025, GHR</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 
