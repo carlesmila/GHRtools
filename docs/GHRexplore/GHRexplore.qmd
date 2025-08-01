@@ -3,7 +3,6 @@ title: "GHRexplore overview"
 format: 
   html:
     toc: true
-
 ---
 
 ```{=html}
@@ -12,9 +11,7 @@ format:
 
 <!-- badges: start -->
 [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html)
-[![CRAN status](https://www.r-pkg.org/badges/version/GHRexplore)](https://cran.r-project.org/package=GHRexplore)
-[![CRAN downloads total](http://cranlogs.r-pkg.org/badges/grand-total/GHRexplore)](https://cran.r-project.org/package=GHRexplore)
-[![CRAN downloads month](http://cranlogs.r-pkg.org/badges/GHRexplore)](https://cran.r-project.org/package=GHRexplore)
+[![CRAN status](https://img.shields.io/cran/v/GHRexplore)](https://cran.r-project.org/package=GHRexplore)
 <!-- badges: end -->
 
 ## Description
@@ -51,7 +48,8 @@ several variables at the same time.
 **GHRexplore** is one of the packages developed by the
 [Global Health Resilience](https://www.bsc.es/discover-bsc/organisation/research-departments/global-health-resilience) (GHR)
 team at the [Barcelona Supercomputing Center](https://www.bsc.es/) (BSC) within the
-[IDExtremes](https://www.bsc.es/es/research-and-development/projects/idextremes-digital-technology-development-award-climate-sensitive) project. 
+[IDExtremes](https://www.bsc.es/es/research-and-development/projects/idextremes-digital-technology-development-award-climate-sensitive) project. The development version of the package can be found on [gitlab](https://earth.bsc.es/gitlab/ghr/ghrexplore). 
+
 
 ## Installation
 

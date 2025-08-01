@@ -1,13 +1,21 @@
 /* css styles */
 
-/* Override the navbar background and link colors */
-.navbar.navbar-dark.bg-primary {
-  background-color: #302461 !important;
+pre.sourceCode {
+  background-color: #f4f4f4 !important; /* light gray */
+  border-radius: 6px;
+  padding: 1em;
 }
-.navbar-dark .navbar-nav .nav-link,
-.navbar-dark .navbar-brand {
-  color: #ffffff !important;
+
+/* Inline code */
+code {
+  background-color: #eaeaea;
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
 }
-.navbar-dark .navbar-nav .nav-link:hover {
-  color: #ccccff !important;  /* Optional hover color */
+
+/* Output blocks (optional) */
+div.output pre {
+  background-color: #fef9e7;
+  padding: 1em;
+  border-radius: 6px;
 }
