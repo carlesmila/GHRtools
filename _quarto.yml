@@ -43,15 +43,10 @@ website:
       
     right:
       - text: "About GHR"
-        href: about.qmd
+        href: https://www.bsc.es/discover-bsc/organisation/research-departments/global-health-resilience
   page-footer: 
-    left: "Copyright 2025, GHR" 
     background: "#168c81"
-    right: 
-      - icon: github
-        href: https://github.com/
-      - icon: twitter 
-        href: https://twitter.com/ 
+    left: "Copyright 2025, GHR" 
 
 format:
   html:

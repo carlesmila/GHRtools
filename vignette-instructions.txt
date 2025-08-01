@@ -1,0 +1,11 @@
+Workflow for rendering vignettes:
+
+Run in the R package project:
+rmarkdown::render(
+  input = "~/Documents/ghrexplore/vignettes/GHRexplore-vignette.Rmd",
+  output_format = "github_document",
+  output_file = "GHRexplore-vignette.md"
+)
+
+Change the format of the resulting .md file to .qmd
+Move the .md file and depending image files to the website repo and link in the index
