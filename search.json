@@ -326,14 +326,14 @@
     "href": "docs/GHRexplore/GHRexplore-index.html#utils",
     "title": "GHRexplore reference",
     "section": "Utils",
-    "text": "Utils\n\nGHR_palette(): Generates color palettes including custom, ColorBrewer and colorspace palettes.\nGHRexplore-package(): A collection of commonly used visualizations of temporal and spatio-temporal health data including case counts, incidence rates, and covariates.\naggregate_cases(): Aggregates a data frame containing disease cases in space and/or time.\naggregate_cov(): Aggregates a data frame containing a covariate of interest in space and/or time."
+    "text": "Utils\n\nGHR_palette(): Generates color palettes including custom, ColorBrewer and colorspace palettes.\naggregate_cases(): Aggregates a data frame containing disease cases in space and/or time.\naggregate_cov(): Aggregates a data frame containing a covariate of interest in space and/or time."
   },
   {
     "objectID": "docs/GHRexplore/GHRexplore-index.html#datasets",
     "href": "docs/GHRexplore/GHRexplore-index.html#datasets",
     "title": "GHRexplore reference",
     "section": "Datasets",
-    "text": "Datasets\n\ndengue_MS(): Data frame containing the monthly number of notified dengue cases by municipality in the Mato Grosso do Sul state of Brazil, as well as set of spatial and spatio-temporal covariates (e.\ndengue_SP(): Data frame containing the weekly number of notified dengue cases in the municipality of Sao Paulo , as well as a set of climatic covariates.\nmap_MS(): Administrative boundaries (polygon geometries) of the 11 municipalities in Mato Grosso do Sul (Brazil) to be used with the dengue_MS data set."
+    "text": "Datasets\n\ndengue_MS: Data frame containing the monthly number of notified dengue cases by municipality in the Mato Grosso do Sul state of Brazil.\ndengue_SP: Data frame containing the weekly number of notified dengue cases in the municipality of Sao Paulo , as well as a set of climatic covariates.\nmap_MS: Administrative boundaries (polygon geometries) of the 11 municipalities in Mato Grosso do Sul (Brazil) to be used with the dengue_MS data set."
   },
   {
     "objectID": "docs/GHRmodel/GHRmodel.html",
