@@ -1,0 +1,41 @@
+---
+format: html
+toc: true
+---
+
+# Generate GHR color palettes
+
+## Description
+
+Generates color palettes including custom, ColorBrewer and colorspace palettes.
+
+Creates a visualization of all custom GHR palettes.
+
+```r
+GHR_palette(palette, ncols = 30)
+
+GHR_palettes()
+```
+
+## Arguments
+
+- `palette`: Name of the GHR, RcolorBrewer or colorspace palette. Use "-" before the palette name (e.g., "-Reds") to reverse it. A vector of custom colors is also possible.
+- `ncols`: Number of colors to sample.
+
+## Details
+
+See all available options by running `GHR_palettes()`, `RColorBrewer::display.brewer.all()` and `colorspace::hcl_palettes(plot=TRUE)`.
+
+## Returns
+
+GHR_palette() returns the function that generates the color palette and the attribute 'na_color'.
+
+GHR_palettes() returns a plot with the custom GHR palettes.
+
+## Examples
+
+```r
+GHR_palette("IDE1", 5)(5)
+
+GHR_palettes()
+```

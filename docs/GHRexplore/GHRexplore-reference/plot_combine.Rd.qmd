@@ -1,0 +1,79 @@
+---
+format: html
+toc: true
+---
+
+# Combine plots
+
+## Description
+
+Combines plots, each representing one variable, into a single plot.
+
+```r
+plot_combine(
+  plot_list,
+  combine_legend = FALSE,
+  combine_xaxis = FALSE,
+  ncol = 1,
+  align = "v",
+  ...,
+  ncol_l = 2,
+  nrow_l = NULL,
+  rel_widths_l = c(3, 1),
+  rel_heights_l = c(1, 1),
+  ncol_legend = 1
+)
+```
+
+## Arguments
+
+- `plot_list`: A list of plots to be combined.
+- `combine_legend`: Logical. If TRUE, assumes the legend of all plots is the same as the legend of the first plot in `plot_list` and final plot shows only one instance of the common legend. Default is FALSE.
+- `combine_xaxis`: Logical. If TRUE, removes x axis labels from all but the last plot. Default is FALSE.
+- `ncol`: (from cowplot) Number of colums in the plot grid. Default is 1.
+- `align`: (from cowplot) Specifies how plots should be aligned Options are "none", "hv" (align in both directions), "h", and "v" (default).
+- `...`: Additional arguments passed to `cowplot::plot_grid`.
+- `ncol_l`: When combine_legend = TRUE, number of colums in which to align plots and the common legend. Default is 2.
+- `nrow_l`: When combine_legend = TRUE, number of rows in which to align plots and the common legend. Default is NULL.
+- `rel_widths_l`: When combine_legend = TRUE, vector of widths in which to align plots and the common legend. Default is c(3, 1).
+- `rel_heights_l`: When combine_legend = TRUE, vector of heights in which to align plots and the common legend. Default is c(1, 1).
+- `ncol_legend`: When combine_legend = TRUE, number of columns the legend should be distributed in. Default is one column.
+
+## Details
+
+This function takes any input from the `cowplot::plot_grid` function to customize the organization of the plots.
+
+## Returns
+
+A single (cow)plot including the provided multiple plots.
+
+## See Also
+
+`plot_compare`, `plot_multiple`
+
+## Examples
+
+```r
+# Load data
+data("dengue_MS")
+
+# Multiple time series plot
+plots <- plot_multiple(
+  plot_function = plot_timeseries,
+  data = dengue_MS,
+  var = c("tmax", "tmin", "pdsi"),
+  type = c("cov", "cov", "cov"),
+  aggregate_space = "meso_code",
+  pop = "population",
+  var_label = c("Max Temp", "Min Temp", "PDSI"),
+  time = "date",
+  area = "micro_code")
+
+# Combine them with a shared legend
+plot_combine(plot_list = plots, 
+             ncol = 1,
+             align = "v",
+             combine_legend = TRUE,
+             combine_xaxis = TRUE,
+             rel_widths_l = c(7,1))
+```

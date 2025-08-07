@@ -1,0 +1,21 @@
+---
+format: html
+toc: true
+---
+
+# Municipality boundaries of **Mato Grosso do Sul**
+
+## Description
+
+Administrative boundaries (polygon geometries) of the 11 municipalities in **Mato Grosso do Sul** (Brazil) to be used with the `dengue_MS` data set.
+
+```r
+map_MS
+```
+
+## Format
+
+A simple feature (sf) object including 11 rows and 2 columns:
+
+- **code**: Unique ID number to each micro region (11 units).
+- **geometry**: Geometries of the sf multipolygon.

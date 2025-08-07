@@ -3,10 +3,14 @@ project:
 
 website:
   title: "GHRtools"
-  back-to-top-navigation: true
-  search: false
+  back-to-top-navigation: false
+  search: true
   navbar:
-    background: light
+    title: "GHRtools"
+    favicon: figures/GHRexplore.svg
+    navigation-container: narrow
+    background: "#f1f1f1"
+    foreground: "#3d3d3d"
     left:
       - text: "Home"
         href: index.qmd
@@ -26,6 +30,8 @@ website:
         menu:
           - text: Overview
             href: docs/GHRexplore/GHRexplore.qmd
+          - text: Reference
+            href: docs/GHRexplore/GHRexplore-index.qmd
           - text: Tutorial
             href: docs/GHRexplore/GHRexplore-vignette.qmd         
       - text: "GHRmodel"
@@ -44,6 +50,7 @@ website:
     right:
       - text: "About GHR"
         href: https://www.bsc.es/discover-bsc/organisation/research-departments/global-health-resilience
+        target: _blank
   page-footer: 
     background: "#168c81"
     left: "Copyright 2025, GHR" 

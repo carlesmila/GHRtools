@@ -1,0 +1,38 @@
+---
+format: html
+toc: true
+---
+
+# Aggregate cases
+
+## Description
+
+Aggregates a data frame containing disease cases in space and/or time.
+
+```r
+aggregate_cases(
+  data = NULL,
+  cases = NULL,
+  pop = NULL,
+  time = NULL,
+  area = NULL,
+  pt = 1e+05,
+  aggregate_space = NULL,
+  aggregate_time = NULL
+)
+```
+
+## Arguments
+
+- `data`: Data frame containing equally spaced (daily, weekly, monthly) incident cases for one or multiple areas.
+- `cases`: Name of the variable that identifies the cases.
+- `pop`: Name of the variable that identifies the population.
+- `time`: Name of the variable that identifies the temporal dimension. The values must be in date format ("yyyy-mm-dd") representing the day of observation for daily data, the first day of the week for weekly, or the first day of the month for monthly observations.
+- `area`: Name of variable that identifies the different locations (e.g., areal units) for which a time series is available.
+- `pt`: Scale of the person-time (default 100,000) for incidence rates.
+- `aggregate_space`: Name of variable used to define spatial aggregation groups.
+- `aggregate_time`: Temporal scale used to perform temporal aggregation. Options are: "week" (ISO 8601), "month", "year".
+
+## Returns
+
+A data frame with the aggregated cases.

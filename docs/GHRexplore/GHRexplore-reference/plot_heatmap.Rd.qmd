@@ -1,0 +1,97 @@
+---
+format: html
+toc: true
+---
+
+# Heatmap plot
+
+## Description
+
+Plots temporal heatmaps of covariates, case counts, or incidence rates.
+
+```r
+plot_heatmap(
+  data,
+  var,
+  time,
+  type = "cov",
+  pop = NULL,
+  pt = 1e+05,
+  area = NULL,
+  aggregate_space = NULL,
+  aggregate_time = "month",
+  aggregate_space_fun = "mean",
+  aggregate_time_fun = "mean",
+  transform = "identity",
+  title = NULL,
+  var_label = NULL,
+  ylab = NULL,
+  xlab = NULL,
+  palette = NULL,
+  centering = NULL
+)
+```
+
+## Arguments
+
+- `data`: Data frame containing equally spaced (daily, weekly, monthly) covariate or disease case observations for one or multiple locations.
+- `var`: Name of the column identifying the variable to be plotted.
+- `time`: Name of the variable that identifies the temporal dimension of the data frame. Its values must be in date format ("yyyy-mm-dd") representing the day of observation for daily data, the first day of the week for weekly, or the first day of the month for monthly observations.
+- `type`: Character that specifies the type of variable in `var`. Possible values include 'cov' (covariate, default), 'counts' (case counts), and 'inc' (case incidence). If `type='inc'`, `pop` is required.
+- `pop`: Character identifying the variable name for population. Only needed if `type='inc'`.
+- `pt`: Numerical only used for `type='inc'`. It represents the scale of the person-time (default 100,000) for incidence rates.
+- `area`: Name of variable that identifies the different locations (i.e., areal units) for which a time series is available.
+- `aggregate_space`: Name of variable used to define spatial aggregation groups.
+- `aggregate_time`: Temporal scale used to perform temporal aggregation. Options are: "week" (ISO 8601), "month", "year".
+- `aggregate_space_fun`: Character indicating the function to be used in the aggregation over space for `type="cov"`. Options are "mean" (default), "median", "sum". For case counts and incidence, "sum" is always applied.
+- `aggregate_time_fun`: Character indicating the function to be used in the aggregation over time for `type="cov"`. Options are "mean" (default), "median", "sum". For case counts and incidence, "sum" is always applied.
+- `transform`: Character, defaults to "identity" (i.e., no transformation). Transforms the color ramp for better visualization. Useful options include "log10p1" `log10(x+1)` useful for case counts and incidence with 0s, or any of the in-built ggplot2 options such as "log10" `log10(x)`, "log1p" `log(x+1)`, and "sqrt" `sqrt(x)` (check all possible options using `?scale_y_continuous`).
+- `title`: Optional title of the plot.
+- `var_label`: Character with a custom name for the case or covariate variable.
+- `ylab`: Label for the y-axis.
+- `xlab`: Label for the x-axis.
+- `palette`: GHR, RColorBrewer or colorspace palette. Use "-" before the palette name (e.g., "-Reds") to reverse it.
+- `centering`: Numerical or "median", defaults to NULL. If set, it centers the palette on that value.
+
+## Returns
+
+A ggplot2 heatmap plot.
+
+## Examples
+
+```r
+# Load data
+data("dengue_MS")
+
+# Covariate heatmap with space aggregation
+plot_heatmap(dengue_MS,
+             var = "tmin",
+             time = "date",
+             var_label = "Minimum\ntemp.",
+             type = "cov",
+             area = "micro_code",
+             aggregate_space = "meso_code",  
+             palette = "Blue-Red")
+
+# Case count heatmap with log scale
+plot_heatmap(dengue_MS,
+             var = "dengue_cases", 
+             time = "date",  
+             type = "counts",
+             area = "micro_code",  
+             palette = "Reds", 
+             title = "Dengue counts", 
+             var_label = "Dengue \ncounts",
+             transform = "log10p1")  
+             
+# Case incidence (for 1,000 persons) heatmap with space aggregation
+plot_heatmap(dengue_MS,
+             var = "dengue_cases", 
+             time = "date",          
+             type = "inc",
+             pop = "population",
+             pt = 1000,
+             area = "micro_code", 
+             aggregate_space = "meso_code", 
+             palette = "Purp")
+```

@@ -3,11 +3,21 @@ title: "GHRexplore tutorial"
 format: 
   html:
     toc: true
-    toc-expand: true
 ---
+
+```{=html}
+<img src='/figures/GHRexplore/logo_IDExtremes.jpg' align="right" width="18%" /> <span> <span> <img src='/figures/GHRexplore/logo_BSC.png' align="right" width="16%" /> 
+```
+
+<!-- badges: start -->
+[![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html)
+[![CRAN status](https://img.shields.io/cran/v/GHRexplore)](https://cran.r-project.org/package=GHRexplore)
+<!-- badges: end -->
 
 ## Overview
 
+::: columns
+::: {.column width="75%"}
 **GHRexplore** is an R package for exploratory analysis of temporal and
 spatiotemporal health data including case counts, incidence rates, and
 covariates. It provides commonly used visualizations and supports data
@@ -15,6 +25,16 @@ transformations such as temporal and spatial aggregations. The package
 also offers extensive customization options for the resulting figures.
 The output of all functions is a ggplot2 object that can be further
 modified if needed.
+:::
+::: {.column width="8%"}
+:::
+::: {.column width="17%"}
+```{=html}
+<img src="/figures/GHRexplore.svg" width="100%">
+```
+:::
+:::
+
 
 ``` r
 # Load GHRexplore

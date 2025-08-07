@@ -1,40 +1,5 @@
 [
   {
-    "objectID": "docs/GHRexplore/GHRexplore.html#description",
-    "href": "docs/GHRexplore/GHRexplore.html#description",
-    "title": "GHRexplore",
-    "section": "Description",
-    "text": "Description\n\n\nGHRexplore is an R package for exploratory analysis of temporal and spatio-temporal health data including case counts, incidence rates, and covariates. It provides commonly used visualizations and supports standard data transformations such as temporal and spatial aggregations. The package also offers extensive customization options for the resulting figures. Currently available plotting functions include:\n\n\n\n\n\n\n\nplot_timeseries: Plots time series of covariates, case counts or incidence rates.\nplot_heatmap: Plots a time series of covariates, case counts or incidence rates as heatmaps.\nplot_seasonality: Plots yearly time series to detect seasonal patterns of covariates, case counts or incidence rates.\nplot_correlation: Plots a correlation matrix of a series of variables.\nplot_map: Plots a choropleth map of covariates, case counts or incidence rates.\nplot_bivariate: Plots a bivariate plot of two numerical and/or categorical variables.\nplot_multiple, plot_combine and plot_compare: Used to generate graphs of several variables at the same time.\n\nGHRexplore is one of the packages developed by the Global Health Resilience (GHR) team at the Barcelona Supercomputing Center (BSC) within the IDExtremes project. The development version of the package can be found on gitlab."
-  },
-  {
-    "objectID": "docs/GHRexplore/GHRexplore.html#installation",
-    "href": "docs/GHRexplore/GHRexplore.html#installation",
-    "title": "GHRexplore",
-    "section": "Installation",
-    "text": "Installation\n# Install from CRAN\ninstall.packages(\"GHRexplore\")\n\n# Get the development version from Gitlab\ndevtools::install_git('https://earth.bsc.es/gitlab/ghr/ghrexplore.git')"
-  },
-  {
-    "objectID": "docs/GHRexplore/GHRexplore.html#usage",
-    "href": "docs/GHRexplore/GHRexplore.html#usage",
-    "title": "GHRexplore",
-    "section": "Usage",
-    "text": "Usage\nlibrary(\"GHRexplore\")\n\n# Use data included in the package to plot a heatmap with spatial aggregation\ndata(\"dengue_MS\")\nplot_heatmap(data = dengue_MS,\n             var = \"dengue_cases\",\n             type = \"inc\",\n             pop = \"population\",\n             time = \"date\",          \n             area = \"micro_code\",   \n             aggregate_space = \"meso_code\",\n             transform = \"log10p1\",\n             title = \"Dengue incidence in Brazil\")"
-  },
-  {
-    "objectID": "docs/GHRexplore/GHRexplore.html#developers",
-    "href": "docs/GHRexplore/GHRexplore.html#developers",
-    "title": "GHRexplore",
-    "section": "Developers",
-    "text": "Developers\nGiovenale Moirano, PhD \nBarcelona Supercomputing Center\nGlobal Health Resilience\nCarles Milà, PhD \nBarcelona Supercomputing Center\nGlobal Health Resilience\nAnna B. Kawiecki, PhD \nBarcelona Supercomputing Center\nGlobal Health Resilience\nRachel Lowe, PhD \nBarcelona Supercomputing Center\nGlobal Health Resilience (Group leader)"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to GHRtools",
-    "section": "",
-    "text": "It spans edge-to-edge of the screen like a banner."
-  },
-  {
     "objectID": "index.html#from-health-and-climate-data-to-disease-forecasts",
     "href": "index.html#from-health-and-climate-data-to-disease-forecasts",
     "title": "Welcome to GHRtools",
@@ -53,70 +18,322 @@
     "href": "docs/data4health/data4health.html",
     "title": "data4health",
     "section": "",
-    "text": "Under construction.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "Back to top"
-  },
-  {
-    "objectID": "docs/GHRmodel/GHRmodel-vignette1.html",
-    "href": "docs/GHRmodel/GHRmodel-vignette1.html",
-    "title": "GHRmodel tutorial",
-    "section": "",
-    "text": "Under construction.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "docs/clim4health/clim4health.html",
-    "href": "docs/clim4health/clim4health.html",
-    "title": "clim4health",
-    "section": "",
-    "text": "Under construction.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "docs/GHRpredict/GHRpredict-vignette1.html",
-    "href": "docs/GHRpredict/GHRpredict-vignette1.html",
-    "title": "GHRpredict tutorial",
-    "section": "",
-    "text": "Under construction.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "docs/GHRpredict/GHRpredict.html",
-    "href": "docs/GHRpredict/GHRpredict.html",
-    "title": "GHRpredict",
-    "section": "",
-    "text": "Under construction.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "docs/clim4health/clim4health-vignette1.html",
-    "href": "docs/clim4health/clim4health-vignette1.html",
-    "title": "clim4health tutorial",
-    "section": "",
-    "text": "Under construction.\n\n\n\n Back to top"
+    "text": "Under construction."
   },
   {
     "objectID": "docs/GHRmodel/GHRmodel.html",
     "href": "docs/GHRmodel/GHRmodel.html",
     "title": "GHRmodel",
     "section": "",
-    "text": "Under construction.\n\n\n\n Back to top"
+    "text": "Under construction."
   },
   {
-    "objectID": "docs/data4health/data4health-vignette1.html",
-    "href": "docs/data4health/data4health-vignette1.html",
-    "title": "data4health tutorial",
+    "objectID": "docs/clim4health/clim4health-vignette1.html",
+    "href": "docs/clim4health/clim4health-vignette1.html",
+    "title": "clim4health tutorial",
     "section": "",
-    "text": "Under construction.\n\n\n\n Back to top"
+    "text": "Under construction."
   },
   {
-    "objectID": "docs/GHRexplore/GHRexplore-vignette.html",
-    "href": "docs/GHRexplore/GHRexplore-vignette.html",
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_compare.Rd.html",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_compare.Rd.html",
+    "title": "Compare plots",
+    "section": "",
+    "text": "Combines multiple plots of several variables in a single graph.\nplot_compare(plot_function, data, var, type, ...)\n\n\n\n\nplot_function: Indicates which of the plot types to use. Options are: ‘plot_timeseries’, ‘plot_heatmap’, ‘plot_seasonality’, ‘plot_map’.\ndata: Data frame containing equally spaced (daily, weekly, monthly) covariate or disease case observations for one or multiple locations.\nvar: Character vector with the name of the variables to be plotted.\ntype: Character vector with the same length of var that specifies the types of variable for each element in var. Possible values include ‘cov’ (covariate, default), ‘counts’ (case counts), and ‘inc’ (case incidence). If type='inc', pop is required.\n...: Additional arguments for plot_multiple, plot_combine, and the selected plot_function.\n\n\n\n\nThis function takes any input arguments from plot_combine() and plot_multiple() to customize the plots and their organization in a grid.\n\n\n\nA single (cow)plot containing plots of several variables.\n\n\n\nplot_multiple, plot_combine\n\n\n\n# Load data\nlibrary(\"sf\")\ndata(\"dengue_MS\")\ndata(\"map_MS\")\n\nplot_compare(\n  plot_function = plot_timeseries,\n  data = dengue_MS,\n  var = c(\"dengue_cases\",  \"pdsi\"),\n  type = c(\"inc\", \"cov\"),\n  pop = \"population\",\n  time = \"date\",\n  area = \"micro_code\",\n  var_label = c(\"Dengue inc\", \"PDSI\"), \n  combine_legend = TRUE, \n  ncol_legend = 1,\n  ncol = 1, \n  align = \"h\")\n\n# Comparing seasonality plots\nplot_compare(\n  plot_function = plot_seasonality,\n  data = dengue_MS,\n  var = c(\"dengue_cases\", \"dengue_cases\", \"pdsi\"),\n  type = c(\"counts\", \"inc\", \"cov\"),\n  pop = \"population\",\n  time = \"date\",\n  area = \"micro_code\",\n  aggregate_space = \"region_code\",\n  pt = 100,\n  var_label = c(\"Dengue Cases\", \"Dengue inc\", \"Min Temp\"), \n  ncol_legend = 1,\n  combine_legend = TRUE)\n\n# Comparing heatmaps plots\nplot_compare(\n  plot_function = plot_heatmap,\n  data = dengue_MS,\n  var = c(\"dengue_cases\", \"pdsi\"),\n  type = c(\"inc\", \"cov\"),   \n  pop = \"population\",\n  time = \"date\",\n  area = \"micro_code\",\n  var_label = c(\"Dengue Cases\", \"Min Temp\"), \n  palette = c(\"Reds\", \"Blues\"),\n  ncol_legend = 1,\n  combine_xaxis = TRUE)\n\n# Comparing map plots\nplot_compare(\n  plot_function = plot_map,\n  data = dengue_MS,\n  var = c(\"dengue_cases\", \"tmax\"),\n  type = c(\"inc\", \"cov\"),  \n  pop = \"population\",\n  time = \"date\",\n  area = \"micro_code\",\n  var_label= c(\"Dengue Incidence\", \"Max Temperature\"), \n  palette = c(\"Reds\", \"Blues\"),\n  map = map_MS,        \n  map_area = \"code\", \n  by_year = FALSE,\n  ncol_legend = 1,\n  combine_xaxis =TRUE)"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_compare.Rd.html#description",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_compare.Rd.html#description",
+    "title": "Compare plots",
+    "section": "",
+    "text": "Combines multiple plots of several variables in a single graph.\nplot_compare(plot_function, data, var, type, ...)"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_compare.Rd.html#arguments",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_compare.Rd.html#arguments",
+    "title": "Compare plots",
+    "section": "",
+    "text": "plot_function: Indicates which of the plot types to use. Options are: ‘plot_timeseries’, ‘plot_heatmap’, ‘plot_seasonality’, ‘plot_map’.\ndata: Data frame containing equally spaced (daily, weekly, monthly) covariate or disease case observations for one or multiple locations.\nvar: Character vector with the name of the variables to be plotted.\ntype: Character vector with the same length of var that specifies the types of variable for each element in var. Possible values include ‘cov’ (covariate, default), ‘counts’ (case counts), and ‘inc’ (case incidence). If type='inc', pop is required.\n...: Additional arguments for plot_multiple, plot_combine, and the selected plot_function."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_compare.Rd.html#details",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_compare.Rd.html#details",
+    "title": "Compare plots",
+    "section": "",
+    "text": "This function takes any input arguments from plot_combine() and plot_multiple() to customize the plots and their organization in a grid."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_compare.Rd.html#returns",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_compare.Rd.html#returns",
+    "title": "Compare plots",
+    "section": "",
+    "text": "A single (cow)plot containing plots of several variables."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_compare.Rd.html#see-also",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_compare.Rd.html#see-also",
+    "title": "Compare plots",
+    "section": "",
+    "text": "plot_multiple, plot_combine"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_compare.Rd.html#examples",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_compare.Rd.html#examples",
+    "title": "Compare plots",
+    "section": "",
+    "text": "# Load data\nlibrary(\"sf\")\ndata(\"dengue_MS\")\ndata(\"map_MS\")\n\nplot_compare(\n  plot_function = plot_timeseries,\n  data = dengue_MS,\n  var = c(\"dengue_cases\",  \"pdsi\"),\n  type = c(\"inc\", \"cov\"),\n  pop = \"population\",\n  time = \"date\",\n  area = \"micro_code\",\n  var_label = c(\"Dengue inc\", \"PDSI\"), \n  combine_legend = TRUE, \n  ncol_legend = 1,\n  ncol = 1, \n  align = \"h\")\n\n# Comparing seasonality plots\nplot_compare(\n  plot_function = plot_seasonality,\n  data = dengue_MS,\n  var = c(\"dengue_cases\", \"dengue_cases\", \"pdsi\"),\n  type = c(\"counts\", \"inc\", \"cov\"),\n  pop = \"population\",\n  time = \"date\",\n  area = \"micro_code\",\n  aggregate_space = \"region_code\",\n  pt = 100,\n  var_label = c(\"Dengue Cases\", \"Dengue inc\", \"Min Temp\"), \n  ncol_legend = 1,\n  combine_legend = TRUE)\n\n# Comparing heatmaps plots\nplot_compare(\n  plot_function = plot_heatmap,\n  data = dengue_MS,\n  var = c(\"dengue_cases\", \"pdsi\"),\n  type = c(\"inc\", \"cov\"),   \n  pop = \"population\",\n  time = \"date\",\n  area = \"micro_code\",\n  var_label = c(\"Dengue Cases\", \"Min Temp\"), \n  palette = c(\"Reds\", \"Blues\"),\n  ncol_legend = 1,\n  combine_xaxis = TRUE)\n\n# Comparing map plots\nplot_compare(\n  plot_function = plot_map,\n  data = dengue_MS,\n  var = c(\"dengue_cases\", \"tmax\"),\n  type = c(\"inc\", \"cov\"),  \n  pop = \"population\",\n  time = \"date\",\n  area = \"micro_code\",\n  var_label= c(\"Dengue Incidence\", \"Max Temperature\"), \n  palette = c(\"Reds\", \"Blues\"),\n  map = map_MS,        \n  map_area = \"code\", \n  by_year = FALSE,\n  ncol_legend = 1,\n  combine_xaxis =TRUE)"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_map.Rd.html",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_map.Rd.html",
+    "title": "Choropleth map",
+    "section": "",
+    "text": "Plots a choropleth map of covariates, case counts, or incidence rates.\nplot_map(\n  data,\n  var,\n  time,\n  type = \"cov\",\n  pop = NULL,\n  pt = 1e+05,\n  area = NULL,\n  map = NULL,\n  map_area = NULL,\n  by_year = TRUE,\n  aggregate_time_fun = \"mean\",\n  transform = \"identity\",\n  title = NULL,\n  var_label = NULL,\n  palette = NULL,\n  centering = NULL,\n  bins = NULL,\n  bins_method = \"quantile\",\n  bins_label = NULL\n)\n\n\n\n\ndata: Data frame containing equally spaced (daily, weekly, monthly) covariate or case observations for one or multiple locations.\nvar: Name of the column identifying the variable to be plotted.\ntime: Name of the variable that identifies the temporal dimension of the data frame. Its values must be in date format (“yyyy-mm-dd”) representing the day of observation for daily data, the first day of the week for weekly, or the first day of the month for monthly observations.\ntype: Character that specifies the type of variable in var. Possible values include ‘cov’ (covariate, default), ‘counts’ (case counts), and ‘inc’ (case incidence). If type='inc', pop is required.\npop: Character identifying the variable name for population. Only needed if type='inc'.\npt: Scale of the person-time (default 100,000) for incidence rates.\narea: Name of variable that identifies the different locations (e.g., areal units) for which a time series is available.\nmap: Name of the sf object corresponding to the spatial unit specified in ‘area’.\nmap_area: Name of the variable that identifies the different locations (e.g., areal units) in the map object. If not specified, it assumes the same name as in area.\nby_year: Logical, if TRUE a map for each year is produced.\naggregate_time_fun: Character indicating the function to be used in the aggregation over time for type=\"cov\". Options are “mean” (default), “median”, “sum”. For case counts and incidence, “sum” is always applied.\ntransform: Character, defaults to “identity” (i.e., no transformation). Transforms the color ramp for better visualization. Useful options include “log10p1” log10(x+1) for case counts and incidence with 0s, or any of the in-built ggplot2 options such as “log10” log10(x), “log1p” log(x+1), and “sqrt” sqrt(x) (check all possible options using ?scale_y_continuous).\ntitle: Optional title of the plot.\nvar_label: Character with a custom name for the case or covariate variable.\npalette: GHR, RColorBrewer or colorspace palette. Use “-” before the palette name (e.g., “-Reds”) to reverse it.\ncentering: Numerical or “median”, defaults to NULL. If set, it centers the palette on that value.\nbins: Number of bins for categorization of numerical variables. Defaults to NULL (no binning).\nbins_method: Method to compute the bins, only used when bins is not NULL. Possible values are “quantile” (default) and “equal”.\nbins_label: Optional labels for the bins. They must have the same length as the number of bins. Defaults to NULL (default interval labels).\n\n\n\n\nA ggplot2 choropleth map.\n\n\n\n# Load data\nlibrary(\"sf\")\ndata(\"dengue_MS\")\ndata(\"map_MS\")\n\n# Temporal average of a covariate\nplot_map(data = dengue_MS, \n         var = \"tmin\",  \n         time = \"date\",       \n         type = \"cov\",\n         area = \"micro_code\",  \n         map = map_MS,         \n         map_area = \"code\",   \n         aggregate_time_fun = \"mean\",         \n         palette =\"Reds\",\n         by_year = FALSE,\n         var_label= \"Min Temp.\")\n\n# Categorical covariate\nplot_map(data = dengue_MS, \n         var = \"biome_name\",        \n         time = \"date\",      \n         area = \"micro_code\", \n         map = map_MS,       \n         map_area = \"code\",  \n         palette =\"Viridis\",\n         by_year = FALSE,\n         var_label= \"Biome\")\n\n# Case counts by year (log)\ndengue_MS |&gt;\n  plot_map(var = \"dengue_cases\",    \n           time = \"date\",    \n           type = \"counts\",\n           area = \"micro_code\", \n           pop = \"population\",\n           map = map_MS,   \n           map_area = \"code\",\n           palette = \"Reds\",\n           transform = \"log10p1\")\n\n# Case incidence by year, binned\nplot_map(dengue_MS,\n         var = \"dengue_cases\", \n         type = \"inc\",\n         time = \"date\",\n         area = \"micro_code\",\n         pop = \"population\",\n         pt = 1000,\n         map = map_MS, \n         map_area = \"code\",\n         bins = 5,   \n         palette = \"Viridis\")"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_map.Rd.html#description",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_map.Rd.html#description",
+    "title": "Choropleth map",
+    "section": "",
+    "text": "Plots a choropleth map of covariates, case counts, or incidence rates.\nplot_map(\n  data,\n  var,\n  time,\n  type = \"cov\",\n  pop = NULL,\n  pt = 1e+05,\n  area = NULL,\n  map = NULL,\n  map_area = NULL,\n  by_year = TRUE,\n  aggregate_time_fun = \"mean\",\n  transform = \"identity\",\n  title = NULL,\n  var_label = NULL,\n  palette = NULL,\n  centering = NULL,\n  bins = NULL,\n  bins_method = \"quantile\",\n  bins_label = NULL\n)"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_map.Rd.html#arguments",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_map.Rd.html#arguments",
+    "title": "Choropleth map",
+    "section": "",
+    "text": "data: Data frame containing equally spaced (daily, weekly, monthly) covariate or case observations for one or multiple locations.\nvar: Name of the column identifying the variable to be plotted.\ntime: Name of the variable that identifies the temporal dimension of the data frame. Its values must be in date format (“yyyy-mm-dd”) representing the day of observation for daily data, the first day of the week for weekly, or the first day of the month for monthly observations.\ntype: Character that specifies the type of variable in var. Possible values include ‘cov’ (covariate, default), ‘counts’ (case counts), and ‘inc’ (case incidence). If type='inc', pop is required.\npop: Character identifying the variable name for population. Only needed if type='inc'.\npt: Scale of the person-time (default 100,000) for incidence rates.\narea: Name of variable that identifies the different locations (e.g., areal units) for which a time series is available.\nmap: Name of the sf object corresponding to the spatial unit specified in ‘area’.\nmap_area: Name of the variable that identifies the different locations (e.g., areal units) in the map object. If not specified, it assumes the same name as in area.\nby_year: Logical, if TRUE a map for each year is produced.\naggregate_time_fun: Character indicating the function to be used in the aggregation over time for type=\"cov\". Options are “mean” (default), “median”, “sum”. For case counts and incidence, “sum” is always applied.\ntransform: Character, defaults to “identity” (i.e., no transformation). Transforms the color ramp for better visualization. Useful options include “log10p1” log10(x+1) for case counts and incidence with 0s, or any of the in-built ggplot2 options such as “log10” log10(x), “log1p” log(x+1), and “sqrt” sqrt(x) (check all possible options using ?scale_y_continuous).\ntitle: Optional title of the plot.\nvar_label: Character with a custom name for the case or covariate variable.\npalette: GHR, RColorBrewer or colorspace palette. Use “-” before the palette name (e.g., “-Reds”) to reverse it.\ncentering: Numerical or “median”, defaults to NULL. If set, it centers the palette on that value.\nbins: Number of bins for categorization of numerical variables. Defaults to NULL (no binning).\nbins_method: Method to compute the bins, only used when bins is not NULL. Possible values are “quantile” (default) and “equal”.\nbins_label: Optional labels for the bins. They must have the same length as the number of bins. Defaults to NULL (default interval labels)."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_map.Rd.html#returns",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_map.Rd.html#returns",
+    "title": "Choropleth map",
+    "section": "",
+    "text": "A ggplot2 choropleth map."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_map.Rd.html#examples",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_map.Rd.html#examples",
+    "title": "Choropleth map",
+    "section": "",
+    "text": "# Load data\nlibrary(\"sf\")\ndata(\"dengue_MS\")\ndata(\"map_MS\")\n\n# Temporal average of a covariate\nplot_map(data = dengue_MS, \n         var = \"tmin\",  \n         time = \"date\",       \n         type = \"cov\",\n         area = \"micro_code\",  \n         map = map_MS,         \n         map_area = \"code\",   \n         aggregate_time_fun = \"mean\",         \n         palette =\"Reds\",\n         by_year = FALSE,\n         var_label= \"Min Temp.\")\n\n# Categorical covariate\nplot_map(data = dengue_MS, \n         var = \"biome_name\",        \n         time = \"date\",      \n         area = \"micro_code\", \n         map = map_MS,       \n         map_area = \"code\",  \n         palette =\"Viridis\",\n         by_year = FALSE,\n         var_label= \"Biome\")\n\n# Case counts by year (log)\ndengue_MS |&gt;\n  plot_map(var = \"dengue_cases\",    \n           time = \"date\",    \n           type = \"counts\",\n           area = \"micro_code\", \n           pop = \"population\",\n           map = map_MS,   \n           map_area = \"code\",\n           palette = \"Reds\",\n           transform = \"log10p1\")\n\n# Case incidence by year, binned\nplot_map(dengue_MS,\n         var = \"dengue_cases\", \n         type = \"inc\",\n         time = \"date\",\n         area = \"micro_code\",\n         pop = \"population\",\n         pt = 1000,\n         map = map_MS, \n         map_area = \"code\",\n         bins = 5,   \n         palette = \"Viridis\")"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_combine.Rd.html",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_combine.Rd.html",
+    "title": "Combine plots",
+    "section": "",
+    "text": "Combines plots, each representing one variable, into a single plot.\nplot_combine(\n  plot_list,\n  combine_legend = FALSE,\n  combine_xaxis = FALSE,\n  ncol = 1,\n  align = \"v\",\n  ...,\n  ncol_l = 2,\n  nrow_l = NULL,\n  rel_widths_l = c(3, 1),\n  rel_heights_l = c(1, 1),\n  ncol_legend = 1\n)\n\n\n\n\nplot_list: A list of plots to be combined.\ncombine_legend: Logical. If TRUE, assumes the legend of all plots is the same as the legend of the first plot in plot_list and final plot shows only one instance of the common legend. Default is FALSE.\ncombine_xaxis: Logical. If TRUE, removes x axis labels from all but the last plot. Default is FALSE.\nncol: (from cowplot) Number of colums in the plot grid. Default is 1.\nalign: (from cowplot) Specifies how plots should be aligned Options are “none”, “hv” (align in both directions), “h”, and “v” (default).\n...: Additional arguments passed to cowplot::plot_grid.\nncol_l: When combine_legend = TRUE, number of colums in which to align plots and the common legend. Default is 2.\nnrow_l: When combine_legend = TRUE, number of rows in which to align plots and the common legend. Default is NULL.\nrel_widths_l: When combine_legend = TRUE, vector of widths in which to align plots and the common legend. Default is c(3, 1).\nrel_heights_l: When combine_legend = TRUE, vector of heights in which to align plots and the common legend. Default is c(1, 1).\nncol_legend: When combine_legend = TRUE, number of columns the legend should be distributed in. Default is one column.\n\n\n\n\nThis function takes any input from the cowplot::plot_grid function to customize the organization of the plots.\n\n\n\nA single (cow)plot including the provided multiple plots.\n\n\n\nplot_compare, plot_multiple\n\n\n\n# Load data\ndata(\"dengue_MS\")\n\n# Multiple time series plot\nplots &lt;- plot_multiple(\n  plot_function = plot_timeseries,\n  data = dengue_MS,\n  var = c(\"tmax\", \"tmin\", \"pdsi\"),\n  type = c(\"cov\", \"cov\", \"cov\"),\n  aggregate_space = \"meso_code\",\n  pop = \"population\",\n  var_label = c(\"Max Temp\", \"Min Temp\", \"PDSI\"),\n  time = \"date\",\n  area = \"micro_code\")\n\n# Combine them with a shared legend\nplot_combine(plot_list = plots, \n             ncol = 1,\n             align = \"v\",\n             combine_legend = TRUE,\n             combine_xaxis = TRUE,\n             rel_widths_l = c(7,1))"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_combine.Rd.html#description",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_combine.Rd.html#description",
+    "title": "Combine plots",
+    "section": "",
+    "text": "Combines plots, each representing one variable, into a single plot.\nplot_combine(\n  plot_list,\n  combine_legend = FALSE,\n  combine_xaxis = FALSE,\n  ncol = 1,\n  align = \"v\",\n  ...,\n  ncol_l = 2,\n  nrow_l = NULL,\n  rel_widths_l = c(3, 1),\n  rel_heights_l = c(1, 1),\n  ncol_legend = 1\n)"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_combine.Rd.html#arguments",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_combine.Rd.html#arguments",
+    "title": "Combine plots",
+    "section": "",
+    "text": "plot_list: A list of plots to be combined.\ncombine_legend: Logical. If TRUE, assumes the legend of all plots is the same as the legend of the first plot in plot_list and final plot shows only one instance of the common legend. Default is FALSE.\ncombine_xaxis: Logical. If TRUE, removes x axis labels from all but the last plot. Default is FALSE.\nncol: (from cowplot) Number of colums in the plot grid. Default is 1.\nalign: (from cowplot) Specifies how plots should be aligned Options are “none”, “hv” (align in both directions), “h”, and “v” (default).\n...: Additional arguments passed to cowplot::plot_grid.\nncol_l: When combine_legend = TRUE, number of colums in which to align plots and the common legend. Default is 2.\nnrow_l: When combine_legend = TRUE, number of rows in which to align plots and the common legend. Default is NULL.\nrel_widths_l: When combine_legend = TRUE, vector of widths in which to align plots and the common legend. Default is c(3, 1).\nrel_heights_l: When combine_legend = TRUE, vector of heights in which to align plots and the common legend. Default is c(1, 1).\nncol_legend: When combine_legend = TRUE, number of columns the legend should be distributed in. Default is one column."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_combine.Rd.html#details",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_combine.Rd.html#details",
+    "title": "Combine plots",
+    "section": "",
+    "text": "This function takes any input from the cowplot::plot_grid function to customize the organization of the plots."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_combine.Rd.html#returns",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_combine.Rd.html#returns",
+    "title": "Combine plots",
+    "section": "",
+    "text": "A single (cow)plot including the provided multiple plots."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_combine.Rd.html#see-also",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_combine.Rd.html#see-also",
+    "title": "Combine plots",
+    "section": "",
+    "text": "plot_compare, plot_multiple"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_combine.Rd.html#examples",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_combine.Rd.html#examples",
+    "title": "Combine plots",
+    "section": "",
+    "text": "# Load data\ndata(\"dengue_MS\")\n\n# Multiple time series plot\nplots &lt;- plot_multiple(\n  plot_function = plot_timeseries,\n  data = dengue_MS,\n  var = c(\"tmax\", \"tmin\", \"pdsi\"),\n  type = c(\"cov\", \"cov\", \"cov\"),\n  aggregate_space = \"meso_code\",\n  pop = \"population\",\n  var_label = c(\"Max Temp\", \"Min Temp\", \"PDSI\"),\n  time = \"date\",\n  area = \"micro_code\")\n\n# Combine them with a shared legend\nplot_combine(plot_list = plots, \n             ncol = 1,\n             align = \"v\",\n             combine_legend = TRUE,\n             combine_xaxis = TRUE,\n             rel_widths_l = c(7,1))"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_bivariate.Rd.html",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_bivariate.Rd.html",
+    "title": "Bivariate plot",
+    "section": "",
+    "text": "Plots a bivariate graph to visually assess associations. It will be a scatterplot if both variables are numeric and grouped boxplots if one of them is categorical.\nplot_bivariate(\n  data,\n  var,\n  area = NULL,\n  facet = FALSE,\n  free_x_scale = FALSE,\n  free_y_scale = FALSE,\n  title = NULL,\n  var_label = NULL,\n  legend = NULL,\n  palette = NULL\n)\n\n\n\n\ndata: Data frame containing equally spaced (daily, weekly, monthly) covariate or disease case observations for one or multiple locations.\nvar: Character vector of covariate names with length 2 (x, y). One of them can be a factor.\narea: Character, the name of the variable that identifies the different areal units or any other grouping of interest. If specified, results are grouped by this variable. Defaults to NULL (no grouping).\nfacet: If TRUE, plot each grouping in a different facet.\nfree_x_scale: If TRUE and facet=TRUE, the x-axis scale is free in each facet.\nfree_y_scale: If TRUE and facet=TRUE, the y-axis scale is free in each facet.\ntitle: Optional title of the plot.\nvar_label: A 2 character vector with a custom name for the variables.\nlegend: A character vector with a custom name for the legend.\npalette: GHR, RColorBrewer or colorspace palette (e.g. “Purp”). Single R colors in colors() or hex codes can be used when there is no grouping or facets are used. Use “-” before the palette name (e.g., “-Reds”) to reverse it. Defaults to a dark green when area is NULL or when facet is TRUE, otherwise defaults to the “IDE2” palette.\n\n\n\n\nA ggplot2 scatterplot or boxplot graph.\n\n\n\n# Load data\ndata(\"dengue_MS\")\n\n# Scatter (two numeric variables) - No grouping\nplot_bivariate(dengue_MS, \n               var = c(\"pop_density\", \"tmin\"), \n               palette = \"#d04a2d\")\n\n# Scatter (two numeric variables) - Grouping in the same graph\nplot_bivariate(dengue_MS, \n               var = c(\"pop_density\", \"tmin\"),\n               var_label = c(\"Pop. density\", \"Min temp.\"),\n               area = \"micro_code\")\n\n# Scatter  (two numeric variables) - Grouping in facets\nplot_bivariate(dengue_MS,\n               var = c(\"pop_density\", \"tmin\"),\n               var_label = c(\"Pop. density\", \"Min temp.\"),\n               area = \"micro_code\", facet = TRUE, \n               free_x_scale = TRUE)\n\n# Boxplots (one numeric, one categorical) - No grouping\nplot_bivariate(dengue_MS, \n               var = c(\"pop_density\", \"biome_name\"), \n               var_label = c(\"Pop. density\", \"Min temp.\"),\n               palette = \"royalblue\")\n\n# Boxplots (one numeric, one categorical) - Grouping\nplot_bivariate(dengue_MS, \n               var = c(\"biome_name\", \"tmin\"), \n               area = \"meso_code\",\n               palette = \"Accent\")"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_bivariate.Rd.html#description",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_bivariate.Rd.html#description",
+    "title": "Bivariate plot",
+    "section": "",
+    "text": "Plots a bivariate graph to visually assess associations. It will be a scatterplot if both variables are numeric and grouped boxplots if one of them is categorical.\nplot_bivariate(\n  data,\n  var,\n  area = NULL,\n  facet = FALSE,\n  free_x_scale = FALSE,\n  free_y_scale = FALSE,\n  title = NULL,\n  var_label = NULL,\n  legend = NULL,\n  palette = NULL\n)"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_bivariate.Rd.html#arguments",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_bivariate.Rd.html#arguments",
+    "title": "Bivariate plot",
+    "section": "",
+    "text": "data: Data frame containing equally spaced (daily, weekly, monthly) covariate or disease case observations for one or multiple locations.\nvar: Character vector of covariate names with length 2 (x, y). One of them can be a factor.\narea: Character, the name of the variable that identifies the different areal units or any other grouping of interest. If specified, results are grouped by this variable. Defaults to NULL (no grouping).\nfacet: If TRUE, plot each grouping in a different facet.\nfree_x_scale: If TRUE and facet=TRUE, the x-axis scale is free in each facet.\nfree_y_scale: If TRUE and facet=TRUE, the y-axis scale is free in each facet.\ntitle: Optional title of the plot.\nvar_label: A 2 character vector with a custom name for the variables.\nlegend: A character vector with a custom name for the legend.\npalette: GHR, RColorBrewer or colorspace palette (e.g. “Purp”). Single R colors in colors() or hex codes can be used when there is no grouping or facets are used. Use “-” before the palette name (e.g., “-Reds”) to reverse it. Defaults to a dark green when area is NULL or when facet is TRUE, otherwise defaults to the “IDE2” palette."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_bivariate.Rd.html#returns",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_bivariate.Rd.html#returns",
+    "title": "Bivariate plot",
+    "section": "",
+    "text": "A ggplot2 scatterplot or boxplot graph."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_bivariate.Rd.html#examples",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_bivariate.Rd.html#examples",
+    "title": "Bivariate plot",
+    "section": "",
+    "text": "# Load data\ndata(\"dengue_MS\")\n\n# Scatter (two numeric variables) - No grouping\nplot_bivariate(dengue_MS, \n               var = c(\"pop_density\", \"tmin\"), \n               palette = \"#d04a2d\")\n\n# Scatter (two numeric variables) - Grouping in the same graph\nplot_bivariate(dengue_MS, \n               var = c(\"pop_density\", \"tmin\"),\n               var_label = c(\"Pop. density\", \"Min temp.\"),\n               area = \"micro_code\")\n\n# Scatter  (two numeric variables) - Grouping in facets\nplot_bivariate(dengue_MS,\n               var = c(\"pop_density\", \"tmin\"),\n               var_label = c(\"Pop. density\", \"Min temp.\"),\n               area = \"micro_code\", facet = TRUE, \n               free_x_scale = TRUE)\n\n# Boxplots (one numeric, one categorical) - No grouping\nplot_bivariate(dengue_MS, \n               var = c(\"pop_density\", \"biome_name\"), \n               var_label = c(\"Pop. density\", \"Min temp.\"),\n               palette = \"royalblue\")\n\n# Boxplots (one numeric, one categorical) - Grouping\nplot_bivariate(dengue_MS, \n               var = c(\"biome_name\", \"tmin\"), \n               area = \"meso_code\",\n               palette = \"Accent\")"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/dengue_MS.Rd.html",
+    "href": "docs/GHRexplore/GHRexplore-reference/dengue_MS.Rd.html",
+    "title": "Dengue cases in Mato Grosso do Sul",
+    "section": "",
+    "text": "Data frame containing the monthly number of notified dengue cases by municipality in the Mato Grosso do Sul state of Brazil, as well as set of spatial and spatio-temporal covariates (e.g., environmental, socio-economic and meteo-climatic factors). This dataset is a subset of the original containing observations over the entire Brazil.\ndengue_MS\n\n\n\nA data frame with 2,640 rows and 27 columns:\n\nmicro_code: Unique ID number for each micro region (11 units).\nmicro_name: Name of each micro region.\nmicro_name_ibge: Name of each micro region in IBGE format.\nmeso_code: Unique ID number for each meso region (4 units).\nmeso_name: Name of each meso region.\nstate_code: Unique ID number for each state (1 unit).\nstate_name: Name of each state.\nregion_code: Unique ID number given to each Brazilian Region. All observations come from the “Southeast Region”.\nregion_name: Name of each Brazilian Region. All observations come from the “Southeast Region”.\nbiome_code: Biome code.\nbiome_name: Biome name.\necozone_code: Ecozone code.\necozone_name: Ecozone name.\nmain_climate: Most prevalent climate regime in the microregion. Based on Koppen Geiger climate regimes.\nmonth: Calendar month index, 1 = January, 12 = December.\nyear: Year 2000 - 2019.\ntime: Time index starting at 1 for January 2000.\ndengue_cases: Number of notified dengue cases registered in the notifiable diseases system in Brazil (SINAN) in the microregion of reference, at the month of first symptoms.\npopulation: Estimated population based on projections calculated using the 2000 and 2010 censuses, as well as population counts from 2007 and 2017.\npop_density: Population density (number of people per km2).\ntmax: Monthly average daily maximum temperature; gridded values (at a 0.5 deg resolution) averaged across each microregion.\ntmin: Monthly average daily minimum temperature; gridded values (at a 0.5 deg resolution) averaged across each microregion.\npdsi: Self-calibrated Palmer Drought Severity Index for each microregion. It measures how wet or dry a region is relative to usual conditions. Negative values represent periods of drought, positive values represent wetter periods. Calculated by taking the mean value within each microregion.\nurban: Percentage of population living in urban areas (2010 census).\nwater_network: Percentage of population with access to the piped water network according to the 2010 census.\nwater_shortage: Frequency of reported water shortages per microregion between 2000 and 2016.\ndate: First day of the month in date format (“%d-%m-%Y”).\n\n\n\n\nhttps://github.com/drrachellowe/hydromet_dengue"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/dengue_MS.Rd.html#description",
+    "href": "docs/GHRexplore/GHRexplore-reference/dengue_MS.Rd.html#description",
+    "title": "Dengue cases in Mato Grosso do Sul",
+    "section": "",
+    "text": "Data frame containing the monthly number of notified dengue cases by municipality in the Mato Grosso do Sul state of Brazil, as well as set of spatial and spatio-temporal covariates (e.g., environmental, socio-economic and meteo-climatic factors). This dataset is a subset of the original containing observations over the entire Brazil.\ndengue_MS"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/dengue_MS.Rd.html#format",
+    "href": "docs/GHRexplore/GHRexplore-reference/dengue_MS.Rd.html#format",
+    "title": "Dengue cases in Mato Grosso do Sul",
+    "section": "",
+    "text": "A data frame with 2,640 rows and 27 columns:\n\nmicro_code: Unique ID number for each micro region (11 units).\nmicro_name: Name of each micro region.\nmicro_name_ibge: Name of each micro region in IBGE format.\nmeso_code: Unique ID number for each meso region (4 units).\nmeso_name: Name of each meso region.\nstate_code: Unique ID number for each state (1 unit).\nstate_name: Name of each state.\nregion_code: Unique ID number given to each Brazilian Region. All observations come from the “Southeast Region”.\nregion_name: Name of each Brazilian Region. All observations come from the “Southeast Region”.\nbiome_code: Biome code.\nbiome_name: Biome name.\necozone_code: Ecozone code.\necozone_name: Ecozone name.\nmain_climate: Most prevalent climate regime in the microregion. Based on Koppen Geiger climate regimes.\nmonth: Calendar month index, 1 = January, 12 = December.\nyear: Year 2000 - 2019.\ntime: Time index starting at 1 for January 2000.\ndengue_cases: Number of notified dengue cases registered in the notifiable diseases system in Brazil (SINAN) in the microregion of reference, at the month of first symptoms.\npopulation: Estimated population based on projections calculated using the 2000 and 2010 censuses, as well as population counts from 2007 and 2017.\npop_density: Population density (number of people per km2).\ntmax: Monthly average daily maximum temperature; gridded values (at a 0.5 deg resolution) averaged across each microregion.\ntmin: Monthly average daily minimum temperature; gridded values (at a 0.5 deg resolution) averaged across each microregion.\npdsi: Self-calibrated Palmer Drought Severity Index for each microregion. It measures how wet or dry a region is relative to usual conditions. Negative values represent periods of drought, positive values represent wetter periods. Calculated by taking the mean value within each microregion.\nurban: Percentage of population living in urban areas (2010 census).\nwater_network: Percentage of population with access to the piped water network according to the 2010 census.\nwater_shortage: Frequency of reported water shortages per microregion between 2000 and 2016.\ndate: First day of the month in date format (“%d-%m-%Y”)."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/dengue_MS.Rd.html#source",
+    "href": "docs/GHRexplore/GHRexplore-reference/dengue_MS.Rd.html#source",
+    "title": "Dengue cases in Mato Grosso do Sul",
+    "section": "",
+    "text": "https://github.com/drrachellowe/hydromet_dengue"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/aggregate_cov.Rd.html",
+    "href": "docs/GHRexplore/GHRexplore-reference/aggregate_cov.Rd.html",
+    "title": "Aggregate covariates",
+    "section": "",
+    "text": "Aggregates a data frame containing a covariate of interest in space and/or time.\naggregate_cov(\n  data = NULL,\n  var = NULL,\n  time = NULL,\n  area = NULL,\n  aggregate_space = NULL,\n  aggregate_time = NULL,\n  aggregate_space_fun = \"mean\",\n  aggregate_time_fun = \"mean\"\n)\n\n\n\n\ndata: Data frame containing equally spaced (daily, weekly, monthly) incident cases for one or multiple areas.\nvar: Name of the variable that identifies the covariate.\ntime: Name of the variable that identifies the temporal dimension. The values must be in date format (“yyyy-mm-dd”) representing the date of observation for daily data, the first day of the week for weekly, or the first day of the month for monthly observations.\narea: Name of variable that identifies the different locations (i.e., areal units) for which a time series is available.\naggregate_space: Name of variable used to define spatial aggregation groups.\naggregate_time: Temporal scale used to perform temporal aggregation. Options are: “week” (ISO 8601), “month”, “year”.\naggregate_space_fun: Character indicating the function to be used in the aggregation over space, default is “mean”.\naggregate_time_fun: Character indicating the function to be used in the aggregation over time, default is “mean”.\n\n\n\n\nA data frame with the aggregated covariate."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/aggregate_cov.Rd.html#description",
+    "href": "docs/GHRexplore/GHRexplore-reference/aggregate_cov.Rd.html#description",
+    "title": "Aggregate covariates",
+    "section": "",
+    "text": "Aggregates a data frame containing a covariate of interest in space and/or time.\naggregate_cov(\n  data = NULL,\n  var = NULL,\n  time = NULL,\n  area = NULL,\n  aggregate_space = NULL,\n  aggregate_time = NULL,\n  aggregate_space_fun = \"mean\",\n  aggregate_time_fun = \"mean\"\n)"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/aggregate_cov.Rd.html#arguments",
+    "href": "docs/GHRexplore/GHRexplore-reference/aggregate_cov.Rd.html#arguments",
+    "title": "Aggregate covariates",
+    "section": "",
+    "text": "data: Data frame containing equally spaced (daily, weekly, monthly) incident cases for one or multiple areas.\nvar: Name of the variable that identifies the covariate.\ntime: Name of the variable that identifies the temporal dimension. The values must be in date format (“yyyy-mm-dd”) representing the date of observation for daily data, the first day of the week for weekly, or the first day of the month for monthly observations.\narea: Name of variable that identifies the different locations (i.e., areal units) for which a time series is available.\naggregate_space: Name of variable used to define spatial aggregation groups.\naggregate_time: Temporal scale used to perform temporal aggregation. Options are: “week” (ISO 8601), “month”, “year”.\naggregate_space_fun: Character indicating the function to be used in the aggregation over space, default is “mean”.\naggregate_time_fun: Character indicating the function to be used in the aggregation over time, default is “mean”."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/aggregate_cov.Rd.html#returns",
+    "href": "docs/GHRexplore/GHRexplore-reference/aggregate_cov.Rd.html#returns",
+    "title": "Aggregate covariates",
+    "section": "",
+    "text": "A data frame with the aggregated covariate."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_timeseries.Rd.html",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_timeseries.Rd.html",
+    "title": "Time series plot",
+    "section": "",
+    "text": "Plots time series of covariates, case counts, or incidence rates.\nplot_timeseries(\n  data,\n  var,\n  time,\n  type = \"cov\",\n  pop = NULL,\n  pt = 1e+05,\n  area = NULL,\n  aggregate_space = NULL,\n  aggregate_time = NULL,\n  aggregate_space_fun = \"mean\",\n  aggregate_time_fun = \"mean\",\n  facet = FALSE,\n  highlight = NULL,\n  transform = \"identity\",\n  title = NULL,\n  var_label = NULL,\n  legend = NULL,\n  ylab = NULL,\n  xlab = NULL,\n  free_y_scale = FALSE,\n  palette = NULL\n)\n\n\n\n\ndata: Data frame containing equally spaced (daily, weekly, monthly) covariate or disease case observations for one or multiple locations.\nvar: Name of the column identifying the variable to be plotted.\ntime: Name of the variable that identifies the temporal dimension of the data frame. Its values must be in date format (“yyyy-mm-dd”) representing the day of observation for daily data, the first day of the week for weekly, or the first day of the month for monthly observations.\ntype: Character that specifies the type of variable in var. Possible values include ‘cov’ (covariate, default), ‘counts’ (case counts), and ‘inc’ (case incidence). If type='inc', pop is required.\npop: Character identifying the variable name for population. Only needed if type='inc'.\npt: Numerical only used for type='inc'. It represents the scale of the person-time (default 100,000) for incidence rates.\narea: Name of variable that identifies the different locations (e.g., areal units) for which a time series is available.\naggregate_space: Name of variable used to define spatial aggregation groups.\naggregate_time: Temporal scale used to perform temporal aggregation. Options are: “week” (ISO 8601), “month”, “year”.\naggregate_space_fun: Character indicating the function to be used in the aggregation over space for type=\"cov\". Options are “mean” (default), “median”, “sum”. For case counts and incidence, “sum” is always applied.\naggregate_time_fun: Character indicating the function to be used in the aggregation over time for type=\"cov\". Options are “mean” (default), “median”, “sum”. For case counts and incidence, “sum” is always applied.\nfacet: If TRUE a separate time series for each space unit is plotted in different facets.\nhighlight: ID of the area to be highlighted. Using this option will only color the selected spatial unit and set all the rest to grey.\ntransform: Character, defaults to “identity” (i.e., no transformation). Transforms the y-axis for better visualization. Useful options include “log10p1” log10(x+1) useful for case counts and incidence with 0s, or any of the in-built ggplot2 options such as “log10” log10(x), “log1p” log(x+1), and “sqrt” sqrt(x) (check all possible options using ?scale_y_continuous).\ntitle: Optional title of the plot.\nvar_label: Character with a custom name for the case or covariate variable.\nlegend: Character with a custom name for the legend.\nylab: Label for the y-axis.\nxlab: Label for the x-axis.\nfree_y_scale: Logical, default FALSE. Allows different scales in the y_axis when facets are used.\npalette: GHR, RColorBrewer or colorspace palette (e.g. “Purp”). Single R colors in colors() or hex codes can be used for single time series or facets. Use “-” before the palette name (e.g., “-Reds”) to reverse it. Defaults to a dark green when area is NULL, when facet is TRUE or when highlight is used (i.e. single time series), otherwise defaults to the “IDE2” palette.\n\n\n\n\nA ggplot2 time series plot.\n\n\n\n# Load data\ndata(\"dengue_MS\")\n\n# Plotting a covariate, all areas in a single graph\nplot_timeseries(dengue_MS,\n                var = \"tmin\",\n                time = \"date\",          \n                type = \"cov\",\n                area = \"micro_code\",   \n                title = \"Minimun Temperature\") \n                \n# Plotting a covariate with space aggregation and different facets\nplot_timeseries(dengue_MS,\n                var = \"tmin\",\n                time = \"date\",\n                type = \"cov\",\n                area = \"micro_code\",\n                aggregate_space = \"meso_code\",\n                aggregate_space_fun = \"mean\",\n                facet = TRUE,           \n                var_label= \"Minimum Temperature\",\n                palette = \"violetred\")\n                \n# Plotting counts, highlight a single area \nplot_timeseries(dengue_MS,\n                var = \"dengue_cases\", \n                time = \"date\",         \n                type = \"counts\",\n                pop = \"population\",\n                area = \"micro_code\",  \n                title= \"Dengue cases\",\n                highlight = \"50001\")\n\n# Plot disease counts (log scale) with temporal and spatial aggregation             \nplot_timeseries(dengue_MS,\n                var = \"dengue_cases\", \n                time = \"date\",      \n                type = \"counts\",\n                area = \"micro_code\",   \n                aggregate_space = \"meso_code\",\n                aggregate_time = \"year\",\n                title = \"Yearly Cases\",\n                transform = \"log10\") \n               \n# Plot incidence for 1,000 people with a Brewer palette and log y axis\nplot_timeseries(dengue_MS,\n                var = \"dengue_cases\",\n                time = \"date\",          \n                type = \"inc\",\n                pop = \"population\",\n                area = \"micro_code\",  \n                pt = 1000,\n                transform = \"log10p1\")"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_timeseries.Rd.html#description",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_timeseries.Rd.html#description",
+    "title": "Time series plot",
+    "section": "",
+    "text": "Plots time series of covariates, case counts, or incidence rates.\nplot_timeseries(\n  data,\n  var,\n  time,\n  type = \"cov\",\n  pop = NULL,\n  pt = 1e+05,\n  area = NULL,\n  aggregate_space = NULL,\n  aggregate_time = NULL,\n  aggregate_space_fun = \"mean\",\n  aggregate_time_fun = \"mean\",\n  facet = FALSE,\n  highlight = NULL,\n  transform = \"identity\",\n  title = NULL,\n  var_label = NULL,\n  legend = NULL,\n  ylab = NULL,\n  xlab = NULL,\n  free_y_scale = FALSE,\n  palette = NULL\n)"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_timeseries.Rd.html#arguments",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_timeseries.Rd.html#arguments",
+    "title": "Time series plot",
+    "section": "",
+    "text": "data: Data frame containing equally spaced (daily, weekly, monthly) covariate or disease case observations for one or multiple locations.\nvar: Name of the column identifying the variable to be plotted.\ntime: Name of the variable that identifies the temporal dimension of the data frame. Its values must be in date format (“yyyy-mm-dd”) representing the day of observation for daily data, the first day of the week for weekly, or the first day of the month for monthly observations.\ntype: Character that specifies the type of variable in var. Possible values include ‘cov’ (covariate, default), ‘counts’ (case counts), and ‘inc’ (case incidence). If type='inc', pop is required.\npop: Character identifying the variable name for population. Only needed if type='inc'.\npt: Numerical only used for type='inc'. It represents the scale of the person-time (default 100,000) for incidence rates.\narea: Name of variable that identifies the different locations (e.g., areal units) for which a time series is available.\naggregate_space: Name of variable used to define spatial aggregation groups.\naggregate_time: Temporal scale used to perform temporal aggregation. Options are: “week” (ISO 8601), “month”, “year”.\naggregate_space_fun: Character indicating the function to be used in the aggregation over space for type=\"cov\". Options are “mean” (default), “median”, “sum”. For case counts and incidence, “sum” is always applied.\naggregate_time_fun: Character indicating the function to be used in the aggregation over time for type=\"cov\". Options are “mean” (default), “median”, “sum”. For case counts and incidence, “sum” is always applied.\nfacet: If TRUE a separate time series for each space unit is plotted in different facets.\nhighlight: ID of the area to be highlighted. Using this option will only color the selected spatial unit and set all the rest to grey.\ntransform: Character, defaults to “identity” (i.e., no transformation). Transforms the y-axis for better visualization. Useful options include “log10p1” log10(x+1) useful for case counts and incidence with 0s, or any of the in-built ggplot2 options such as “log10” log10(x), “log1p” log(x+1), and “sqrt” sqrt(x) (check all possible options using ?scale_y_continuous).\ntitle: Optional title of the plot.\nvar_label: Character with a custom name for the case or covariate variable.\nlegend: Character with a custom name for the legend.\nylab: Label for the y-axis.\nxlab: Label for the x-axis.\nfree_y_scale: Logical, default FALSE. Allows different scales in the y_axis when facets are used.\npalette: GHR, RColorBrewer or colorspace palette (e.g. “Purp”). Single R colors in colors() or hex codes can be used for single time series or facets. Use “-” before the palette name (e.g., “-Reds”) to reverse it. Defaults to a dark green when area is NULL, when facet is TRUE or when highlight is used (i.e. single time series), otherwise defaults to the “IDE2” palette."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_timeseries.Rd.html#returns",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_timeseries.Rd.html#returns",
+    "title": "Time series plot",
+    "section": "",
+    "text": "A ggplot2 time series plot."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_timeseries.Rd.html#examples",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_timeseries.Rd.html#examples",
+    "title": "Time series plot",
+    "section": "",
+    "text": "# Load data\ndata(\"dengue_MS\")\n\n# Plotting a covariate, all areas in a single graph\nplot_timeseries(dengue_MS,\n                var = \"tmin\",\n                time = \"date\",          \n                type = \"cov\",\n                area = \"micro_code\",   \n                title = \"Minimun Temperature\") \n                \n# Plotting a covariate with space aggregation and different facets\nplot_timeseries(dengue_MS,\n                var = \"tmin\",\n                time = \"date\",\n                type = \"cov\",\n                area = \"micro_code\",\n                aggregate_space = \"meso_code\",\n                aggregate_space_fun = \"mean\",\n                facet = TRUE,           \n                var_label= \"Minimum Temperature\",\n                palette = \"violetred\")\n                \n# Plotting counts, highlight a single area \nplot_timeseries(dengue_MS,\n                var = \"dengue_cases\", \n                time = \"date\",         \n                type = \"counts\",\n                pop = \"population\",\n                area = \"micro_code\",  \n                title= \"Dengue cases\",\n                highlight = \"50001\")\n\n# Plot disease counts (log scale) with temporal and spatial aggregation             \nplot_timeseries(dengue_MS,\n                var = \"dengue_cases\", \n                time = \"date\",      \n                type = \"counts\",\n                area = \"micro_code\",   \n                aggregate_space = \"meso_code\",\n                aggregate_time = \"year\",\n                title = \"Yearly Cases\",\n                transform = \"log10\") \n               \n# Plot incidence for 1,000 people with a Brewer palette and log y axis\nplot_timeseries(dengue_MS,\n                var = \"dengue_cases\",\n                time = \"date\",          \n                type = \"inc\",\n                pop = \"population\",\n                area = \"micro_code\",  \n                pt = 1000,\n                transform = \"log10p1\")"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_heatmap.Rd.html",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_heatmap.Rd.html",
+    "title": "Heatmap plot",
+    "section": "",
+    "text": "Plots temporal heatmaps of covariates, case counts, or incidence rates.\nplot_heatmap(\n  data,\n  var,\n  time,\n  type = \"cov\",\n  pop = NULL,\n  pt = 1e+05,\n  area = NULL,\n  aggregate_space = NULL,\n  aggregate_time = \"month\",\n  aggregate_space_fun = \"mean\",\n  aggregate_time_fun = \"mean\",\n  transform = \"identity\",\n  title = NULL,\n  var_label = NULL,\n  ylab = NULL,\n  xlab = NULL,\n  palette = NULL,\n  centering = NULL\n)\n\n\n\n\ndata: Data frame containing equally spaced (daily, weekly, monthly) covariate or disease case observations for one or multiple locations.\nvar: Name of the column identifying the variable to be plotted.\ntime: Name of the variable that identifies the temporal dimension of the data frame. Its values must be in date format (“yyyy-mm-dd”) representing the day of observation for daily data, the first day of the week for weekly, or the first day of the month for monthly observations.\ntype: Character that specifies the type of variable in var. Possible values include ‘cov’ (covariate, default), ‘counts’ (case counts), and ‘inc’ (case incidence). If type='inc', pop is required.\npop: Character identifying the variable name for population. Only needed if type='inc'.\npt: Numerical only used for type='inc'. It represents the scale of the person-time (default 100,000) for incidence rates.\narea: Name of variable that identifies the different locations (i.e., areal units) for which a time series is available.\naggregate_space: Name of variable used to define spatial aggregation groups.\naggregate_time: Temporal scale used to perform temporal aggregation. Options are: “week” (ISO 8601), “month”, “year”.\naggregate_space_fun: Character indicating the function to be used in the aggregation over space for type=\"cov\". Options are “mean” (default), “median”, “sum”. For case counts and incidence, “sum” is always applied.\naggregate_time_fun: Character indicating the function to be used in the aggregation over time for type=\"cov\". Options are “mean” (default), “median”, “sum”. For case counts and incidence, “sum” is always applied.\ntransform: Character, defaults to “identity” (i.e., no transformation). Transforms the color ramp for better visualization. Useful options include “log10p1” log10(x+1) useful for case counts and incidence with 0s, or any of the in-built ggplot2 options such as “log10” log10(x), “log1p” log(x+1), and “sqrt” sqrt(x) (check all possible options using ?scale_y_continuous).\ntitle: Optional title of the plot.\nvar_label: Character with a custom name for the case or covariate variable.\nylab: Label for the y-axis.\nxlab: Label for the x-axis.\npalette: GHR, RColorBrewer or colorspace palette. Use “-” before the palette name (e.g., “-Reds”) to reverse it.\ncentering: Numerical or “median”, defaults to NULL. If set, it centers the palette on that value.\n\n\n\n\nA ggplot2 heatmap plot.\n\n\n\n# Load data\ndata(\"dengue_MS\")\n\n# Covariate heatmap with space aggregation\nplot_heatmap(dengue_MS,\n             var = \"tmin\",\n             time = \"date\",\n             var_label = \"Minimum\\ntemp.\",\n             type = \"cov\",\n             area = \"micro_code\",\n             aggregate_space = \"meso_code\",  \n             palette = \"Blue-Red\")\n\n# Case count heatmap with log scale\nplot_heatmap(dengue_MS,\n             var = \"dengue_cases\", \n             time = \"date\",  \n             type = \"counts\",\n             area = \"micro_code\",  \n             palette = \"Reds\", \n             title = \"Dengue counts\", \n             var_label = \"Dengue \\ncounts\",\n             transform = \"log10p1\")  \n             \n# Case incidence (for 1,000 persons) heatmap with space aggregation\nplot_heatmap(dengue_MS,\n             var = \"dengue_cases\", \n             time = \"date\",          \n             type = \"inc\",\n             pop = \"population\",\n             pt = 1000,\n             area = \"micro_code\", \n             aggregate_space = \"meso_code\", \n             palette = \"Purp\")"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_heatmap.Rd.html#description",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_heatmap.Rd.html#description",
+    "title": "Heatmap plot",
+    "section": "",
+    "text": "Plots temporal heatmaps of covariates, case counts, or incidence rates.\nplot_heatmap(\n  data,\n  var,\n  time,\n  type = \"cov\",\n  pop = NULL,\n  pt = 1e+05,\n  area = NULL,\n  aggregate_space = NULL,\n  aggregate_time = \"month\",\n  aggregate_space_fun = \"mean\",\n  aggregate_time_fun = \"mean\",\n  transform = \"identity\",\n  title = NULL,\n  var_label = NULL,\n  ylab = NULL,\n  xlab = NULL,\n  palette = NULL,\n  centering = NULL\n)"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_heatmap.Rd.html#arguments",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_heatmap.Rd.html#arguments",
+    "title": "Heatmap plot",
+    "section": "",
+    "text": "data: Data frame containing equally spaced (daily, weekly, monthly) covariate or disease case observations for one or multiple locations.\nvar: Name of the column identifying the variable to be plotted.\ntime: Name of the variable that identifies the temporal dimension of the data frame. Its values must be in date format (“yyyy-mm-dd”) representing the day of observation for daily data, the first day of the week for weekly, or the first day of the month for monthly observations.\ntype: Character that specifies the type of variable in var. Possible values include ‘cov’ (covariate, default), ‘counts’ (case counts), and ‘inc’ (case incidence). If type='inc', pop is required.\npop: Character identifying the variable name for population. Only needed if type='inc'.\npt: Numerical only used for type='inc'. It represents the scale of the person-time (default 100,000) for incidence rates.\narea: Name of variable that identifies the different locations (i.e., areal units) for which a time series is available.\naggregate_space: Name of variable used to define spatial aggregation groups.\naggregate_time: Temporal scale used to perform temporal aggregation. Options are: “week” (ISO 8601), “month”, “year”.\naggregate_space_fun: Character indicating the function to be used in the aggregation over space for type=\"cov\". Options are “mean” (default), “median”, “sum”. For case counts and incidence, “sum” is always applied.\naggregate_time_fun: Character indicating the function to be used in the aggregation over time for type=\"cov\". Options are “mean” (default), “median”, “sum”. For case counts and incidence, “sum” is always applied.\ntransform: Character, defaults to “identity” (i.e., no transformation). Transforms the color ramp for better visualization. Useful options include “log10p1” log10(x+1) useful for case counts and incidence with 0s, or any of the in-built ggplot2 options such as “log10” log10(x), “log1p” log(x+1), and “sqrt” sqrt(x) (check all possible options using ?scale_y_continuous).\ntitle: Optional title of the plot.\nvar_label: Character with a custom name for the case or covariate variable.\nylab: Label for the y-axis.\nxlab: Label for the x-axis.\npalette: GHR, RColorBrewer or colorspace palette. Use “-” before the palette name (e.g., “-Reds”) to reverse it.\ncentering: Numerical or “median”, defaults to NULL. If set, it centers the palette on that value."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_heatmap.Rd.html#returns",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_heatmap.Rd.html#returns",
+    "title": "Heatmap plot",
+    "section": "",
+    "text": "A ggplot2 heatmap plot."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_heatmap.Rd.html#examples",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_heatmap.Rd.html#examples",
+    "title": "Heatmap plot",
+    "section": "",
+    "text": "# Load data\ndata(\"dengue_MS\")\n\n# Covariate heatmap with space aggregation\nplot_heatmap(dengue_MS,\n             var = \"tmin\",\n             time = \"date\",\n             var_label = \"Minimum\\ntemp.\",\n             type = \"cov\",\n             area = \"micro_code\",\n             aggregate_space = \"meso_code\",  \n             palette = \"Blue-Red\")\n\n# Case count heatmap with log scale\nplot_heatmap(dengue_MS,\n             var = \"dengue_cases\", \n             time = \"date\",  \n             type = \"counts\",\n             area = \"micro_code\",  \n             palette = \"Reds\", \n             title = \"Dengue counts\", \n             var_label = \"Dengue \\ncounts\",\n             transform = \"log10p1\")  \n             \n# Case incidence (for 1,000 persons) heatmap with space aggregation\nplot_heatmap(dengue_MS,\n             var = \"dengue_cases\", \n             time = \"date\",          \n             type = \"inc\",\n             pop = \"population\",\n             pt = 1000,\n             area = \"micro_code\", \n             aggregate_space = \"meso_code\", \n             palette = \"Purp\")"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-vignette.html#overview",
+    "href": "docs/GHRexplore/GHRexplore-vignette.html#overview",
     "title": "GHRexplore tutorial",
-    "section": "",
-    "text": "GHRexplore is an R package for exploratory analysis of temporal and spatiotemporal health data including case counts, incidence rates, and covariates. It provides commonly used visualizations and supports data transformations such as temporal and spatial aggregations. The package also offers extensive customization options for the resulting figures. The output of all functions is a ggplot2 object that can be further modified if needed.\n# Load GHRexplore\nlibrary(GHRexplore)\n\n# Other necessary libraries for the vignette\nlibrary(dplyr)\nlibrary(sf)"
+    "section": "Overview",
+    "text": "Overview\n\n\nGHRexplore is an R package for exploratory analysis of temporal and spatiotemporal health data including case counts, incidence rates, and covariates. It provides commonly used visualizations and supports data transformations such as temporal and spatial aggregations. The package also offers extensive customization options for the resulting figures. The output of all functions is a ggplot2 object that can be further modified if needed.\n\n\n\n\n\n\n# Load GHRexplore\nlibrary(GHRexplore)\n\n# Other necessary libraries for the vignette\nlibrary(dplyr)\nlibrary(sf)"
   },
   {
     "objectID": "docs/GHRexplore/GHRexplore-vignette.html#data-requirements",
@@ -196,10 +413,367 @@
     "text": "Compare\nplot_compare allows the visualization of several variables in the same figure using the same GHRexplore plotting function. Possible functions include plot_timeseries, plot_heatmap, plot_seasonality and plot_map.\nIn plot_compare, the var, var_lab, type and palette can be vectors of the same length that refer to each of the elements to be plotted, while some other elements, like pop, pt, time, area and aggregation functions are shared. The final display of the multiple plots is automatically done via the cowplot package, and several options to arrange the figures are available (see ?plot_combine) including all arguments of cowplot::plot_grid.\nIn this first example, we plot the time series of PDSI and dengue incidence as a single column and combine the legends (ncol=1, combine_legend=TRUE):\nplot_compare(plot_function = plot_timeseries,\n             data = dengue_MS, \n             var = c(\"pdsi\", \"dengue_cases\"),\n             type = c(\"cov\", \"inc\"), \n             var_lab = c(\"PDSI\", \"Dengue Incidence\"),\n             pop = \"population\",\n             time = \"date\", \n             area = \"micro_code\", \n             aggregate_space = \"meso_code\",\n             ncol=1, \n             combine_legend=TRUE)\n\nIn this second example, we plot heatmaps of PDSI and dengue incidence using different palettes:\nplot_compare(plot_function = plot_heatmap,\n             data = dengue_MS, \n             var = c(\"pdsi\", \"dengue_cases\"),\n             type = c(\"cov\", \"inc\"), \n             var_lab = c(\"PDSI\", \"Incidence\"),\n             palette = c(\"Purp\", \"Reds\"), \n             pop = \"population\",\n             time = \"date\", \n             area = \"micro_code\", \n             aggregate_space = \"meso_code\",\n             ncol=1)"
   },
   {
-    "objectID": "docs/GHRexplore/GHRexplore-vignette.html#overview",
-    "href": "docs/GHRexplore/GHRexplore-vignette.html#overview",
-    "title": "GHRexplore tutorial",
+    "objectID": "docs/GHRpredict/GHRpredict-vignette1.html",
+    "href": "docs/GHRpredict/GHRpredict-vignette1.html",
+    "title": "GHRpredict tutorial",
     "section": "",
-    "text": "GHRexplore is an R package for exploratory analysis of temporal and spatiotemporal health data including case counts, incidence rates, and covariates. It provides commonly used visualizations and supports data transformations such as temporal and spatial aggregations. The package also offers extensive customization options for the resulting figures. The output of all functions is a ggplot2 object that can be further modified if needed.\n# Load GHRexplore\nlibrary(GHRexplore)\n\n# Other necessary libraries for the vignette\nlibrary(dplyr)\nlibrary(sf)"
+    "text": "Under construction."
+  },
+  {
+    "objectID": "docs/GHRpredict/GHRpredict.html",
+    "href": "docs/GHRpredict/GHRpredict.html",
+    "title": "GHRpredict",
+    "section": "",
+    "text": "Under construction."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-index.html#plotting-functions",
+    "href": "docs/GHRexplore/GHRexplore-index.html#plotting-functions",
+    "title": "GHRexplore reference",
+    "section": "Plotting functions",
+    "text": "Plotting functions\n\nplot_bivariate(): Plots a bivariate graph to visually assess associations.\nplot_combine(): Combines plots, each representing one variable, into a single plot.\nplot_compare(): Combines multiple plots of several variables in a single graph.\nplot_correlation(): Plots a correlation matrix of a series of variables.\nplot_heatmap(): Plots temporal heatmaps of covariates, case counts, or incidence rates.\nplot_map(): Plots a choropleth map of covariates, case counts, or incidence rates.\nplot_multiple(): Produces a list of multiple plots of the same type, each representing one variable.\nplot_seasonality(): Plots yearly time series of covariates, case counts, or incidence rates to explore seasonality patterns.\nplot_timeseries(): Plots time series of covariates, case counts, or incidence rates."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-index.html#helper-functions",
+    "href": "docs/GHRexplore/GHRexplore-index.html#helper-functions",
+    "title": "GHRexplore reference",
+    "section": "Helper functions",
+    "text": "Helper functions\n\nGHR_palette(): Generates color palettes including custom, ColorBrewer and colorspace palettes.\nGHRexplore-package(): A collection of commonly used visualizations of temporal and spatio-temporal health data including case counts, incidence rates, and covariates.\naggregate_cases(): Aggregates a data frame containing disease cases in space and/or time.\naggregate_cov(): Aggregates a data frame containing a covariate of interest in space and/or time.\ndengue_MS(): Data frame containing the monthly number of notified dengue cases by municipality in the Mato Grosso do Sul state of Brazil, as well as set of spatial and spatio-temporal covariates (e.\ndengue_SP(): Data frame containing the weekly number of notified dengue cases in the municipality of Sao Paulo , as well as a set of climatic covariates.\nmap_MS(): Administrative boundaries (polygon geometries) of the 11 municipalities in Mato Grosso do Sul (Brazil) to be used with the dengue_MS data set.\nplot_seasonality(): Plots yearly time series of covariates, case counts, or incidence rates to explore seasonality patterns.\nplot_timeseries(): Plots time series of covariates, case counts, or incidence rates."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_multiple.Rd.html",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_multiple.Rd.html",
+    "title": "Multiple plot",
+    "section": "",
+    "text": "Produces a list of multiple plots of the same type, each representing one variable.\nplot_multiple(plot_function, ...)\n\n\n\n\nplot_function: Indicates which of the plot types to use. Options are: ‘plot_timeseries’, ‘plot_heatmap’, ‘plot_seasonality’, and ‘plot_map’.\n...: Additional arguments to pass to the plotting function.\n\n\n\n\nVariable names, types, labels and palette can be customized for each plot, the rest of parameters will be the same for all variables (options depend on the chosen plot type).\n\n\n\nA list of the different generated plots.\n\n\n\nplot_compare, plot_combine\n\n\n\n# Load data\nlibrary(\"sf\")\ndata(\"dengue_MS\")\ndata(\"map_MS\")\n\nplots &lt;- plot_multiple(\n  plot_function = plot_timeseries,\n  data = dengue_MS,\n  var = c(\"dengue_cases\", \"dengue_cases\", \"tmax\"),\n  type = c(\"counts\", \"inc\", \"cov\"),\n  pop = \"population\",\n  var_label = c(\"Dengue Cases\", \"Dengue inc\", \"Max Temp\"),\n  palette = c(\"blue\", \"red\", \"darkgreen\"),\n  time = \"date\",\n  area = \"micro_code\",\n  facet = TRUE)\n\n# Acess individual plots\nprint(plots[[1]])  \n\n# Multiple heatmap plots\nplots &lt;- plot_multiple(\n  plot_function = plot_heatmap,\n  data = dengue_MS,\n  var = c(\"dengue_cases\", \"dengue_cases\", \"tmax\"),\n  type = c(\"counts\", \"inc\", \"cov\"),\n  pop = \"population\",\n  var_label = c(\"Dengue Cases\", \"Dengue inc\", \"Max Temp\"),\n  palette = c(\"Blues\", \"Reds\", \"BrBG\"),\n  time = \"date\",\n  area = \"micro_code\")\n\n# Multiple seasonality plots\nplots &lt;- plot_multiple(\n  plot_function = plot_seasonality,\n  data = dengue_MS,\n  var = c(\"dengue_cases\", \"dengue_cases\", \"tmax\"),\n  type = c(\"counts\", \"inc\", \"cov\"),\n  pop = \"population\",\n  var_label = c(\"Dengue Cases\", \"Dengue inc\", \"Max Temp\"),\n  palette =  c(\"Blues\", \"Reds\", \"BrBG\"),\n  time = \"date\",\n  area = \"micro_code\")\n\n# Multiple map plots\nplots &lt;- plot_multiple(\n  plot_function = plot_map, \n  data = dengue_MS,\n  var = c(\"dengue_cases\", \"dengue_cases\", \"tmax\"),\n  type = c(\"counts\", \"inc\", \"cov\"),\n  pop = \"population\",\n  var_label = c(\"Dengue Cases\", \"Dengue inc\", \"Max Temp\"),\n  palette = c(\"Reds\", \"Blues\", \"Viridis\"),\n  map = map_MS,         \n  map_area = \"code\",    \n  time = \"date\",\n  area = \"micro_code\")"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_multiple.Rd.html#description",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_multiple.Rd.html#description",
+    "title": "Multiple plot",
+    "section": "",
+    "text": "Produces a list of multiple plots of the same type, each representing one variable.\nplot_multiple(plot_function, ...)"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_multiple.Rd.html#arguments",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_multiple.Rd.html#arguments",
+    "title": "Multiple plot",
+    "section": "",
+    "text": "plot_function: Indicates which of the plot types to use. Options are: ‘plot_timeseries’, ‘plot_heatmap’, ‘plot_seasonality’, and ‘plot_map’.\n...: Additional arguments to pass to the plotting function."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_multiple.Rd.html#details",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_multiple.Rd.html#details",
+    "title": "Multiple plot",
+    "section": "",
+    "text": "Variable names, types, labels and palette can be customized for each plot, the rest of parameters will be the same for all variables (options depend on the chosen plot type)."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_multiple.Rd.html#returns",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_multiple.Rd.html#returns",
+    "title": "Multiple plot",
+    "section": "",
+    "text": "A list of the different generated plots."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_multiple.Rd.html#see-also",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_multiple.Rd.html#see-also",
+    "title": "Multiple plot",
+    "section": "",
+    "text": "plot_compare, plot_combine"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_multiple.Rd.html#examples",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_multiple.Rd.html#examples",
+    "title": "Multiple plot",
+    "section": "",
+    "text": "# Load data\nlibrary(\"sf\")\ndata(\"dengue_MS\")\ndata(\"map_MS\")\n\nplots &lt;- plot_multiple(\n  plot_function = plot_timeseries,\n  data = dengue_MS,\n  var = c(\"dengue_cases\", \"dengue_cases\", \"tmax\"),\n  type = c(\"counts\", \"inc\", \"cov\"),\n  pop = \"population\",\n  var_label = c(\"Dengue Cases\", \"Dengue inc\", \"Max Temp\"),\n  palette = c(\"blue\", \"red\", \"darkgreen\"),\n  time = \"date\",\n  area = \"micro_code\",\n  facet = TRUE)\n\n# Acess individual plots\nprint(plots[[1]])  \n\n# Multiple heatmap plots\nplots &lt;- plot_multiple(\n  plot_function = plot_heatmap,\n  data = dengue_MS,\n  var = c(\"dengue_cases\", \"dengue_cases\", \"tmax\"),\n  type = c(\"counts\", \"inc\", \"cov\"),\n  pop = \"population\",\n  var_label = c(\"Dengue Cases\", \"Dengue inc\", \"Max Temp\"),\n  palette = c(\"Blues\", \"Reds\", \"BrBG\"),\n  time = \"date\",\n  area = \"micro_code\")\n\n# Multiple seasonality plots\nplots &lt;- plot_multiple(\n  plot_function = plot_seasonality,\n  data = dengue_MS,\n  var = c(\"dengue_cases\", \"dengue_cases\", \"tmax\"),\n  type = c(\"counts\", \"inc\", \"cov\"),\n  pop = \"population\",\n  var_label = c(\"Dengue Cases\", \"Dengue inc\", \"Max Temp\"),\n  palette =  c(\"Blues\", \"Reds\", \"BrBG\"),\n  time = \"date\",\n  area = \"micro_code\")\n\n# Multiple map plots\nplots &lt;- plot_multiple(\n  plot_function = plot_map, \n  data = dengue_MS,\n  var = c(\"dengue_cases\", \"dengue_cases\", \"tmax\"),\n  type = c(\"counts\", \"inc\", \"cov\"),\n  pop = \"population\",\n  var_label = c(\"Dengue Cases\", \"Dengue inc\", \"Max Temp\"),\n  palette = c(\"Reds\", \"Blues\", \"Viridis\"),\n  map = map_MS,         \n  map_area = \"code\",    \n  time = \"date\",\n  area = \"micro_code\")"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/dengue_SP.Rd.html",
+    "href": "docs/GHRexplore/GHRexplore-reference/dengue_SP.Rd.html",
+    "title": "Dengue cases in Sao Paulo",
+    "section": "",
+    "text": "Data frame containing the weekly number of notified dengue cases in the municipality of Sao Paulo, as well as a set of climatic covariates.\ndengue_SP\n\n\n\nA data frame with 678 rows and 8 columns:\n\ndate: First day of the week in date format.\ngeocode: Unique ID code for Sao Paulo microregion.\ncases: Number of notified dengue cases.\nyear: Year (2010 - 2022).\ntemp_med: Weekly average daily mean temperature.\nprecip_tot: Weekly cumulative precipitation.\nenso: El Niño-Southern Oscillation index.\npop: Number of inhabitants.\n\n\n\n\nhttps://info.dengue.mat.br/services/api"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/dengue_SP.Rd.html#description",
+    "href": "docs/GHRexplore/GHRexplore-reference/dengue_SP.Rd.html#description",
+    "title": "Dengue cases in Sao Paulo",
+    "section": "",
+    "text": "Data frame containing the weekly number of notified dengue cases in the municipality of Sao Paulo, as well as a set of climatic covariates.\ndengue_SP"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/dengue_SP.Rd.html#format",
+    "href": "docs/GHRexplore/GHRexplore-reference/dengue_SP.Rd.html#format",
+    "title": "Dengue cases in Sao Paulo",
+    "section": "",
+    "text": "A data frame with 678 rows and 8 columns:\n\ndate: First day of the week in date format.\ngeocode: Unique ID code for Sao Paulo microregion.\ncases: Number of notified dengue cases.\nyear: Year (2010 - 2022).\ntemp_med: Weekly average daily mean temperature.\nprecip_tot: Weekly cumulative precipitation.\nenso: El Niño-Southern Oscillation index.\npop: Number of inhabitants."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/dengue_SP.Rd.html#source",
+    "href": "docs/GHRexplore/GHRexplore-reference/dengue_SP.Rd.html#source",
+    "title": "Dengue cases in Sao Paulo",
+    "section": "",
+    "text": "https://info.dengue.mat.br/services/api"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/GHRexplore-package.Rd.html",
+    "href": "docs/GHRexplore/GHRexplore-reference/GHRexplore-package.Rd.html",
+    "title": "GHRexplore: Exploratory Analysis of Temporal and Spatio-Temporal Health Data",
+    "section": "",
+    "text": "A collection of commonly used visualizations of temporal and spatio-temporal health data including case counts, incidence rates, and covariates. The available plot types include time series, heatmaps, seasonality plots, maps and more. The package supports standard data transformations such as temporal and spatial aggregations, while offering extensive customization options for the resulting figures.\n\n\n\nMaintainer : Carles Milà carles.milagarcia@bsc.es (ORCID)\nAuthors:\n\nGiovenale Moirano (ORCID)\nAnna B. Kawiecki (ORCID)\nRachel Lowe (ORCID) [copyright holder]\n\n\n\n\nUseful links:\n\nhttps://earth.bsc.es/gitlab/ghr/ghrexplore\nReport bugs at https://earth.bsc.es/gitlab/ghr/ghrexplore/-/issues"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/GHRexplore-package.Rd.html#description",
+    "href": "docs/GHRexplore/GHRexplore-reference/GHRexplore-package.Rd.html#description",
+    "title": "GHRexplore: Exploratory Analysis of Temporal and Spatio-Temporal Health Data",
+    "section": "",
+    "text": "A collection of commonly used visualizations of temporal and spatio-temporal health data including case counts, incidence rates, and covariates. The available plot types include time series, heatmaps, seasonality plots, maps and more. The package supports standard data transformations such as temporal and spatial aggregations, while offering extensive customization options for the resulting figures."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/GHRexplore-package.Rd.html#authors",
+    "href": "docs/GHRexplore/GHRexplore-reference/GHRexplore-package.Rd.html#authors",
+    "title": "GHRexplore: Exploratory Analysis of Temporal and Spatio-Temporal Health Data",
+    "section": "",
+    "text": "Maintainer : Carles Milà carles.milagarcia@bsc.es (ORCID)\nAuthors:\n\nGiovenale Moirano (ORCID)\nAnna B. Kawiecki (ORCID)\nRachel Lowe (ORCID) [copyright holder]"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/GHRexplore-package.Rd.html#see-also",
+    "href": "docs/GHRexplore/GHRexplore-reference/GHRexplore-package.Rd.html#see-also",
+    "title": "GHRexplore: Exploratory Analysis of Temporal and Spatio-Temporal Health Data",
+    "section": "",
+    "text": "Useful links:\n\nhttps://earth.bsc.es/gitlab/ghr/ghrexplore\nReport bugs at https://earth.bsc.es/gitlab/ghr/ghrexplore/-/issues"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/map_MS.Rd.html",
+    "href": "docs/GHRexplore/GHRexplore-reference/map_MS.Rd.html",
+    "title": "Municipality boundaries of Mato Grosso do Sul",
+    "section": "",
+    "text": "Administrative boundaries (polygon geometries) of the 11 municipalities in Mato Grosso do Sul (Brazil) to be used with the dengue_MS data set.\nmap_MS\n\n\n\nA simple feature (sf) object including 11 rows and 2 columns:\n\ncode: Unique ID number to each micro region (11 units).\ngeometry: Geometries of the sf multipolygon."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/map_MS.Rd.html#description",
+    "href": "docs/GHRexplore/GHRexplore-reference/map_MS.Rd.html#description",
+    "title": "Municipality boundaries of Mato Grosso do Sul",
+    "section": "",
+    "text": "Administrative boundaries (polygon geometries) of the 11 municipalities in Mato Grosso do Sul (Brazil) to be used with the dengue_MS data set.\nmap_MS"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/map_MS.Rd.html#format",
+    "href": "docs/GHRexplore/GHRexplore-reference/map_MS.Rd.html#format",
+    "title": "Municipality boundaries of Mato Grosso do Sul",
+    "section": "",
+    "text": "A simple feature (sf) object including 11 rows and 2 columns:\n\ncode: Unique ID number to each micro region (11 units).\ngeometry: Geometries of the sf multipolygon."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_correlation.Rd.html",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_correlation.Rd.html",
+    "title": "Correlation plot",
+    "section": "",
+    "text": "Plots a correlation matrix of a series of variables.\nplot_correlation(\n  data,\n  var,\n  var_label = NULL,\n  method = \"pearson\",\n  plot_type = c(\"circle\", \"number\"),\n  scale = 1,\n  title = NULL,\n  palette = \"IDE1\",\n  print = FALSE\n)\n\n\n\n\ndata: Data frame containing equally spaced (daily, weekly, monthly) covariate or disease case observations for one or multiple locations.\nvar: Character vector containing variables in data to include in the correlation matrix.\nvar_label: Optional character vector of the same length as var containing custom names for the variables.\nmethod: Correlation computation method. Options include “pearson” (default), “spearman” or “kendall”.\nplot_type: Character vector of length 2 indicating the type of plot to use in the lower triangular and diagonal (1st element) and the upper triangular (2nd element). Options include “circle”, “number” and “raster”.\nscale: Circle and number size multiplier, e.g. 1.1 increases the size a 10% while 0.9 decreases it a 10%.\ntitle: Optional title of the plot.\npalette: GHR, RColorBrewer or colorspace palette. Use “-” before the palette name (e.g., “-Reds”) to reverse it.\nprint: Logical. If TRUE, print the correlation matrix.\n\n\n\n\nA plot of the correlation matrix.\n\n\n\n# Load data\ndata(\"dengue_MS\")\n\n# Pearson correlation plot\nplot_correlation(dengue_MS, \n                 method = \"pearson\",\n                 var = c(\"dengue_cases\",\"pop_density\", \n                         \"tmax\", \"tmin\", \"pdsi\", \"urban\",\n                         \"water_network\", \"water_shortage\"),  \n                 var_label = c(\"dengue cases\",\"pop. density\", \n                               \"max temp\", \"min temp\", \"drought index\", \"urbanization\",\n                               \"water network\", \"water shortage\"),\n                 title = \"Correlation matrix\") \n\n# Print spearman correlation plot of type 'raster' and 'number' \n# with another palette \nplot_correlation(dengue_MS,\n                 method = \"spearman\",\n                 var = c(\"dengue_cases\",\"pop_density\", \n                         \"tmax\", \"tmin\", \"pdsi\", \"urban\",\n                         \"water_network\", \"water_shortage\"),  \n                 var_label = c(\"dengue cases\",\"pop. density\", \n                               \"max temp\", \"min temp\", \"drought index\", \"urbanization\",\n                               \"water network\", \"water shortage\"),\n                 plot_type = c(\"raster\", \"number\"),\n                 palette = \"-Blue-Red 3\")"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_correlation.Rd.html#description",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_correlation.Rd.html#description",
+    "title": "Correlation plot",
+    "section": "",
+    "text": "Plots a correlation matrix of a series of variables.\nplot_correlation(\n  data,\n  var,\n  var_label = NULL,\n  method = \"pearson\",\n  plot_type = c(\"circle\", \"number\"),\n  scale = 1,\n  title = NULL,\n  palette = \"IDE1\",\n  print = FALSE\n)"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_correlation.Rd.html#arguments",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_correlation.Rd.html#arguments",
+    "title": "Correlation plot",
+    "section": "",
+    "text": "data: Data frame containing equally spaced (daily, weekly, monthly) covariate or disease case observations for one or multiple locations.\nvar: Character vector containing variables in data to include in the correlation matrix.\nvar_label: Optional character vector of the same length as var containing custom names for the variables.\nmethod: Correlation computation method. Options include “pearson” (default), “spearman” or “kendall”.\nplot_type: Character vector of length 2 indicating the type of plot to use in the lower triangular and diagonal (1st element) and the upper triangular (2nd element). Options include “circle”, “number” and “raster”.\nscale: Circle and number size multiplier, e.g. 1.1 increases the size a 10% while 0.9 decreases it a 10%.\ntitle: Optional title of the plot.\npalette: GHR, RColorBrewer or colorspace palette. Use “-” before the palette name (e.g., “-Reds”) to reverse it.\nprint: Logical. If TRUE, print the correlation matrix."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_correlation.Rd.html#returns",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_correlation.Rd.html#returns",
+    "title": "Correlation plot",
+    "section": "",
+    "text": "A plot of the correlation matrix."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_correlation.Rd.html#examples",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_correlation.Rd.html#examples",
+    "title": "Correlation plot",
+    "section": "",
+    "text": "# Load data\ndata(\"dengue_MS\")\n\n# Pearson correlation plot\nplot_correlation(dengue_MS, \n                 method = \"pearson\",\n                 var = c(\"dengue_cases\",\"pop_density\", \n                         \"tmax\", \"tmin\", \"pdsi\", \"urban\",\n                         \"water_network\", \"water_shortage\"),  \n                 var_label = c(\"dengue cases\",\"pop. density\", \n                               \"max temp\", \"min temp\", \"drought index\", \"urbanization\",\n                               \"water network\", \"water shortage\"),\n                 title = \"Correlation matrix\") \n\n# Print spearman correlation plot of type 'raster' and 'number' \n# with another palette \nplot_correlation(dengue_MS,\n                 method = \"spearman\",\n                 var = c(\"dengue_cases\",\"pop_density\", \n                         \"tmax\", \"tmin\", \"pdsi\", \"urban\",\n                         \"water_network\", \"water_shortage\"),  \n                 var_label = c(\"dengue cases\",\"pop. density\", \n                               \"max temp\", \"min temp\", \"drought index\", \"urbanization\",\n                               \"water network\", \"water shortage\"),\n                 plot_type = c(\"raster\", \"number\"),\n                 palette = \"-Blue-Red 3\")"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/aggregate_cases.Rd.html",
+    "href": "docs/GHRexplore/GHRexplore-reference/aggregate_cases.Rd.html",
+    "title": "Aggregate cases",
+    "section": "",
+    "text": "Aggregates a data frame containing disease cases in space and/or time.\naggregate_cases(\n  data = NULL,\n  cases = NULL,\n  pop = NULL,\n  time = NULL,\n  area = NULL,\n  pt = 1e+05,\n  aggregate_space = NULL,\n  aggregate_time = NULL\n)\n\n\n\n\ndata: Data frame containing equally spaced (daily, weekly, monthly) incident cases for one or multiple areas.\ncases: Name of the variable that identifies the cases.\npop: Name of the variable that identifies the population.\ntime: Name of the variable that identifies the temporal dimension. The values must be in date format (“yyyy-mm-dd”) representing the day of observation for daily data, the first day of the week for weekly, or the first day of the month for monthly observations.\narea: Name of variable that identifies the different locations (e.g., areal units) for which a time series is available.\npt: Scale of the person-time (default 100,000) for incidence rates.\naggregate_space: Name of variable used to define spatial aggregation groups.\naggregate_time: Temporal scale used to perform temporal aggregation. Options are: “week” (ISO 8601), “month”, “year”.\n\n\n\n\nA data frame with the aggregated cases."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/aggregate_cases.Rd.html#description",
+    "href": "docs/GHRexplore/GHRexplore-reference/aggregate_cases.Rd.html#description",
+    "title": "Aggregate cases",
+    "section": "",
+    "text": "Aggregates a data frame containing disease cases in space and/or time.\naggregate_cases(\n  data = NULL,\n  cases = NULL,\n  pop = NULL,\n  time = NULL,\n  area = NULL,\n  pt = 1e+05,\n  aggregate_space = NULL,\n  aggregate_time = NULL\n)"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/aggregate_cases.Rd.html#arguments",
+    "href": "docs/GHRexplore/GHRexplore-reference/aggregate_cases.Rd.html#arguments",
+    "title": "Aggregate cases",
+    "section": "",
+    "text": "data: Data frame containing equally spaced (daily, weekly, monthly) incident cases for one or multiple areas.\ncases: Name of the variable that identifies the cases.\npop: Name of the variable that identifies the population.\ntime: Name of the variable that identifies the temporal dimension. The values must be in date format (“yyyy-mm-dd”) representing the day of observation for daily data, the first day of the week for weekly, or the first day of the month for monthly observations.\narea: Name of variable that identifies the different locations (e.g., areal units) for which a time series is available.\npt: Scale of the person-time (default 100,000) for incidence rates.\naggregate_space: Name of variable used to define spatial aggregation groups.\naggregate_time: Temporal scale used to perform temporal aggregation. Options are: “week” (ISO 8601), “month”, “year”."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/aggregate_cases.Rd.html#returns",
+    "href": "docs/GHRexplore/GHRexplore-reference/aggregate_cases.Rd.html#returns",
+    "title": "Aggregate cases",
+    "section": "",
+    "text": "A data frame with the aggregated cases."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_seasonality.Rd.html",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_seasonality.Rd.html",
+    "title": "Seasonality plot",
+    "section": "",
+    "text": "Plots yearly time series of covariates, case counts, or incidence rates to explore seasonality patterns.\nplot_seasonality(\n  data,\n  var,\n  time,\n  type = \"cov\",\n  pop = NULL,\n  pt = 1e+05,\n  area = NULL,\n  aggregate_space = NULL,\n  aggregate_time = \"month\",\n  aggregate_space_fun = \"mean\",\n  aggregate_time_fun = \"mean\",\n  transform = \"identity\",\n  title = NULL,\n  var_label = NULL,\n  ylab = NULL,\n  xlab = NULL,\n  free_y_scale = FALSE,\n  palette = \"IDE1\"\n)\n\n\n\n\ndata: Data frame containing equally spaced (daily, weekly, monthly) covariate or disease case observations for one or multiple locations.\nvar: Name of the column identifying the variable to be plotted.\ntime: Name of the variable that identifies the temporal dimension of the data frame. Its values must be in date format (“yyyy-mm-dd”) representing the day of observation for daily data, the first day of the week for weekly, or the first day of the month for monthly observations.\ntype: Character that specifies the type of variable in var. Possible values include ‘cov’ (covariate, default), ‘counts’ (case counts), and ‘inc’ (case incidence). If type='inc', pop is required.\npop: Character identifying the variable name for population. Only needed if type='inc'.\npt: Scale of the person-time (default 100,000) for incidence rates.\narea: Name of variable that identifies the different locations (e.g., areal units) for which a time series is available.\naggregate_space: Name of variable used to define spatial aggregation groups.\naggregate_time: Temporal scale used to perform temporal aggregation. Options are: “week” (ISO 8601), “month”, “year”.\naggregate_space_fun: Character indicating the function to be used in the aggregation over space for type=\"cov\". Options are “mean” (default), “median”, “sum”. For case counts and incidence, “sum” is always applied.\naggregate_time_fun: Character indicating the function to be used in the aggregation over time for type=\"cov\". Options are “mean” (default), “median”, “sum”. For case counts and incidence, “sum” is always applied.\ntransform: Character, defaults to “identity” (i.e., no transformation). Transforms the y-axis for better visualization. Useful options include “log10p1” log10(x+1) for case counts and incidence with 0s, or any of the in-built ggplot2 options such as “log10” log10(x), “log1p” log(x+1), and “sqrt” sqrt(x) (check all possible options using ?scale_y_continuous).\ntitle: Optional title of the plot.\nvar_label: Character with a custom name for the case or covariate variable.\nylab: Label for the y-axis.\nxlab: Label for the x-axis.\nfree_y_scale: If TRUE, the y-axis scale is free in each facet.\npalette: GHR, RColorBrewer or colorspace palette. Use “-” before the palette name (e.g., “-Reds”) to reverse it.\n\n\n\n\nA ggplot2 seasonality plot.\n\n\n\n# Load data\ndata(\"dengue_MS\")\n\n# Seasonality plot of a covariate with space aggregation\nplot_seasonality(dengue_MS,\n                 var = \"tmax\",\n                 time = \"date\",\n                 var_label = \"Max temp.\",\n                 type = \"cov\",\n                 area = \"micro_code\",\n                 aggregate_space = \"region_code\") \n\n# Plot case counts (log scale) with space aggregation\n plot_seasonality(dengue_MS,\n                  var = \"dengue_cases\",\n                  time = \"date\",  \n                  type = \"counts\",\n                  area = \"micro_code\",\n                  aggregate_space = \"meso_code\",\n                  transform = \"log10p1\",\n                  var_label = \"Monthly Dengue Cases\", \n                  xlab = \"Month\", \n                  ylab = \"Number of cases\",\n                  free_y_scale = TRUE)\n                  \n# Seasonality plot of incidence\nplot_seasonality(dengue_MS,\n                 var = \"dengue_cases\",\n                 time = \"date\",    \n                 type = \"inc\",\n                 pop = \"population\",\n                 area = \"micro_code\",\n                 pt = 1000, \n                 title = \"Monthly Dengue Incidence\",\n                 palette = \"Reds\")"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_seasonality.Rd.html#description",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_seasonality.Rd.html#description",
+    "title": "Seasonality plot",
+    "section": "",
+    "text": "Plots yearly time series of covariates, case counts, or incidence rates to explore seasonality patterns.\nplot_seasonality(\n  data,\n  var,\n  time,\n  type = \"cov\",\n  pop = NULL,\n  pt = 1e+05,\n  area = NULL,\n  aggregate_space = NULL,\n  aggregate_time = \"month\",\n  aggregate_space_fun = \"mean\",\n  aggregate_time_fun = \"mean\",\n  transform = \"identity\",\n  title = NULL,\n  var_label = NULL,\n  ylab = NULL,\n  xlab = NULL,\n  free_y_scale = FALSE,\n  palette = \"IDE1\"\n)"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_seasonality.Rd.html#arguments",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_seasonality.Rd.html#arguments",
+    "title": "Seasonality plot",
+    "section": "",
+    "text": "data: Data frame containing equally spaced (daily, weekly, monthly) covariate or disease case observations for one or multiple locations.\nvar: Name of the column identifying the variable to be plotted.\ntime: Name of the variable that identifies the temporal dimension of the data frame. Its values must be in date format (“yyyy-mm-dd”) representing the day of observation for daily data, the first day of the week for weekly, or the first day of the month for monthly observations.\ntype: Character that specifies the type of variable in var. Possible values include ‘cov’ (covariate, default), ‘counts’ (case counts), and ‘inc’ (case incidence). If type='inc', pop is required.\npop: Character identifying the variable name for population. Only needed if type='inc'.\npt: Scale of the person-time (default 100,000) for incidence rates.\narea: Name of variable that identifies the different locations (e.g., areal units) for which a time series is available.\naggregate_space: Name of variable used to define spatial aggregation groups.\naggregate_time: Temporal scale used to perform temporal aggregation. Options are: “week” (ISO 8601), “month”, “year”.\naggregate_space_fun: Character indicating the function to be used in the aggregation over space for type=\"cov\". Options are “mean” (default), “median”, “sum”. For case counts and incidence, “sum” is always applied.\naggregate_time_fun: Character indicating the function to be used in the aggregation over time for type=\"cov\". Options are “mean” (default), “median”, “sum”. For case counts and incidence, “sum” is always applied.\ntransform: Character, defaults to “identity” (i.e., no transformation). Transforms the y-axis for better visualization. Useful options include “log10p1” log10(x+1) for case counts and incidence with 0s, or any of the in-built ggplot2 options such as “log10” log10(x), “log1p” log(x+1), and “sqrt” sqrt(x) (check all possible options using ?scale_y_continuous).\ntitle: Optional title of the plot.\nvar_label: Character with a custom name for the case or covariate variable.\nylab: Label for the y-axis.\nxlab: Label for the x-axis.\nfree_y_scale: If TRUE, the y-axis scale is free in each facet.\npalette: GHR, RColorBrewer or colorspace palette. Use “-” before the palette name (e.g., “-Reds”) to reverse it."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_seasonality.Rd.html#returns",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_seasonality.Rd.html#returns",
+    "title": "Seasonality plot",
+    "section": "",
+    "text": "A ggplot2 seasonality plot."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/plot_seasonality.Rd.html#examples",
+    "href": "docs/GHRexplore/GHRexplore-reference/plot_seasonality.Rd.html#examples",
+    "title": "Seasonality plot",
+    "section": "",
+    "text": "# Load data\ndata(\"dengue_MS\")\n\n# Seasonality plot of a covariate with space aggregation\nplot_seasonality(dengue_MS,\n                 var = \"tmax\",\n                 time = \"date\",\n                 var_label = \"Max temp.\",\n                 type = \"cov\",\n                 area = \"micro_code\",\n                 aggregate_space = \"region_code\") \n\n# Plot case counts (log scale) with space aggregation\n plot_seasonality(dengue_MS,\n                  var = \"dengue_cases\",\n                  time = \"date\",  \n                  type = \"counts\",\n                  area = \"micro_code\",\n                  aggregate_space = \"meso_code\",\n                  transform = \"log10p1\",\n                  var_label = \"Monthly Dengue Cases\", \n                  xlab = \"Month\", \n                  ylab = \"Number of cases\",\n                  free_y_scale = TRUE)\n                  \n# Seasonality plot of incidence\nplot_seasonality(dengue_MS,\n                 var = \"dengue_cases\",\n                 time = \"date\",    \n                 type = \"inc\",\n                 pop = \"population\",\n                 area = \"micro_code\",\n                 pt = 1000, \n                 title = \"Monthly Dengue Incidence\",\n                 palette = \"Reds\")"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/GHR_palette.Rd.html",
+    "href": "docs/GHRexplore/GHRexplore-reference/GHR_palette.Rd.html",
+    "title": "Generate GHR color palettes",
+    "section": "",
+    "text": "Generates color palettes including custom, ColorBrewer and colorspace palettes.\nCreates a visualization of all custom GHR palettes.\nGHR_palette(palette, ncols = 30)\n\nGHR_palettes()\n\n\n\n\npalette: Name of the GHR, RcolorBrewer or colorspace palette. Use “-” before the palette name (e.g., “-Reds”) to reverse it. A vector of custom colors is also possible.\nncols: Number of colors to sample.\n\n\n\n\nSee all available options by running GHR_palettes(), RColorBrewer::display.brewer.all() and colorspace::hcl_palettes(plot=TRUE).\n\n\n\nGHR_palette() returns the function that generates the color palette and the attribute ‘na_color’.\nGHR_palettes() returns a plot with the custom GHR palettes.\n\n\n\nGHR_palette(\"IDE1\", 5)(5)\n\nGHR_palettes()"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/GHR_palette.Rd.html#description",
+    "href": "docs/GHRexplore/GHRexplore-reference/GHR_palette.Rd.html#description",
+    "title": "Generate GHR color palettes",
+    "section": "",
+    "text": "Generates color palettes including custom, ColorBrewer and colorspace palettes.\nCreates a visualization of all custom GHR palettes.\nGHR_palette(palette, ncols = 30)\n\nGHR_palettes()"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/GHR_palette.Rd.html#arguments",
+    "href": "docs/GHRexplore/GHRexplore-reference/GHR_palette.Rd.html#arguments",
+    "title": "Generate GHR color palettes",
+    "section": "",
+    "text": "palette: Name of the GHR, RcolorBrewer or colorspace palette. Use “-” before the palette name (e.g., “-Reds”) to reverse it. A vector of custom colors is also possible.\nncols: Number of colors to sample."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/GHR_palette.Rd.html#details",
+    "href": "docs/GHRexplore/GHRexplore-reference/GHR_palette.Rd.html#details",
+    "title": "Generate GHR color palettes",
+    "section": "",
+    "text": "See all available options by running GHR_palettes(), RColorBrewer::display.brewer.all() and colorspace::hcl_palettes(plot=TRUE)."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/GHR_palette.Rd.html#returns",
+    "href": "docs/GHRexplore/GHRexplore-reference/GHR_palette.Rd.html#returns",
+    "title": "Generate GHR color palettes",
+    "section": "",
+    "text": "GHR_palette() returns the function that generates the color palette and the attribute ‘na_color’.\nGHR_palettes() returns a plot with the custom GHR palettes."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-reference/GHR_palette.Rd.html#examples",
+    "href": "docs/GHRexplore/GHRexplore-reference/GHR_palette.Rd.html#examples",
+    "title": "Generate GHR color palettes",
+    "section": "",
+    "text": "GHR_palette(\"IDE1\", 5)(5)\n\nGHR_palettes()"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore.html#description",
+    "href": "docs/GHRexplore/GHRexplore.html#description",
+    "title": "GHRexplore",
+    "section": "Description",
+    "text": "Description\n\n\nGHRexplore is an R package for exploratory analysis of temporal and spatio-temporal health data including case counts, incidence rates, and covariates. It provides commonly used visualizations and supports standard data transformations such as temporal and spatial aggregations. The package also offers extensive customization options for the resulting figures. Currently available plotting functions include:\n\n\n\n\n\n\n\nplot_timeseries: Plots time series of covariates, case counts or incidence rates.\nplot_heatmap: Plots a time series of covariates, case counts or incidence rates as heatmaps.\nplot_seasonality: Plots yearly time series to detect seasonal patterns of covariates, case counts or incidence rates.\nplot_correlation: Plots a correlation matrix of a series of variables.\nplot_map: Plots a choropleth map of covariates, case counts or incidence rates.\nplot_bivariate: Plots a bivariate plot of two numerical and/or categorical variables.\nplot_multiple, plot_combine and plot_compare: Used to generate graphs of several variables at the same time.\n\nGHRexplore is one of the packages developed by the Global Health Resilience (GHR) team at the Barcelona Supercomputing Center (BSC) within the IDExtremes project. The development version of the package can be found on gitlab."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore.html#installation",
+    "href": "docs/GHRexplore/GHRexplore.html#installation",
+    "title": "GHRexplore",
+    "section": "Installation",
+    "text": "Installation\n# Install from CRAN\ninstall.packages(\"GHRexplore\")\n\n# Get the development version from Gitlab\ndevtools::install_git('https://earth.bsc.es/gitlab/ghr/ghrexplore.git')"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore.html#usage",
+    "href": "docs/GHRexplore/GHRexplore.html#usage",
+    "title": "GHRexplore",
+    "section": "Usage",
+    "text": "Usage\nlibrary(\"GHRexplore\")\n\n# Use data included in the package to plot a heatmap with spatial aggregation\ndata(\"dengue_MS\")\nplot_heatmap(data = dengue_MS,\n             var = \"dengue_cases\",\n             type = \"inc\",\n             pop = \"population\",\n             time = \"date\",          \n             area = \"micro_code\",   \n             aggregate_space = \"meso_code\",\n             transform = \"log10p1\",\n             title = \"Dengue incidence in Brazil\")"
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore.html#developers",
+    "href": "docs/GHRexplore/GHRexplore.html#developers",
+    "title": "GHRexplore",
+    "section": "Developers",
+    "text": "Developers\nGiovenale Moirano, PhD \nBarcelona Supercomputing Center\nGlobal Health Resilience\nCarles Milà, PhD \nBarcelona Supercomputing Center\nGlobal Health Resilience\nAnna B. Kawiecki, PhD \nBarcelona Supercomputing Center\nGlobal Health Resilience\nRachel Lowe, PhD \nBarcelona Supercomputing Center\nGlobal Health Resilience (Group leader)"
+  },
+  {
+    "objectID": "docs/clim4health/clim4health.html",
+    "href": "docs/clim4health/clim4health.html",
+    "title": "clim4health",
+    "section": "",
+    "text": "Under construction."
+  },
+  {
+    "objectID": "docs/GHRmodel/GHRmodel-vignette1.html",
+    "href": "docs/GHRmodel/GHRmodel-vignette1.html",
+    "title": "GHRmodel tutorial",
+    "section": "",
+    "text": "Under construction."
+  },
+  {
+    "objectID": "docs/data4health/data4health-vignette1.html",
+    "href": "docs/data4health/data4health-vignette1.html",
+    "title": "data4health tutorial",
+    "section": "",
+    "text": "Under construction."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-index.html",
+    "href": "docs/GHRexplore/GHRexplore-index.html",
+    "title": "GHRexplore reference",
+    "section": "",
+    "text": "Function reference for the GHRexplore package:\n\nGHR_palette(): Generates color palettes including custom, ColorBrewer and colorspace palettes.\nGHRexplore-package(): A collection of commonly used visualizations of temporal and spatio-temporal health data including case counts, incidence rates, and covariates.\naggregate_cases(): Aggregates a data frame containing disease cases in space and/or time.\naggregate_cov(): Aggregates a data frame containing a covariate of interest in space and/or time.\ndengue_MS(): Data frame containing the monthly number of notified dengue cases by municipality in the Mato Grosso do Sul state of Brazil, as well as set of spatial and spatio-temporal covariates (e.\ndengue_SP(): Data frame containing the weekly number of notified dengue cases in the municipality of Sao Paulo , as well as a set of climatic covariates.\nmap_MS(): Administrative boundaries (polygon geometries) of the 11 municipalities in Mato Grosso do Sul (Brazil) to be used with the dengue_MS data set.\nplot_bivariate(): Plots a bivariate graph to visually assess associations.\nplot_combine(): Combines plots, each representing one variable, into a single plot.\nplot_compare(): Combines multiple plots of several variables in a single graph.\nplot_correlation(): Plots a correlation matrix of a series of variables.\nplot_heatmap(): Plots temporal heatmaps of covariates, case counts, or incidence rates.\nplot_map(): Plots a choropleth map of covariates, case counts, or incidence rates.\nplot_multiple(): Produces a list of multiple plots of the same type, each representing one variable.\nplot_seasonality(): Plots yearly time series of covariates, case counts, or incidence rates to explore seasonality patterns.\nplot_timeseries(): Plots time series of covariates, case counts, or incidence rates."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-index.html#utils",
+    "href": "docs/GHRexplore/GHRexplore-index.html#utils",
+    "title": "GHRexplore reference",
+    "section": "Utils",
+    "text": "Utils\n\nGHR_palette(): Generates color palettes including custom, ColorBrewer and colorspace palettes.\nGHRexplore-package(): A collection of commonly used visualizations of temporal and spatio-temporal health data including case counts, incidence rates, and covariates.\naggregate_cases(): Aggregates a data frame containing disease cases in space and/or time.\naggregate_cov(): Aggregates a data frame containing a covariate of interest in space and/or time."
+  },
+  {
+    "objectID": "docs/GHRexplore/GHRexplore-index.html#datasets",
+    "href": "docs/GHRexplore/GHRexplore-index.html#datasets",
+    "title": "GHRexplore reference",
+    "section": "Datasets",
+    "text": "Datasets\n\ndengue_MS(): Data frame containing the monthly number of notified dengue cases by municipality in the Mato Grosso do Sul state of Brazil, as well as set of spatial and spatio-temporal covariates (e.\ndengue_SP(): Data frame containing the weekly number of notified dengue cases in the municipality of Sao Paulo , as well as a set of climatic covariates.\nmap_MS(): Administrative boundaries (polygon geometries) of the 11 municipalities in Mato Grosso do Sul (Brazil) to be used with the dengue_MS data set."
   }
 ]

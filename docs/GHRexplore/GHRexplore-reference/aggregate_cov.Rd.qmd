@@ -1,0 +1,38 @@
+---
+format: html
+toc: true
+---
+
+# Aggregate covariates
+
+## Description
+
+Aggregates a data frame containing a covariate of interest in space and/or time.
+
+```r
+aggregate_cov(
+  data = NULL,
+  var = NULL,
+  time = NULL,
+  area = NULL,
+  aggregate_space = NULL,
+  aggregate_time = NULL,
+  aggregate_space_fun = "mean",
+  aggregate_time_fun = "mean"
+)
+```
+
+## Arguments
+
+- `data`: Data frame containing equally spaced (daily, weekly, monthly) incident cases for one or multiple areas.
+- `var`: Name of the variable that identifies the covariate.
+- `time`: Name of the variable that identifies the temporal dimension. The values must be in date format ("yyyy-mm-dd") representing the date of observation for daily data, the first day of the week for weekly, or the first day of the month for monthly observations.
+- `area`: Name of variable that identifies the different locations (i.e., areal units) for which a time series is available.
+- `aggregate_space`: Name of variable used to define spatial aggregation groups.
+- `aggregate_time`: Temporal scale used to perform temporal aggregation. Options are: "week" (ISO 8601), "month", "year".
+- `aggregate_space_fun`: Character indicating the function to be used in the aggregation over space, default is "mean".
+- `aggregate_time_fun`: Character indicating the function to be used in the aggregation over time, default is "mean".
+
+## Returns
+
+A data frame with the aggregated covariate.

@@ -1,0 +1,79 @@
+---
+format: html
+toc: true
+---
+
+# Bivariate plot
+
+## Description
+
+Plots a bivariate graph to visually assess associations. It will be a scatterplot if both variables are numeric and grouped boxplots if one of them is categorical.
+
+```r
+plot_bivariate(
+  data,
+  var,
+  area = NULL,
+  facet = FALSE,
+  free_x_scale = FALSE,
+  free_y_scale = FALSE,
+  title = NULL,
+  var_label = NULL,
+  legend = NULL,
+  palette = NULL
+)
+```
+
+## Arguments
+
+- `data`: Data frame containing equally spaced (daily, weekly, monthly) covariate or disease case observations for one or multiple locations.
+- `var`: Character vector of covariate names with length 2 (x, y). One of them can be a factor.
+- `area`: Character, the name of the variable that identifies the different areal units or any other grouping of interest. If specified, results are grouped by this variable. Defaults to NULL (no grouping).
+- `facet`: If TRUE, plot each grouping in a different facet.
+- `free_x_scale`: If TRUE and facet=TRUE, the x-axis scale is free in each facet.
+- `free_y_scale`: If TRUE and facet=TRUE, the y-axis scale is free in each facet.
+- `title`: Optional title of the plot.
+- `var_label`: A 2 character vector with a custom name for the variables.
+- `legend`: A character vector with a custom name for the legend.
+- `palette`: GHR, RColorBrewer or colorspace palette (e.g. "Purp"). Single R colors in `colors()` or hex codes can be used when there is no grouping or facets are used. Use "-" before the palette name (e.g., "-Reds") to reverse it. Defaults to a dark green when `area` is NULL or when `facet` is TRUE, otherwise defaults to the "IDE2" palette.
+
+## Returns
+
+A ggplot2 scatterplot or boxplot graph.
+
+## Examples
+
+```r
+# Load data
+data("dengue_MS")
+
+# Scatter (two numeric variables) - No grouping
+plot_bivariate(dengue_MS, 
+               var = c("pop_density", "tmin"), 
+               palette = "#d04a2d")
+
+# Scatter (two numeric variables) - Grouping in the same graph
+plot_bivariate(dengue_MS, 
+               var = c("pop_density", "tmin"),
+               var_label = c("Pop. density", "Min temp."),
+               area = "micro_code")
+
+# Scatter  (two numeric variables) - Grouping in facets
+plot_bivariate(dengue_MS,
+               var = c("pop_density", "tmin"),
+               var_label = c("Pop. density", "Min temp."),
+               area = "micro_code", facet = TRUE, 
+               free_x_scale = TRUE)
+
+# Boxplots (one numeric, one categorical) - No grouping
+plot_bivariate(dengue_MS, 
+               var = c("pop_density", "biome_name"), 
+               var_label = c("Pop. density", "Min temp."),
+               palette = "royalblue")
+
+# Boxplots (one numeric, one categorical) - Grouping
+plot_bivariate(dengue_MS, 
+               var = c("biome_name", "tmin"), 
+               area = "meso_code",
+               palette = "Accent")
+```

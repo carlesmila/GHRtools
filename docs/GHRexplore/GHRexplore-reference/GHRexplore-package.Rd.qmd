@@ -1,0 +1,27 @@
+---
+format: html
+toc: true
+---
+
+# GHRexplore: Exploratory Analysis of Temporal and Spatio-Temporal Health Data
+
+## Description
+
+A collection of commonly used visualizations of temporal and spatio-temporal health data including case counts, incidence rates, and covariates. The available plot types include time series, heatmaps, seasonality plots, maps and more. The package supports standard data transformations such as temporal and spatial aggregations, while offering extensive customization options for the resulting figures.
+
+## Author(s)
+
+Maintainer : Carles Milà carles.milagarcia@bsc.es ([ORCID](https://orcid.org/0000-0003-0470-0760))
+
+Authors:
+
+ * Giovenale Moirano ([ORCID](https://orcid.org/0000-0001-8748-3321))
+ * Anna B. Kawiecki ([ORCID](https://orcid.org/0000-0002-0499-2612))
+ * Rachel Lowe ([ORCID](https://orcid.org/0000-0003-3939-7343)) [copyright holder]
+
+## See Also
+
+Useful links:
+
+ * [https://earth.bsc.es/gitlab/ghr/ghrexplore](https://earth.bsc.es/gitlab/ghr/ghrexplore)
+ * Report bugs at [https://earth.bsc.es/gitlab/ghr/ghrexplore/-/issues](https://earth.bsc.es/gitlab/ghr/ghrexplore/-/issues)

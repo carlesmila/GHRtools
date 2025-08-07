@@ -1,0 +1,93 @@
+---
+format: html
+toc: true
+---
+
+# Multiple plot
+
+## Description
+
+Produces a list of multiple plots of the same type, each representing one variable.
+
+```r
+plot_multiple(plot_function, ...)
+```
+
+## Arguments
+
+- `plot_function`: Indicates which of the plot types to use. Options are: 'plot_timeseries', 'plot_heatmap', 'plot_seasonality', and 'plot_map'.
+- `...`: Additional arguments to pass to the plotting function.
+
+## Details
+
+Variable names, types, labels and palette can be customized for each plot, the rest of parameters will be the same for all variables (options depend on the chosen plot type).
+
+## Returns
+
+A list of the different generated plots.
+
+## See Also
+
+`plot_compare`, `plot_combine`
+
+## Examples
+
+```r
+# Load data
+library("sf")
+data("dengue_MS")
+data("map_MS")
+
+plots <- plot_multiple(
+  plot_function = plot_timeseries,
+  data = dengue_MS,
+  var = c("dengue_cases", "dengue_cases", "tmax"),
+  type = c("counts", "inc", "cov"),
+  pop = "population",
+  var_label = c("Dengue Cases", "Dengue inc", "Max Temp"),
+  palette = c("blue", "red", "darkgreen"),
+  time = "date",
+  area = "micro_code",
+  facet = TRUE)
+
+# Acess individual plots
+print(plots[[1]])  
+
+# Multiple heatmap plots
+plots <- plot_multiple(
+  plot_function = plot_heatmap,
+  data = dengue_MS,
+  var = c("dengue_cases", "dengue_cases", "tmax"),
+  type = c("counts", "inc", "cov"),
+  pop = "population",
+  var_label = c("Dengue Cases", "Dengue inc", "Max Temp"),
+  palette = c("Blues", "Reds", "BrBG"),
+  time = "date",
+  area = "micro_code")
+
+# Multiple seasonality plots
+plots <- plot_multiple(
+  plot_function = plot_seasonality,
+  data = dengue_MS,
+  var = c("dengue_cases", "dengue_cases", "tmax"),
+  type = c("counts", "inc", "cov"),
+  pop = "population",
+  var_label = c("Dengue Cases", "Dengue inc", "Max Temp"),
+  palette =  c("Blues", "Reds", "BrBG"),
+  time = "date",
+  area = "micro_code")
+
+# Multiple map plots
+plots <- plot_multiple(
+  plot_function = plot_map, 
+  data = dengue_MS,
+  var = c("dengue_cases", "dengue_cases", "tmax"),
+  type = c("counts", "inc", "cov"),
+  pop = "population",
+  var_label = c("Dengue Cases", "Dengue inc", "Max Temp"),
+  palette = c("Reds", "Blues", "Viridis"),
+  map = map_MS,         
+  map_area = "code",    
+  time = "date",
+  area = "micro_code")
+```

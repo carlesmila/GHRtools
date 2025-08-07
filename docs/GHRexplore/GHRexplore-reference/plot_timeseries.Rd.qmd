@@ -1,0 +1,122 @@
+---
+format: html
+toc: true
+---
+
+# Time series plot
+
+## Description
+
+Plots time series of covariates, case counts, or incidence rates.
+
+```r
+plot_timeseries(
+  data,
+  var,
+  time,
+  type = "cov",
+  pop = NULL,
+  pt = 1e+05,
+  area = NULL,
+  aggregate_space = NULL,
+  aggregate_time = NULL,
+  aggregate_space_fun = "mean",
+  aggregate_time_fun = "mean",
+  facet = FALSE,
+  highlight = NULL,
+  transform = "identity",
+  title = NULL,
+  var_label = NULL,
+  legend = NULL,
+  ylab = NULL,
+  xlab = NULL,
+  free_y_scale = FALSE,
+  palette = NULL
+)
+```
+
+## Arguments
+
+- `data`: Data frame containing equally spaced (daily, weekly, monthly) covariate or disease case observations for one or multiple locations.
+- `var`: Name of the column identifying the variable to be plotted.
+- `time`: Name of the variable that identifies the temporal dimension of the data frame. Its values must be in date format ("yyyy-mm-dd") representing the day of observation for daily data, the first day of the week for weekly, or the first day of the month for monthly observations.
+- `type`: Character that specifies the type of variable in `var`. Possible values include 'cov' (covariate, default), 'counts' (case counts), and 'inc' (case incidence). If `type='inc'`, `pop` is required.
+- `pop`: Character identifying the variable name for population. Only needed if `type='inc'`.
+- `pt`: Numerical only used for `type='inc'`. It represents the scale of the person-time (default 100,000) for incidence rates.
+- `area`: Name of variable that identifies the different locations (e.g., areal units) for which a time series is available.
+- `aggregate_space`: Name of variable used to define spatial aggregation groups.
+- `aggregate_time`: Temporal scale used to perform temporal aggregation. Options are: "week" (ISO 8601), "month", "year".
+- `aggregate_space_fun`: Character indicating the function to be used in the aggregation over space for `type="cov"`. Options are "mean" (default), "median", "sum". For case counts and incidence, "sum" is always applied.
+- `aggregate_time_fun`: Character indicating the function to be used in the aggregation over time for `type="cov"`. Options are "mean" (default), "median", "sum". For case counts and incidence, "sum" is always applied.
+- `facet`: If TRUE a separate time series for each space unit is plotted in different facets.
+- `highlight`: ID of the `area` to be highlighted. Using this option will only color the selected spatial unit and set all the rest to grey.
+- `transform`: Character, defaults to "identity" (i.e., no transformation). Transforms the y-axis for better visualization. Useful options include "log10p1" `log10(x+1)` useful for case counts and incidence with 0s, or any of the in-built ggplot2 options such as "log10" `log10(x)`, "log1p" `log(x+1)`, and "sqrt" `sqrt(x)` (check all possible options using `?scale_y_continuous`).
+- `title`: Optional title of the plot.
+- `var_label`: Character with a custom name for the case or covariate variable.
+- `legend`: Character with a custom name for the legend.
+- `ylab`: Label for the y-axis.
+- `xlab`: Label for the x-axis.
+- `free_y_scale`: Logical, default FALSE. Allows different scales in the y_axis when facets are used.
+- `palette`: GHR, RColorBrewer or colorspace palette (e.g. "Purp"). Single R colors in `colors()` or hex codes can be used for single time series or facets. Use "-" before the palette name (e.g., "-Reds") to reverse it. Defaults to a dark green when `area` is NULL, when `facet` is TRUE or when `highlight` is used (i.e. single time series), otherwise defaults to the "IDE2" palette.
+
+## Returns
+
+A ggplot2 time series plot.
+
+## Examples
+
+```r
+# Load data
+data("dengue_MS")
+
+# Plotting a covariate, all areas in a single graph
+plot_timeseries(dengue_MS,
+                var = "tmin",
+                time = "date",          
+                type = "cov",
+                area = "micro_code",   
+                title = "Minimun Temperature") 
+                
+# Plotting a covariate with space aggregation and different facets
+plot_timeseries(dengue_MS,
+                var = "tmin",
+                time = "date",
+                type = "cov",
+                area = "micro_code",
+                aggregate_space = "meso_code",
+                aggregate_space_fun = "mean",
+                facet = TRUE,           
+                var_label= "Minimum Temperature",
+                palette = "violetred")
+                
+# Plotting counts, highlight a single area 
+plot_timeseries(dengue_MS,
+                var = "dengue_cases", 
+                time = "date",         
+                type = "counts",
+                pop = "population",
+                area = "micro_code",  
+                title= "Dengue cases",
+                highlight = "50001")
+
+# Plot disease counts (log scale) with temporal and spatial aggregation             
+plot_timeseries(dengue_MS,
+                var = "dengue_cases", 
+                time = "date",      
+                type = "counts",
+                area = "micro_code",   
+                aggregate_space = "meso_code",
+                aggregate_time = "year",
+                title = "Yearly Cases",
+                transform = "log10") 
+               
+# Plot incidence for 1,000 people with a Brewer palette and log y axis
+plot_timeseries(dengue_MS,
+                var = "dengue_cases",
+                time = "date",          
+                type = "inc",
+                pop = "population",
+                area = "micro_code",  
+                pt = 1000,
+                transform = "log10p1")
+```

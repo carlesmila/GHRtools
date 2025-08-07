@@ -6,7 +6,7 @@ format:
 ---
 
 ```{=html}
-<img src='../../figures/GHRexplore/logo_IDExtremes.jpg' align="right" width="18%" /> <span> <span> <img src='../../figures/GHRexplore/logo_BSC.png' align="right" width="16%" /> 
+<img src='/figures/GHRexplore/logo_IDExtremes.jpg' align="right" width="18%" /> <span> <span> <img src='/figures/GHRexplore/logo_BSC.png' align="right" width="16%" /> 
 ```
 
 <!-- badges: start -->
@@ -28,7 +28,7 @@ for the resulting figures. Currently available plotting functions include:
 :::
 ::: {.column width="20%"}
 ```{=html}
-<img src="../../figures/GHRexplore.svg" width="100%">
+<img src="/figures/GHRexplore.svg" width="100%">
 ```
 :::
 :::

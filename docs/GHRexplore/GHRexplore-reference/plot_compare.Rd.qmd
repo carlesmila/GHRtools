@@ -1,0 +1,103 @@
+---
+format: html
+toc: true
+---
+
+# Compare plots
+
+## Description
+
+Combines multiple plots of several variables in a single graph.
+
+```r
+plot_compare(plot_function, data, var, type, ...)
+```
+
+## Arguments
+
+- `plot_function`: Indicates which of the plot types to use. Options are: 'plot_timeseries', 'plot_heatmap', 'plot_seasonality', 'plot_map'.
+- `data`: Data frame containing equally spaced (daily, weekly, monthly) covariate or disease case observations for one or multiple locations.
+- `var`: Character vector with the name of the variables to be plotted.
+- `type`: Character vector with the same length of `var` that specifies the types of variable for each element in `var`. Possible values include 'cov' (covariate, default), 'counts' (case counts), and 'inc' (case incidence). If `type='inc'`, `pop` is required.
+- `...`: Additional arguments for `plot_multiple`, `plot_combine`, and the selected `plot_function`.
+
+## Details
+
+This function takes any input arguments from `plot_combine()` and `plot_multiple()` to customize the plots and their organization in a grid.
+
+## Returns
+
+A single (cow)plot containing plots of several variables.
+
+## See Also
+
+`plot_multiple`, `plot_combine`
+
+## Examples
+
+```r
+# Load data
+library("sf")
+data("dengue_MS")
+data("map_MS")
+
+plot_compare(
+  plot_function = plot_timeseries,
+  data = dengue_MS,
+  var = c("dengue_cases",  "pdsi"),
+  type = c("inc", "cov"),
+  pop = "population",
+  time = "date",
+  area = "micro_code",
+  var_label = c("Dengue inc", "PDSI"), 
+  combine_legend = TRUE, 
+  ncol_legend = 1,
+  ncol = 1, 
+  align = "h")
+
+# Comparing seasonality plots
+plot_compare(
+  plot_function = plot_seasonality,
+  data = dengue_MS,
+  var = c("dengue_cases", "dengue_cases", "pdsi"),
+  type = c("counts", "inc", "cov"),
+  pop = "population",
+  time = "date",
+  area = "micro_code",
+  aggregate_space = "region_code",
+  pt = 100,
+  var_label = c("Dengue Cases", "Dengue inc", "Min Temp"), 
+  ncol_legend = 1,
+  combine_legend = TRUE)
+
+# Comparing heatmaps plots
+plot_compare(
+  plot_function = plot_heatmap,
+  data = dengue_MS,
+  var = c("dengue_cases", "pdsi"),
+  type = c("inc", "cov"),   
+  pop = "population",
+  time = "date",
+  area = "micro_code",
+  var_label = c("Dengue Cases", "Min Temp"), 
+  palette = c("Reds", "Blues"),
+  ncol_legend = 1,
+  combine_xaxis = TRUE)
+
+# Comparing map plots
+plot_compare(
+  plot_function = plot_map,
+  data = dengue_MS,
+  var = c("dengue_cases", "tmax"),
+  type = c("inc", "cov"),  
+  pop = "population",
+  time = "date",
+  area = "micro_code",
+  var_label= c("Dengue Incidence", "Max Temperature"), 
+  palette = c("Reds", "Blues"),
+  map = map_MS,        
+  map_area = "code", 
+  by_year = FALSE,
+  ncol_legend = 1,
+  combine_xaxis =TRUE)
+```

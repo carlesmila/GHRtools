@@ -1,0 +1,118 @@
+---
+format: html
+toc: true
+---
+
+# Choropleth map
+
+## Description
+
+Plots a choropleth map of covariates, case counts, or incidence rates.
+
+```r
+plot_map(
+  data,
+  var,
+  time,
+  type = "cov",
+  pop = NULL,
+  pt = 1e+05,
+  area = NULL,
+  map = NULL,
+  map_area = NULL,
+  by_year = TRUE,
+  aggregate_time_fun = "mean",
+  transform = "identity",
+  title = NULL,
+  var_label = NULL,
+  palette = NULL,
+  centering = NULL,
+  bins = NULL,
+  bins_method = "quantile",
+  bins_label = NULL
+)
+```
+
+## Arguments
+
+- `data`: Data frame containing equally spaced (daily, weekly, monthly) covariate or case observations for one or multiple locations.
+- `var`: Name of the column identifying the variable to be plotted.
+- `time`: Name of the variable that identifies the temporal dimension of the data frame. Its values must be in date format ("yyyy-mm-dd") representing the day of observation for daily data, the first day of the week for weekly, or the first day of the month for monthly observations.
+- `type`: Character that specifies the type of variable in `var`. Possible values include 'cov' (covariate, default), 'counts' (case counts), and 'inc' (case incidence). If `type='inc'`, `pop` is required.
+- `pop`: Character identifying the variable name for population. Only needed if `type='inc'`.
+- `pt`: Scale of the person-time (default 100,000) for incidence rates.
+- `area`: Name of variable that identifies the different locations (e.g., areal units) for which a time series is available.
+- `map`: Name of the sf object corresponding to the spatial unit specified in 'area'.
+- `map_area`: Name of the variable that identifies the different locations (e.g., areal units) in the map object. If not specified, it assumes the same name as in `area`.
+- `by_year`: Logical, if TRUE a map for each year is produced.
+- `aggregate_time_fun`: Character indicating the function to be used in the aggregation over time for `type="cov"`. Options are "mean" (default), "median", "sum". For case counts and incidence, "sum" is always applied.
+- `transform`: Character, defaults to "identity" (i.e., no transformation). Transforms the color ramp for better visualization. Useful options include "log10p1" `log10(x+1)` for case counts and incidence with 0s, or any of the in-built ggplot2 options such as "log10" `log10(x)`, "log1p" `log(x+1)`, and "sqrt" `sqrt(x)` (check all possible options using `?scale_y_continuous`).
+- `title`: Optional title of the plot.
+- `var_label`: Character with a custom name for the case or covariate variable.
+- `palette`: GHR, RColorBrewer or colorspace palette. Use "-" before the palette name (e.g., "-Reds") to reverse it.
+- `centering`: Numerical or "median", defaults to NULL. If set, it centers the palette on that value.
+- `bins`: Number of bins for categorization of numerical variables. Defaults to NULL (no binning).
+- `bins_method`: Method to compute the bins, only used when `bins` is not NULL. Possible values are "quantile" (default) and "equal".
+- `bins_label`: Optional labels for the bins. They must have the same length as the number of bins. Defaults to NULL (default interval labels).
+
+## Returns
+
+A ggplot2 choropleth map.
+
+## Examples
+
+```r
+# Load data
+library("sf")
+data("dengue_MS")
+data("map_MS")
+
+# Temporal average of a covariate
+plot_map(data = dengue_MS, 
+         var = "tmin",  
+         time = "date",       
+         type = "cov",
+         area = "micro_code",  
+         map = map_MS,         
+         map_area = "code",   
+         aggregate_time_fun = "mean",         
+         palette ="Reds",
+         by_year = FALSE,
+         var_label= "Min Temp.")
+
+# Categorical covariate
+plot_map(data = dengue_MS, 
+         var = "biome_name",        
+         time = "date",      
+         area = "micro_code", 
+         map = map_MS,       
+         map_area = "code",  
+         palette ="Viridis",
+         by_year = FALSE,
+         var_label= "Biome")
+
+# Case counts by year (log)
+dengue_MS |>
+  plot_map(var = "dengue_cases",    
+           time = "date",    
+           type = "counts",
+           area = "micro_code", 
+           pop = "population",
+           map = map_MS,   
+           map_area = "code",
+           palette = "Reds",
+           transform = "log10p1")
+
+# Case incidence by year, binned
+plot_map(dengue_MS,
+         var = "dengue_cases", 
+         type = "inc",
+         time = "date",
+         area = "micro_code",
+         pop = "population",
+         pt = 1000,
+         map = map_MS, 
+         map_area = "code",
+         bins = 5,   
+         palette = "Viridis")
+```

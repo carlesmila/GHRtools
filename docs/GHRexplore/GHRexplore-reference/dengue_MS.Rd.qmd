@@ -1,0 +1,50 @@
+---
+format: html
+toc: true
+---
+
+# Dengue cases in **Mato Grosso do Sul**
+
+## Description
+
+Data frame containing the monthly number of notified dengue cases by municipality in the **Mato Grosso do Sul** state of Brazil, as well as set of spatial and spatio-temporal covariates (e.g., environmental, socio-economic and meteo-climatic factors). This dataset is a subset of the original containing observations over the entire Brazil.
+
+```r
+dengue_MS
+```
+
+## Format
+
+A data frame with 2,640 rows and 27 columns:
+
+- **micro_code**: Unique ID number for each micro region (11 units).
+- **micro_name**: Name of each micro region.
+- **micro_name_ibge**: Name of each micro region in IBGE format.
+- **meso_code**: Unique ID number for each meso region (4 units).
+- **meso_name**: Name of each meso region.
+- **state_code**: Unique ID number for each state (1 unit).
+- **state_name**: Name of each state.
+- **region_code**: Unique ID number given to each Brazilian Region. All observations come from the "Southeast Region".
+- **region_name**: Name of each Brazilian Region. All observations come from the "Southeast Region".
+- **biome_code**: Biome code.
+- **biome_name**: Biome name.
+- **ecozone_code**: Ecozone code.
+- **ecozone_name**: Ecozone name.
+- **main_climate**: Most prevalent climate regime in the microregion. Based on Koppen Geiger climate regimes.
+- **month**: Calendar month index, 1 = January, 12 = December.
+- **year**: Year 2000 - 2019.
+- **time**: Time index starting at 1 for January 2000.
+- **dengue_cases**: Number of notified dengue cases registered in the notifiable diseases system in Brazil (SINAN) in the microregion of reference, at the month of first symptoms.
+- **population**: Estimated population based on projections calculated using the 2000 and 2010 censuses, as well as population counts from 2007 and 2017.
+- **pop_density**: Population density (number of people per km2).
+- **tmax**: Monthly average daily maximum temperature; gridded values (at a 0.5 deg resolution) averaged across each microregion.
+- **tmin**: Monthly average daily minimum temperature; gridded values (at a 0.5 deg resolution) averaged across each microregion.
+- **pdsi**: Self-calibrated Palmer Drought Severity Index for each microregion. It measures how wet or dry a region is relative to usual conditions. Negative values represent periods of drought, positive values represent wetter periods. Calculated by taking the mean value within each microregion.
+- **urban**: Percentage of population living in urban areas (2010 census).
+- **water_network**: Percentage of population with access to the piped water network according to the 2010 census.
+- **water_shortage**: Frequency of reported water shortages per microregion between 2000 and 2016.
+- **date**: First day of the month in date format ("%d-%m-%Y").
+
+## Source
+
+[https://github.com/drrachellowe/hydromet_dengue](https://github.com/drrachellowe/hydromet_dengue)
