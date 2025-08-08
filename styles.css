@@ -1,25 +1,36 @@
 /* css styles */
 
-pre.sourceCode {
-  background-color: #f4f4f4 !important; /* light gray */
-  border-radius: 6px;
-  padding: 1em;
-}
-
-/* Inline code */
+/* Code blocks */
 code {
-  background-color: #eaeaea;
-  padding: 0.1em 0.4em;
+  background-color: #f4f4f4;
   border-radius: 4px;
 }
-
-/* Output blocks (optional) */
-div.output pre {
-  background-color: #fef9e7;
-  padding: 1em;
+pre {
+  background-color: #f4f4f4 !important;
   border-radius: 6px;
+  overflow-x: auto;
+}
+pre code {
+  background-color: transparent !important;
+  padding: 0;
+}
+pre.sourceCode {
+  background-color: #f4f4f4 !important;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+div.sourceCode {
+  background-color: #f4f4f4 !important;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+div.output pre {
+  background-color: #f4f4f4 !important;
+  border-radius: 6px;
+  overflow-x: auto;
 }
 
+/* Banner */
 .full-banner {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
@@ -33,9 +44,8 @@ div.output pre {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-
 .quarto-title-banner {
-  min-height: 200px; 
+  min-height: 250px; 
   padding-top: 3rem;
   padding-bottom: 3rem;
   display: flex;
@@ -43,9 +53,8 @@ div.output pre {
   justify-content: center;
   align-items: center;
 }
-
 .quarto-title-banner .title {
-  font-size: 2.5rem;     /* Default is ~2rem */
+  font-size: 2.5rem;     
   font-weight: 700;
   text-align: center;
   margin-bottom: 0.5rem;
@@ -61,9 +70,6 @@ div.output pre {
 }
 
 /* Navbar container */
-.navbar {
-  border-bottom: 1px solid #111; /* Adjust color/thickness as needed */
-}
 .navbar-container {
   max-width: 1140px; 
   margin-left: auto;

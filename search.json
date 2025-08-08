@@ -2,16 +2,16 @@
   {
     "objectID": "index.html#from-health-and-climate-data-to-disease-forecasts",
     "href": "index.html#from-health-and-climate-data-to-disease-forecasts",
-    "title": "Welcome to GHRtools",
+    "title": "GHRtools",
     "section": "From health and climate data to disease forecasts",
     "text": "From health and climate data to disease forecasts\nOur GHRsuite packages support climate and health workflows by streamlining health and climate data collection and harmonization, exploratory analysis, Bayesian modelling and forecasting."
   },
   {
-    "objectID": "index.html#discover-our-tools",
-    "href": "index.html#discover-our-tools",
-    "title": "Welcome to GHRtools",
-    "section": "Discover our tools",
-    "text": "Discover our tools\n \n\n\n\n\n\n\n\n\n\n\n\n    data4health  \n  \n    \n        \n   Access, preprocess and aggregate of health data at customized spatiotemporal resolutions.\n   Use a set of functions to streamline health data pipelines or enjoy a user-friendly graphical interface provided as a Shiny app within the package.\n    \n    \n  \n\n\n\n  \n\n\n\n\n    clim4health  \n  \n     \n    \n  Obtain, transform and export climate data including reanalyses, forecasts, hindcasts, and weather stations.\n  Apply common transformations including postprocessing, and downscaling, spatiotemporal aggregations and threshold-based suitability indicators.\n    \n  \n  \n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n    GHRexplore  \n  \n         \n    \n   Perform exploratory analysis of temporal and spatiotemporal health data including case counts, incidence rates, and covariates.\n   Produce high-quality time series, heatmaps, seasonality and bivariate plots and choropleth maps with many customization options.\n    \n  \n  \n\n\n\n  \n\n\n\n\n    GHRmodel  \n  \n         \n    \n   A modular and flexible approach to modeling health outcomes using INLA\n   It addresses common challenges when fitting INLA models, including covariate transformations, formula definitions with complex covariate effects, model fitting, and diagnostic plots and model statistics.\n\n    \n  \n  \n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n    GHRpredict  \n  \n         \n    \n   Generate predictions of models fitted with GHRmodel.\n   Obtain out-of-sample statistics and diagnostics for case predictions and outbreak detection using cross-validation"
+    "objectID": "index.html#our-tools",
+    "href": "index.html#our-tools",
+    "title": "GHRtools",
+    "section": "Our tools",
+    "text": "Our tools\n \n\n\n\n\n\n\n\n\n\n\n\n    data4health  \n  \n    \n        \n   Access, preprocess and aggregate health data at customized spatiotemporal resolutions.\n   Use a set of functions to streamline health data pipelines or leverage a user-friendly graphical interface provided as a Shiny app within the package.\n    \n    \n  \n\n\n\n  \n\n\n\n\n    clim4health  \n  \n     \n    \n  Obtain, transform and export climate data including reanalyses, forecasts, hindcasts, and weather stations.\n  Apply common transformations of climate data including postprocessing, downscaling, spatiotemporal aggregations, and construct threshold-based vector suitability indicators.\n    \n  \n  \n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n    GHRexplore  \n  \n         \n    \n   Perform exploratory analysis of temporal and spatiotemporal health data including case counts, incidence rates, and covariates.\n   Produce high-quality time series, heatmaps, seasonality, bivariate and correlation plots, as well as choropleth maps, with many customization options.\n    \n  \n  \n\n\n\n  \n\n\n\n\n    GHRmodel  \n  \n         \n    \n   A modular and flexible approach to modeling health outcomes using INLA. \n   It addresses common challenges when fitting INLA models, including covariate transformations, formula definitions with complex covariate effects, model fitting, diagnostic plots and model statistics.\n\n    \n  \n  \n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n    GHRpredict  \n  \n         \n    \n   Generate predictions of models fitted with GHRmodel.\n   Evaluate the quality of your predictions using out-of-sample statistics, graphical diagnostics and outbreak detection capabilities using cross-validation"
   },
   {
     "objectID": "docs/GHRpredict/GHRpredict-vignette1.html",
