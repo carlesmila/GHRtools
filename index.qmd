@@ -1,7 +1,6 @@
 ---
-title: "Welcome to GHRtools"
+title: "GHRtools"
 subtitle: "A suite of R packages for climate and health workflows created by the Global Health Resilience (GHR) group at the Barcelona Supercomputing Center."
-text: "  "
 title-block-banner: "#168c81"
 title-block-banner-color: white
 format:
@@ -28,7 +27,7 @@ Our GHRsuite packages support **climate and health workflows** by streamlining h
 <br> 
 ```
 
-## Discover our tools
+## Our tools
 
 ```{=html}
 <br> 
@@ -53,8 +52,8 @@ Our GHRsuite packages support **climate and health workflows** by streamlining h
   <div class="card-body">
     <p class="card-text">
         <ul>
-  <li> Access, preprocess and aggregate of health data at customized spatiotemporal resolutions.</li>
-  <li> Use a set of functions to streamline health data pipelines or enjoy a user-friendly graphical interface provided as a Shiny app within the package.</li>
+  <li> Access, preprocess and aggregate health data at customized spatiotemporal resolutions.</li>
+  <li> Use a set of functions to streamline health data pipelines or leverage a user-friendly graphical interface provided as a Shiny app within the package.</li>
   </ul>  
     </p>
   </div>
@@ -79,7 +78,7 @@ Our GHRsuite packages support **climate and health workflows** by streamlining h
     <p class="card-text"> 
     <ul>
   <li>Obtain, transform and export climate data including reanalyses, forecasts, hindcasts, and weather stations.</li>
-  <li>Apply common transformations including postprocessing, and downscaling, spatiotemporal aggregations and threshold-based suitability indicators.</li>
+  <li>Apply common transformations of climate data including postprocessing, downscaling, spatiotemporal aggregations, and construct threshold-based vector suitability indicators.</li>
   </ul>  
   </p>
   </div>
@@ -122,7 +121,7 @@ Our GHRsuite packages support **climate and health workflows** by streamlining h
         <p class="card-text"> 
     <ul>
   <li> Perform exploratory analysis of temporal and spatiotemporal health data including case counts, incidence rates, and covariates.</li>
-  <li> Produce high-quality time series, heatmaps, seasonality and bivariate plots and choropleth maps with many customization options.</li>
+  <li> Produce high-quality time series, heatmaps, seasonality, bivariate and correlation plots, as well as choropleth maps, with many customization options.</li>
   </ul>  
   </p>
   </div>
@@ -146,8 +145,8 @@ Our GHRsuite packages support **climate and health workflows** by streamlining h
   <div class="card-body">
         <p class="card-text"> 
     <ul>
-  <li> A modular and flexible approach to modeling health outcomes using INLA</li>
-  <li> It addresses common challenges when fitting INLA models, including covariate transformations, formula definitions with complex covariate effects, model fitting, and diagnostic plots and model statistics.
+  <li> A modular and flexible approach to modeling health outcomes using INLA. </li>
+  <li> It addresses common challenges when fitting INLA models, including covariate transformations, formula definitions with complex covariate effects, model fitting, diagnostic plots and model statistics.
 </li>
   </ul>  
   </p>
@@ -191,7 +190,7 @@ Our GHRsuite packages support **climate and health workflows** by streamlining h
         <p class="card-text"> 
     <ul>
   <li> Generate predictions of models fitted with GHRmodel.</li>
-  <li> Obtain out-of-sample statistics and diagnostics for case predictions and outbreak detection using cross-validation</li>
+  <li> Evaluate the quality of your predictions using out-of-sample statistics, graphical diagnostics and outbreak detection capabilities using cross-validation</li>
   </ul>  
   </p>
   </div>
