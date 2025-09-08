@@ -36,6 +36,8 @@ website:
             href: docs/GHRexplore/GHRexplore.qmd
           - text: Reference
             href: docs/GHRexplore/GHRexplore-index.qmd
+          - text: Changelog
+            href: docs/GHRexplore/GHRexplore-news.qmd
           - text: "------"
           - text: "Vignettes"
           - text: Getting started

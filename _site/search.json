@@ -851,6 +851,6 @@
     "href": "docs/GHRexplore/GHRexplore-news.html",
     "title": "GHRexplore changelog",
     "section": "",
-    "text": "GHRexplore 0.1.0\n\nInitial CRAN submission.\n\n\n\nGHRexplore 0.1.1\n\nFixed tests failing with cowplot 1.2.0.\nFixed minor bug in plot_map().\n\n\n\nGHRexplore 0.2.0\n\nNew plotting function: plot_timeseries2() for dual-axis time series plots.\nIncreased flexibility of plot_map() (line colour, width, alpha).\nby_year argument deprecated in plot_map() and substituted by aggregate_time."
+    "text": "0.1.0\n\nInitial CRAN submission.\n\n\n\n0.1.1\n\nFixed tests failing with cowplot 1.2.0.\nFixed minor bug in plot_map().\n\n\n\n0.2.0\n\nNew plotting function: plot_timeseries2() for dual-axis time series plots.\nIncreased flexibility of plot_map() (line colour, width, alpha).\nby_year argument deprecated in plot_map() and substituted by aggregate_time."
   }
 ]
