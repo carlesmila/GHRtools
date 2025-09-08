@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>aggregate_cov.rd – GHRtools</title>
+<title>plot_timeseries2.rd – GHRtools</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -240,11 +240,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#aggregate-covariates" id="toc-aggregate-covariates" class="nav-link active" data-scroll-target="#aggregate-covariates">Aggregate covariates</a>
+  <li><a href="#time-series-plot-of-two-variables-in-two-different-axes" id="toc-time-series-plot-of-two-variables-in-two-different-axes" class="nav-link active" data-scroll-target="#time-series-plot-of-two-variables-in-two-different-axes">Time series plot of two variables in two different axes</a>
   <ul class="collapse">
   <li><a href="#description" id="toc-description" class="nav-link" data-scroll-target="#description">Description</a></li>
   <li><a href="#arguments" id="toc-arguments" class="nav-link" data-scroll-target="#arguments">Arguments</a></li>
   <li><a href="#returns" id="toc-returns" class="nav-link" data-scroll-target="#returns">Returns</a></li>
+  <li><a href="#see-also" id="toc-see-also" class="nav-link" data-scroll-target="#see-also">See Also</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -255,38 +257,101 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="aggregate-covariates" class="level1">
-<h1>Aggregate covariates</h1>
+<section id="time-series-plot-of-two-variables-in-two-different-axes" class="level1">
+<h1>Time series plot of two variables in two different axes</h1>
 <section id="description" class="level2">
 <h2 class="anchored" data-anchor-id="description">Description</h2>
-<p>Aggregates a data frame containing a covariate of interest in space and/or time.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">aggregate_cov</span>(</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> <span class="cn">NULL</span>,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">var =</span> <span class="cn">NULL</span>,</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">time =</span> <span class="cn">NULL</span>,</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">area =</span> <span class="cn">NULL</span>,</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">aggregate_space =</span> <span class="cn">NULL</span>,</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">aggregate_time =</span> <span class="cn">NULL</span>,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">aggregate_space_fun =</span> <span class="st">"mean"</span>,</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">aggregate_time_fun =</span> <span class="st">"mean"</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Plots time series of two covariates, case counts, or incidence rates in two different axes.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_timeseries2</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  data,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  var,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  time,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="fu">c</span>(<span class="st">"cov"</span>, <span class="st">"cov"</span>),</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">pop =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">pt =</span> <span class="fl">1e+05</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">area =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">aggregate_space =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">aggregate_time =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">aggregate_space_fun =</span> <span class="st">"mean"</span>,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">aggregate_time_fun =</span> <span class="st">"mean"</span>,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">align =</span> <span class="st">"min"</span>,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">title =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">var_label =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend =</span> <span class="st">"Variable"</span>,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">free_y_scale =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">palette =</span> <span class="fu">c</span>(<span class="st">"#168c81"</span>, <span class="st">"#B98AFB"</span>),</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">alpha =</span> <span class="fl">0.9</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="arguments" class="level2">
 <h2 class="anchored" data-anchor-id="arguments">Arguments</h2>
 <ul>
-<li><code>data</code>: Data frame containing equally spaced (daily, weekly, monthly) incident cases for one or multiple areas.</li>
-<li><code>var</code>: Name of the variable that identifies the covariate.</li>
-<li><code>time</code>: Name of the variable that identifies the temporal dimension. The values must be in date format (“yyyy-mm-dd”) representing the date of observation for daily data, the first day of the week for weekly, or the first day of the month for monthly observations.</li>
-<li><code>area</code>: Name of variable that identifies the different locations (i.e., areal units) for which a time series is available.</li>
+<li><code>data</code>: Data frame containing equally spaced (daily, weekly, monthly) covariate or disease case observations for one or multiple locations.</li>
+<li><code>var</code>: A character vector of length 2 (left axis, right axis) identifying the variables to be plotted.</li>
+<li><code>time</code>: Name of the variable that identifies the temporal dimension of the data frame. Its values must be in date format (“yyyy-mm-dd”) representing the day of observation for daily data, the first day of the week for weekly, or the first day of the month for monthly observations.</li>
+<li><code>type</code>: A character vector of length 2 (left axis, right axis) that specifies the types of variable in <code>var</code>. Possible values include ‘cov’ (covariate, default), ‘counts’ (case counts), and ‘inc’ (case incidence). If <code>type='inc'</code>, <code>pop</code> is required.</li>
+<li><code>pop</code>: Character identifying the variable name for population. Only needed if <code>type='inc'</code>.</li>
+<li><code>pt</code>: Numerical only used for <code>type='inc'</code>. It represents the scale of the person-time (default 100,000) for incidence rates.</li>
+<li><code>area</code>: Name of variable that identifies the different locations (e.g., areal units) for which a time series is available.</li>
 <li><code>aggregate_space</code>: Name of variable used to define spatial aggregation groups.</li>
 <li><code>aggregate_time</code>: Temporal scale used to perform temporal aggregation. Options are: “week” (ISO 8601), “month”, “year”.</li>
-<li><code>aggregate_space_fun</code>: Character indicating the function to be used in the aggregation over space, default is “mean”.</li>
-<li><code>aggregate_time_fun</code>: Character indicating the function to be used in the aggregation over time, default is “mean”.</li>
+<li><code>aggregate_space_fun</code>: Character indicating the function to be used in the aggregation over space for <code>type="cov"</code>. Options are “mean” (default), “median”, “sum”. For case counts and incidence, “sum” is always applied.</li>
+<li><code>aggregate_time_fun</code>: Character indicating the function to be used in the aggregation over time for <code>type="cov"</code>. Options are “mean” (default), “median”, “sum”. For case counts and incidence, “sum” is always applied.</li>
+<li><code>align</code>: Options to align the two plots. Defaults to “min”, which forces the minimum of the two variables to be aligned. Other options include “mean” and “median”.</li>
+<li><code>title</code>: Optional title of the plot.</li>
+<li><code>var_label</code>: A character vector of length 2 (left axis, right axis) with custom names for the case or covariate variable.</li>
+<li><code>legend</code>: Character with a custom name for the legend.</li>
+<li><code>ylab</code>: A character vector of length 2 (left, right) for the y-axes.</li>
+<li><code>xlab</code>: Label for the x-axis.</li>
+<li><code>free_y_scale</code>: Logical, default FALSE. Allows different scales in the y_axis when facets are used.</li>
+<li><code>palette</code>: A character vector of length 2 (left axis, right axis) indicating the colours (R or hex codes) to use for each of the two variables).</li>
+<li><code>alpha</code>: Numerical between 0 and 1 determining the transparency of the lines.</li>
 </ul>
 </section>
 <section id="returns" class="level2">
 <h2 class="anchored" data-anchor-id="returns">Returns</h2>
-<p>A data frame with the aggregated covariate.</p>
+<p>A ggplot2 time series plot.</p>
+</section>
+<section id="see-also" class="level2">
+<h2 class="anchored" data-anchor-id="see-also">See Also</h2>
+<p>plot_timeseries for single axis time series plots.</p>
+</section>
+<section id="examples" class="level2">
+<h2 class="anchored" data-anchor-id="examples">Examples</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load data</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"dengue_MS"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"dengue_SP"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting two covariates with temporal aggregation, align using the mean</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_timeseries2</span>(dengue_SP,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>                 <span class="at">var =</span> <span class="fu">c</span>(<span class="st">"temp_med"</span>, <span class="st">"precip_tot"</span>),</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>                 <span class="at">time =</span> <span class="st">"date"</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>                 <span class="at">align =</span> <span class="st">"mean"</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>                 <span class="at">aggregate_time =</span> <span class="st">"month"</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting case incidence and a covariate with temporal aggregation </span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># and customized colours and labels</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_timeseries2</span>(dengue_SP,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>                 <span class="at">var =</span> <span class="fu">c</span>(<span class="st">"cases"</span>, <span class="st">"precip_tot"</span>),</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>                 <span class="at">type =</span> <span class="fu">c</span>(<span class="st">"inc"</span>, <span class="st">"cov"</span>),</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>                 <span class="at">var_label =</span> <span class="fu">c</span>(<span class="st">"Incidence"</span>, <span class="st">"Precipitation"</span>),</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>                 <span class="at">title =</span> <span class="st">"Precipitation and dengue incidence in Sao Paulo"</span>,</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>                 <span class="at">time =</span> <span class="st">"date"</span>,</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>                 <span class="at">pop =</span> <span class="st">"pop"</span>,</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>                 <span class="at">aggregate_time =</span> <span class="st">"month"</span>,</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>                 <span class="at">palette =</span> <span class="fu">c</span>(<span class="st">"darkgreen"</span>, <span class="st">"royalblue"</span>),</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>                 <span class="at">alpha =</span> <span class="fl">0.8</span>)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>                 </span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting case incidence and a covariate with spatial aggregation</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_timeseries2</span>(dengue_MS,</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>                 <span class="at">var =</span> <span class="fu">c</span>(<span class="st">"dengue_cases"</span>, <span class="st">"pdsi"</span>),</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>                 <span class="at">type =</span> <span class="fu">c</span>(<span class="st">"inc"</span>, <span class="st">"cov"</span>),</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>                 <span class="at">pop =</span> <span class="st">"population"</span>,</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>                 <span class="at">time =</span> <span class="st">"date"</span>,</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>                 <span class="at">area =</span> <span class="st">"micro_code"</span>,</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>                 <span class="at">aggregate_space =</span> <span class="st">"meso_code"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
