@@ -10,7 +10,7 @@ toc: true
 Administrative boundaries (polygon geometries) of the 11 municipalities in **Mato Grosso do Sul** (Brazil) to be used with the `dengue_MS` data set.
 
 ```r
-map_MS
+data(map_MS)
 ```
 
 ## Format

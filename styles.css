@@ -120,4 +120,8 @@ h1 {
   padding-right: 0.5rem;
 }
 
-
+/* Dropdown */
+.dropdown-header {font-weight: 600; color: #242424; }
+.dropdown-menu {
+  background-color: #f7fff5;   // your custom colour
+}

@@ -2,15 +2,13 @@ Workflow for rendering vignettes:
 
 Run in the R package project:
 rmarkdown::render(
-  input = "~/Documents/ghrexplore/vignettes/GHRexplore-vignette.Rmd",
+  input = "~/Documents/ghrexplore/vignettes/GHRexplore.Rmd",
   output_format = "github_document",
   output_file = "GHRexplore-vignette.md"
 )
 
-Change the format of the resulting .md file to .qmd
 Move the .md file and depending image files to the website repo and link in the index
-Copy paste badges and hex sticker from main page to the vignette
-
+Copy paste header, badges and hex sticker from main page to the vignette
 
 
 

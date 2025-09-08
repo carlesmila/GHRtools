@@ -97,7 +97,7 @@ plot_compare(
   palette = c("Reds", "Blues"),
   map = map_MS,        
   map_area = "code", 
-  by_year = FALSE,
+  aggregate_time = "all",
   ncol_legend = 1,
   combine_xaxis =TRUE)
 ```

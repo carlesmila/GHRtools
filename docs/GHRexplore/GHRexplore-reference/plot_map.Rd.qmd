@@ -20,7 +20,8 @@ plot_map(
   area = NULL,
   map = NULL,
   map_area = NULL,
-  by_year = TRUE,
+  by_year = NULL,
+  aggregate_time = "year",
   aggregate_time_fun = "mean",
   transform = "identity",
   title = NULL,
@@ -29,7 +30,8 @@ plot_map(
   centering = NULL,
   bins = NULL,
   bins_method = "quantile",
-  bins_label = NULL
+  bins_label = NULL,
+  ...
 )
 ```
 
@@ -44,7 +46,8 @@ plot_map(
 - `area`: Name of variable that identifies the different locations (e.g., areal units) for which a time series is available.
 - `map`: Name of the sf object corresponding to the spatial unit specified in 'area'.
 - `map_area`: Name of the variable that identifies the different locations (e.g., areal units) in the map object. If not specified, it assumes the same name as in `area`.
-- `by_year`: Logical, if TRUE a map for each year is produced.
+- `by_year`: Deprecated. Use 'aggregate_time' instead.
+- `aggregate_time`: Temporal scale for visualization and aggregation. Options include "all" (across all time points) and "year" (default).
 - `aggregate_time_fun`: Character indicating the function to be used in the aggregation over time for `type="cov"`. Options are "mean" (default), "median", "sum". For case counts and incidence, "sum" is always applied.
 - `transform`: Character, defaults to "identity" (i.e., no transformation). Transforms the color ramp for better visualization. Useful options include "log10p1" `log10(x+1)` for case counts and incidence with 0s, or any of the in-built ggplot2 options such as "log10" `log10(x)`, "log1p" `log(x+1)`, and "sqrt" `sqrt(x)` (check all possible options using `?scale_y_continuous`).
 - `title`: Optional title of the plot.
@@ -54,6 +57,7 @@ plot_map(
 - `bins`: Number of bins for categorization of numerical variables. Defaults to NULL (no binning).
 - `bins_method`: Method to compute the bins, only used when `bins` is not NULL. Possible values are "quantile" (default) and "equal".
 - `bins_label`: Optional labels for the bins. They must have the same length as the number of bins. Defaults to NULL (default interval labels).
+- `...`: Additional aesthetics to be passed to geom_sf. Possible values include `colour` (e.g., `colour="black"`), linewidth (e.g., `linewidth=0.1`), linetype (e.g., `linetype=2`), and alpha (e.g., `alpha=0.8`).
 
 ## Returns
 
@@ -75,9 +79,9 @@ plot_map(data = dengue_MS,
          area = "micro_code",  
          map = map_MS,         
          map_area = "code",   
+         aggregate_time = "all",
          aggregate_time_fun = "mean",         
          palette ="Reds",
-         by_year = FALSE,
          var_label= "Min Temp.")
 
 # Categorical covariate
@@ -85,10 +89,10 @@ plot_map(data = dengue_MS,
          var = "biome_name",        
          time = "date",      
          area = "micro_code", 
+         aggregate_time = "all",
          map = map_MS,       
          map_area = "code",  
          palette ="Viridis",
-         by_year = FALSE,
          var_label= "Biome")
 
 # Case counts by year (log)

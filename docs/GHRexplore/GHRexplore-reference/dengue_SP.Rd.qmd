@@ -10,7 +10,7 @@ toc: true
 Data frame containing the weekly number of notified dengue cases in the municipality of **Sao Paulo**, as well as a set of climatic covariates.
 
 ```r
-dengue_SP
+data(dengue_SP)
 ```
 
 ## Format

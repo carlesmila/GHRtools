@@ -1,5 +1,5 @@
 ---
-title: "GHRexplore tutorial"
+title: "Introduction to GHRexplore"
 format: 
   html:
     toc: true
@@ -14,10 +14,9 @@ format:
 [![CRAN status](https://img.shields.io/cran/v/GHRexplore)](https://cran.r-project.org/package=GHRexplore)
 <!-- badges: end -->
 
-## Overview
 
-::: columns
-::: {.column width="75%"}
+# Overview
+
 **GHRexplore** is an R package for exploratory analysis of temporal and
 spatiotemporal health data including case counts, incidence rates, and
 covariates. It provides commonly used visualizations and supports data
@@ -25,16 +24,6 @@ transformations such as temporal and spatial aggregations. The package
 also offers extensive customization options for the resulting figures.
 The output of all functions is a ggplot2 object that can be further
 modified if needed.
-:::
-::: {.column width="8%"}
-:::
-::: {.column width="17%"}
-```{=html}
-<img src="/figures/GHRexplore.svg" width="100%">
-```
-:::
-:::
-
 
 ``` r
 # Load GHRexplore
@@ -61,33 +50,33 @@ data("dengue_MS")
 glimpse(dengue_MS)
 #> Rows: 2,640
 #> Columns: 27
-#> $ micro_code      <dbl> 50001, 50002, 50003, 50004, 50005, 50006, 50007, 50008, 50009, 50010, 50011, 50001, 50002, 50003, 50004, 50005, 50006, 50007, 50008, 50009, 50010,…
-#> $ micro_name      <chr> "Baixo Pantanal", "Aquidauana", "Alto Taquari", "Campo Grande", "Cassilândia", "Paranaíba", "Três Lagoas", "Nova Andradina", "Bodoquena", "Dourado…
-#> $ micro_name_ibge <chr> "BAIXO PANTANAL", "AQUIDAUANA", "ALTO TAQUARI", "CAMPO GRANDE", "CASSILÂNDIA", "PARANAÍBA", "TRÊS LAGOAS", "NOVA ANDRADINA", "BODOQUENA", "DOURADO…
-#> $ meso_code       <dbl> 5001, 5001, 5002, 5002, 5003, 5003, 5003, 5003, 5004, 5004, 5004, 5001, 5001, 5002, 5002, 5003, 5003, 5003, 5003, 5004, 5004, 5004, 5001, 5001, 50…
-#> $ meso_name       <chr> "Pantanais Sul Mato-Grossense", "Pantanais Sul Mato-Grossense", "Centro Norte De Mato Grosso Do Sul", "Centro Norte De Mato Grosso Do Sul", "Leste…
-#> $ state_code      <dbl> 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50…
-#> $ state_name      <chr> "Mato Grosso Do Sul", "Mato Grosso Do Sul", "Mato Grosso Do Sul", "Mato Grosso Do Sul", "Mato Grosso Do Sul", "Mato Grosso Do Sul", "Mato Grosso D…
-#> $ region_code     <dbl> 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,…
-#> $ region_name     <chr> "Centre-West", "Centre-West", "Centre-West", "Centre-West", "Centre-West", "Centre-West", "Centre-West", "Centre-West", "Centre-West", "Centre-Wes…
-#> $ biome_code      <dbl> 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 6, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 6, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 6, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 6, 3, 3, 2, 2, 2,…
-#> $ biome_name      <chr> "Pantanal", "Pantanal", "Cerrado", "Cerrado", "Cerrado", "Cerrado", "Cerrado", "Cerrado", "Cerrado", "Cerrado", "Atlantic Rainforest", "Pantanal",…
-#> $ ecozone_code    <dbl> 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 8, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 8, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 8, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 8, 3, 3, 2, 2, 2,…
-#> $ ecozone_name    <chr> "Pantanal", "Pantanal", "Cerrado", "Cerrado", "Cerrado", "Cerrado", "Cerrado", "Cerrado", "Cerrado", "Cerrado", "S Atlantic Rainforest", "Pantanal…
-#> $ main_climate    <chr> "AW", "AM", "AW", "AM", "AM", "AW", "AM", "AW", "AF", "CFA", "CFA", "AW", "AM", "AW", "AM", "AM", "AW", "AM", "AW", "AF", "CFA", "CFA", "AW", "AM"…
-#> $ month           <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5,…
-#> $ year            <dbl> 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 20…
-#> $ time            <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5,…
-#> $ dengue_cases    <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA…
-#> $ population      <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA…
-#> $ pop_density     <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA…
-#> $ tmax            <dbl> 34.28429, 33.15394, 32.31370, 31.23787, 31.19907, 32.12062, 31.67418, 31.42584, 33.35522, 31.53561, 31.59908, 33.37863, 32.83702, 32.13290, 31.537…
-#> $ tmin            <dbl> 24.00583, 23.43257, 22.61425, 21.82709, 21.29000, 21.85358, 22.03971, 21.71142, 23.22608, 21.63477, 21.51721, 23.21109, 22.73544, 21.81151, 21.168…
-#> $ pdsi            <dbl> -1.23299623, -1.85649669, -0.72018290, -2.39796877, -0.20565207, -1.50169408, -2.48268366, -3.26624393, -3.05362844, -3.60814834, -3.65085363, -1.…
-#> $ urban           <dbl> 88.31, 72.36, 84.51, 94.71, 87.29, 85.58, 84.16, 78.50, 78.59, 81.81, 73.65, 88.31, 72.36, 84.51, 94.71, 87.29, 85.58, 84.16, 78.50, 78.59, 81.81,…
-#> $ water_network   <dbl> 88.78, 79.59, 84.29, 88.13, 86.48, 65.80, 83.69, 81.68, 80.51, 77.45, 76.66, 88.78, 79.59, 84.29, 88.13, 86.48, 65.80, 83.69, 81.68, 80.51, 77.45,…
-#> $ water_shortage  <dbl> 0.0000, 0.1528, 0.0437, 0.1855, 0.3201, 0.1921, 0.0524, 0.2444, 0.1247, 0.2095, 0.1419, 0.0000, 0.1528, 0.0437, 0.1855, 0.3201, 0.1921, 0.0524, 0.…
-#> $ date            <date> 2000-01-01, 2000-01-01, 2000-01-01, 2000-01-01, 2000-01-01, 2000-01-01, 2000-01-01, 2000-01-01, 2000-01-01, 2000-01-01, 2000-01-01, 2000-02-01, 2…
+#> $ micro_code      <dbl> 50001, 50002, 50003, 50004, 50005, 50006, 50007, 50008, 50009, 50010, 50011, 50001, 50002, 50003, 50004, …
+#> $ micro_name      <chr> "Baixo Pantanal", "Aquidauana", "Alto Taquari", "Campo Grande", "Cassilândia", "Paranaíba", "Três Lagoas"…
+#> $ micro_name_ibge <chr> "BAIXO PANTANAL", "AQUIDAUANA", "ALTO TAQUARI", "CAMPO GRANDE", "CASSILÂNDIA", "PARANAÍBA", "TRÊS LAGOAS"…
+#> $ meso_code       <dbl> 5001, 5001, 5002, 5002, 5003, 5003, 5003, 5003, 5004, 5004, 5004, 5001, 5001, 5002, 5002, 5003, 5003, 500…
+#> $ meso_name       <chr> "Pantanais Sul Mato-Grossense", "Pantanais Sul Mato-Grossense", "Centro Norte De Mato Grosso Do Sul", "Ce…
+#> $ state_code      <dbl> 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 5…
+#> $ state_name      <chr> "Mato Grosso Do Sul", "Mato Grosso Do Sul", "Mato Grosso Do Sul", "Mato Grosso Do Sul", "Mato Grosso Do S…
+#> $ region_code     <dbl> 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, …
+#> $ region_name     <chr> "Centre-West", "Centre-West", "Centre-West", "Centre-West", "Centre-West", "Centre-West", "Centre-West", …
+#> $ biome_code      <dbl> 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 6, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 6, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 6, 3, 3, …
+#> $ biome_name      <chr> "Pantanal", "Pantanal", "Cerrado", "Cerrado", "Cerrado", "Cerrado", "Cerrado", "Cerrado", "Cerrado", "Cer…
+#> $ ecozone_code    <dbl> 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 8, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 8, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 8, 3, 3, …
+#> $ ecozone_name    <chr> "Pantanal", "Pantanal", "Cerrado", "Cerrado", "Cerrado", "Cerrado", "Cerrado", "Cerrado", "Cerrado", "Cer…
+#> $ main_climate    <chr> "AW", "AM", "AW", "AM", "AM", "AW", "AM", "AW", "AF", "CFA", "CFA", "AW", "AM", "AW", "AM", "AM", "AW", "…
+#> $ month           <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, …
+#> $ year            <dbl> 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 200…
+#> $ time            <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, …
+#> $ dengue_cases    <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
+#> $ population      <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
+#> $ pop_density     <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
+#> $ tmax            <dbl> 34.28429, 33.15394, 32.31370, 31.23787, 31.19907, 32.12062, 31.67418, 31.42584, 33.35522, 31.53561, 31.59…
+#> $ tmin            <dbl> 24.00583, 23.43257, 22.61425, 21.82709, 21.29000, 21.85358, 22.03971, 21.71142, 23.22608, 21.63477, 21.51…
+#> $ pdsi            <dbl> -1.2329962, -1.8564967, -0.7201829, -2.3979688, -0.2056521, -1.5016941, -2.4826837, -3.2662439, -3.053628…
+#> $ urban           <dbl> 88.31, 72.36, 84.51, 94.71, 87.29, 85.58, 84.16, 78.50, 78.59, 81.81, 73.65, 88.31, 72.36, 84.51, 94.71, …
+#> $ water_network   <dbl> 88.78, 79.59, 84.29, 88.13, 86.48, 65.80, 83.69, 81.68, 80.51, 77.45, 76.66, 88.78, 79.59, 84.29, 88.13, …
+#> $ water_shortage  <dbl> 0.0000, 0.1528, 0.0437, 0.1855, 0.3201, 0.1921, 0.0524, 0.2444, 0.1247, 0.2095, 0.1419, 0.0000, 0.1528, 0…
+#> $ date            <date> 2000-01-01, 2000-01-01, 2000-01-01, 2000-01-01, 2000-01-01, 2000-01-01, 2000-01-01, 2000-01-01, 2000-01-…
 ```
 
 In this data frame, the *date* column contains the temporal identifier
@@ -110,7 +99,7 @@ glimpse(map_MS)
 #> Rows: 11
 #> Columns: 2
 #> $ code     <dbl> 50001, 50002, 50003, 50004, 50005, 50006, 50007, 50008, 50009, 50010, 50011
-#> $ geometry <MULTIPOLYGON [°]> MULTIPOLYGON (((-55.60618 -..., MULTIPOLYGON (((-55.39862 -..., MULTIPOLYGON (((-53.68353 -..., MULTIPOLYGON (((-53.98856 -..., MULTIPOLYGON (((-53.07228…
+#> $ geometry <MULTIPOLYGON [°]> MULTIPOLYGON (((-55.60618 -..., MULTIPOLYGON (((-55.39862 -..., MULTIPOLYGON (((-53.68353 -..., MULTIPOLYGON (((…
 ```
 
 In `map_MS`, the *code* variable corresponds to the *micro_code* area
@@ -259,6 +248,82 @@ plot_timeseries(dengue_MS, var = "dengue_cases", type = "inc", pop = "population
 
 <img src="GHRexplore-vignette_files/figure-gfm/ts6-1.png" style="display: block; margin: auto;" />
 
+## Dual-axis time series
+
+`plot_timeseries2` produces two-axis time series plots of covariates,
+case counts, or incidence rates. Similarly to `plot_timeseries`, it
+allows for spatial and temporal aggregations, plotting single or
+multiple time series of different areas simultaneously using facets, and
+axis and title labeling. The main difference between the two time series
+functions is that, in `plot_timeseries2` the arguments `var`, `type` and
+optionally `var_label` and `ylab` need to be of length 2, corresponding
+to the left and right axes respectively.
+
+We start by plotting the time series data for two covariates (note
+`type=c("cov", "cov")`): maximum temperature and PDSI. We choose to
+align the two axis by forcing the mean of the two variables to be
+aligned:
+
+``` r
+plot_timeseries2(dengue_MS,
+                 var = c("tmax", "pdsi"),
+                 type = c("cov", "cov"),
+                 time = "date", 
+                 area = "micro_code",
+                 align = "mean")
+```
+
+<img src="GHRexplore-vignette_files/figure-gfm/ts2-1-1.png" style="display: block; margin: auto;" />
+
+We now improve on this by performing spatial aggregation into larger
+*meso* areas and specifying custom colours and labels:
+
+``` r
+plot_timeseries2(dengue_MS,
+                 var = c("tmax", "pdsi"),
+                 type = c("cov", "cov"),
+                 time = "date", 
+                 area = "micro_code",
+                 aggregate_space = "meso_code",
+                 palette = c("tomato", "royalblue"),
+                 var_label = c("Maximum temp.", "PDSI"),
+                 align = "mean")
+```
+
+<img src="GHRexplore-vignette_files/figure-gfm/ts2-2-1.png" style="display: block; margin: auto;" />
+
+One of the most interesting applications of `plot_timeseries2` is to
+visualize in the same graph disease cases and a candidate predictor. We
+do that in the following example, where we visualize dengue incidence
+and maximum temperature (note `type=c("inc", "cov")` and the `pop`
+argument):
+
+``` r
+plot_timeseries2(dengue_MS,
+                 var = c("dengue_cases", "pdsi"),
+                 type = c("inc", "cov"),
+                 pop = "population", 
+                 time = "date", 
+                 area = "micro_code",
+                 aggregate_space = "meso_code")
+```
+
+<img src="GHRexplore-vignette_files/figure-gfm/ts2-3-1.png" style="display: block; margin: auto;" />
+
+Similarly, we can visualize case counts together with a covariate (note
+`type=c("counts", "cov")`).
+
+``` r
+plot_timeseries2(dengue_MS,
+                 var = c("dengue_cases", "pdsi"),
+                 type = c("counts", "cov"),
+                 time = "date", 
+                 area = "micro_code",
+                 aggregate_space = "meso_code")
+```
+
+<img src="GHRexplore-vignette_files/figure-gfm/ts2-4-1.png" style="display: block; margin: auto;" />
+
 ## Heatmap
 
 `plot_heatmap` plots time series heatmaps of covariates, case counts, or
@@ -332,21 +397,23 @@ In this first example, we plot average urbanicity levels (note
 palette:
 
 ``` r
-plot_map(data = dengue_MS, var = "urban",  time = "date", type = "cov", area = "micro_code",  
-         map = map_MS, map_area = "code", by_year = FALSE, var_label= "Urbanicity",
-         palette = "-Heat")
+plot_map(data = dengue_MS, var = "urban",  time = "date", 
+         type = "cov", area = "micro_code",  map = map_MS, 
+         map_area = "code", aggregate_time = "all", 
+         var_label= "Urbanicity", palette = "-Heat")
 ```
 
 <img src="GHRexplore-vignette_files/figure-gfm/map1-1.png" style="display: block; margin: auto;" />
 
 We now plot case incidence per 1,000 persons (note `type="inc"` and
-`pt=1000`) for every year (`by_year=TRUE`) and binning into 5 categories
-using the quantile method (see `bins` and `bins_method` arguments).
+`pt=1000`) for every year (`aggregate_time = "year"`) and binning into 5
+categories using the quantile method (see `bins` and `bins_method`
+arguments).
 
 ``` r
 plot_map(dengue_MS, var = "dengue_cases", type = "inc", pop = "population", 
          pt = 1000, time = "date", area = "micro_code",  
-         map = map_MS, map_area = "code", by_year = TRUE, 
+         map = map_MS, map_area = "code", aggregate_time = "year", 
          bins = 5, bins_method = "quantile", palette = "-Rocket")  
 ```
 
@@ -357,7 +424,7 @@ covariate:
 
 ``` r
 plot_map(data = dengue_MS, var = "biome_name", type = "cov",
-         time = "date", area = "micro_code", by_year = FALSE,
+         time = "date", area = "micro_code", aggregate_time = "all", 
          map = map_MS, map_area = "code", var_label= "Biome")
 ```
 

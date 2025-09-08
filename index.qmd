@@ -19,7 +19,7 @@ format:
 
 ## From health and climate data to disease forecasts
 
-Our GHRsuite packages support **climate and health workflows** by streamlining health and climate data collection and harmonization, exploratory analysis, Bayesian modelling and forecasting.
+**GHRtools** is a suite of R packages that support **climate and health workflows** by streamlining health and climate data collection and harmonization, exploratory analysis, Bayesian modelling and forecasting.
 
 ```{=html}
 <br> 

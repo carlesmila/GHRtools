@@ -1,0 +1,103 @@
+---
+format: html
+toc: true
+---
+
+# Time series plot of two variables in two different axes
+
+## Description
+
+Plots time series of two covariates, case counts, or incidence rates in two different axes.
+
+```r
+plot_timeseries2(
+  data,
+  var,
+  time,
+  type = c("cov", "cov"),
+  pop = NULL,
+  pt = 1e+05,
+  area = NULL,
+  aggregate_space = NULL,
+  aggregate_time = NULL,
+  aggregate_space_fun = "mean",
+  aggregate_time_fun = "mean",
+  align = "min",
+  title = NULL,
+  var_label = NULL,
+  legend = "Variable",
+  ylab = NULL,
+  xlab = NULL,
+  free_y_scale = FALSE,
+  palette = c("#168c81", "#B98AFB"),
+  alpha = 0.9
+)
+```
+
+## Arguments
+
+- `data`: Data frame containing equally spaced (daily, weekly, monthly) covariate or disease case observations for one or multiple locations.
+- `var`: A character vector of length 2 (left axis, right axis) identifying the variables to be plotted.
+- `time`: Name of the variable that identifies the temporal dimension of the data frame. Its values must be in date format ("yyyy-mm-dd") representing the day of observation for daily data, the first day of the week for weekly, or the first day of the month for monthly observations.
+- `type`: A character vector of length 2 (left axis, right axis) that specifies the types of variable in `var`. Possible values include 'cov' (covariate, default), 'counts' (case counts), and 'inc' (case incidence). If `type='inc'`, `pop` is required.
+- `pop`: Character identifying the variable name for population. Only needed if `type='inc'`.
+- `pt`: Numerical only used for `type='inc'`. It represents the scale of the person-time (default 100,000) for incidence rates.
+- `area`: Name of variable that identifies the different locations (e.g., areal units) for which a time series is available.
+- `aggregate_space`: Name of variable used to define spatial aggregation groups.
+- `aggregate_time`: Temporal scale used to perform temporal aggregation. Options are: "week" (ISO 8601), "month", "year".
+- `aggregate_space_fun`: Character indicating the function to be used in the aggregation over space for `type="cov"`. Options are "mean" (default), "median", "sum". For case counts and incidence, "sum" is always applied.
+- `aggregate_time_fun`: Character indicating the function to be used in the aggregation over time for `type="cov"`. Options are "mean" (default), "median", "sum". For case counts and incidence, "sum" is always applied.
+- `align`: Options to align the two plots. Defaults to "min", which forces the minimum of the two variables to be aligned. Other options include "mean" and "median".
+- `title`: Optional title of the plot.
+- `var_label`: A character vector of length 2 (left axis, right axis) with custom names for the case or covariate variable.
+- `legend`: Character with a custom name for the legend.
+- `ylab`: A character vector of length 2 (left, right) for the y-axes.
+- `xlab`: Label for the x-axis.
+- `free_y_scale`: Logical, default FALSE. Allows different scales in the y_axis when facets are used.
+- `palette`: A character vector of length 2 (left axis, right axis) indicating the colours (R or hex codes) to use for each of the two variables).
+- `alpha`: Numerical between 0 and 1 determining the transparency of the lines.
+
+## Returns
+
+A ggplot2 time series plot.
+
+## See Also
+
+plot_timeseries for single axis time series plots.
+
+## Examples
+
+```r
+# Load data
+data("dengue_MS")
+data("dengue_SP")
+
+# Plotting two covariates with temporal aggregation, align using the mean
+plot_timeseries2(dengue_SP,
+                 var = c("temp_med", "precip_tot"),
+                 time = "date",
+                 align = "mean",
+                 aggregate_time = "month")
+
+# Plotting case incidence and a covariate with temporal aggregation 
+# and customized colours and labels
+plot_timeseries2(dengue_SP,
+                 var = c("cases", "precip_tot"),
+                 type = c("inc", "cov"),
+                 var_label = c("Incidence", "Precipitation"),
+                 title = "Precipitation and dengue incidence in Sao Paulo",
+                 time = "date",
+                 pop = "pop",
+                 aggregate_time = "month",
+                 palette = c("darkgreen", "royalblue"),
+                 alpha = 0.8)
+                 
+# Plotting case incidence and a covariate with spatial aggregation
+plot_timeseries2(dengue_MS,
+                 var = c("dengue_cases", "pdsi"),
+                 type = c("inc", "cov"),
+                 pop = "population",
+                 time = "date",
+                 area = "micro_code",
+                 aggregate_space = "meso_code")
+```

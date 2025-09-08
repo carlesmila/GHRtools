@@ -63,6 +63,10 @@ plot_timeseries(
 
 A ggplot2 time series plot.
 
+## See Also
+
+plot_timeseries2 for dual-axis time series plots.
+
 ## Examples
 
 ```r

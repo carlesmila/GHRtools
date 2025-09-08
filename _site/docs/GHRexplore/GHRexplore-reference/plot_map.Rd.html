@@ -65,6 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
+<link href="../../../figures/bsc-logo.png" rel="icon" type="image/png">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
@@ -74,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-8c9d7cae4c6a691b33fc068c945d91cc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-407a5dda253cbe202b6876a852b9dc2a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -137,9 +138,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="../../../docs/data4health/data4health.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Vignettes</li>
         <li>
     <a class="dropdown-item" href="../../../docs/data4health/data4health-vignette1.html">
- <span class="dropdown-text">Tutorial</span></a>
+ <span class="dropdown-text">Getting started</span></a>
   </li>  
     </ul>
   </li>
@@ -152,9 +155,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="../../../docs/clim4health/clim4health.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Vignettes</li>
         <li>
     <a class="dropdown-item" href="../../../docs/clim4health/clim4health-vignette1.html">
- <span class="dropdown-text">Tutorial</span></a>
+ <span class="dropdown-text">Getting started</span></a>
   </li>  
     </ul>
   </li>
@@ -171,9 +176,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="../../../docs/GHRexplore/GHRexplore-index.html">
  <span class="dropdown-text">Reference</span></a>
   </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Vignettes</li>
         <li>
     <a class="dropdown-item" href="../../../docs/GHRexplore/GHRexplore-vignette.html">
- <span class="dropdown-text">Tutorial</span></a>
+ <span class="dropdown-text">Getting started</span></a>
   </li>  
     </ul>
   </li>
@@ -186,9 +193,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="../../../docs/GHRmodel/GHRmodel.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Vignettes</li>
         <li>
     <a class="dropdown-item" href="../../../docs/GHRmodel/GHRmodel-vignette1.html">
- <span class="dropdown-text">Tutorial</span></a>
+ <span class="dropdown-text">Getting started</span></a>
   </li>  
     </ul>
   </li>
@@ -201,9 +210,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="../../../docs/GHRpredict/GHRpredict.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Vignettes</li>
         <li>
     <a class="dropdown-item" href="../../../docs/GHRpredict/GHRpredict-vignette1.html">
- <span class="dropdown-text">Tutorial</span></a>
+ <span class="dropdown-text">Getting started</span></a>
   </li>  
     </ul>
   </li>
@@ -260,17 +271,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">area =</span> <span class="cn">NULL</span>,</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">map =</span> <span class="cn">NULL</span>,</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">map_area =</span> <span class="cn">NULL</span>,</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">by_year =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">aggregate_time_fun =</span> <span class="st">"mean"</span>,</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">transform =</span> <span class="st">"identity"</span>,</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">title =</span> <span class="cn">NULL</span>,</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">var_label =</span> <span class="cn">NULL</span>,</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">palette =</span> <span class="cn">NULL</span>,</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">centering =</span> <span class="cn">NULL</span>,</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">bins =</span> <span class="cn">NULL</span>,</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">bins_method =</span> <span class="st">"quantile"</span>,</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">bins_label =</span> <span class="cn">NULL</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">by_year =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">aggregate_time =</span> <span class="st">"year"</span>,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">aggregate_time_fun =</span> <span class="st">"mean"</span>,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">transform =</span> <span class="st">"identity"</span>,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">title =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">var_label =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">palette =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">centering =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">bins =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">bins_method =</span> <span class="st">"quantile"</span>,</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">bins_label =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  ...</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="arguments" class="level2">
 <h2 class="anchored" data-anchor-id="arguments">Arguments</h2>
@@ -284,7 +297,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>area</code>: Name of variable that identifies the different locations (e.g., areal units) for which a time series is available.</li>
 <li><code>map</code>: Name of the sf object corresponding to the spatial unit specified in ‘area’.</li>
 <li><code>map_area</code>: Name of the variable that identifies the different locations (e.g., areal units) in the map object. If not specified, it assumes the same name as in <code>area</code>.</li>
-<li><code>by_year</code>: Logical, if TRUE a map for each year is produced.</li>
+<li><code>by_year</code>: Deprecated. Use ‘aggregate_time’ instead.</li>
+<li><code>aggregate_time</code>: Temporal scale for visualization and aggregation. Options include “all” (across all time points) and “year” (default).</li>
 <li><code>aggregate_time_fun</code>: Character indicating the function to be used in the aggregation over time for <code>type="cov"</code>. Options are “mean” (default), “median”, “sum”. For case counts and incidence, “sum” is always applied.</li>
 <li><code>transform</code>: Character, defaults to “identity” (i.e., no transformation). Transforms the color ramp for better visualization. Useful options include “log10p1” <code>log10(x+1)</code> for case counts and incidence with 0s, or any of the in-built ggplot2 options such as “log10” <code>log10(x)</code>, “log1p” <code>log(x+1)</code>, and “sqrt” <code>sqrt(x)</code> (check all possible options using <code>?scale_y_continuous</code>).</li>
 <li><code>title</code>: Optional title of the plot.</li>
@@ -294,6 +308,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>bins</code>: Number of bins for categorization of numerical variables. Defaults to NULL (no binning).</li>
 <li><code>bins_method</code>: Method to compute the bins, only used when <code>bins</code> is not NULL. Possible values are “quantile” (default) and “equal”.</li>
 <li><code>bins_label</code>: Optional labels for the bins. They must have the same length as the number of bins. Defaults to NULL (default interval labels).</li>
+<li><code>...</code>: Additional aesthetics to be passed to geom_sf. Possible values include <code>colour</code> (e.g., <code>colour="black"</code>), linewidth (e.g., <code>linewidth=0.1</code>), linetype (e.g., <code>linetype=2</code>), and alpha (e.g., <code>alpha=0.8</code>).</li>
 </ul>
 </section>
 <section id="returns" class="level2">
@@ -315,9 +330,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">area =</span> <span class="st">"micro_code"</span>,  </span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">map =</span> map_MS,         </span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>         <span class="at">map_area =</span> <span class="st">"code"</span>,   </span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>         <span class="at">aggregate_time_fun =</span> <span class="st">"mean"</span>,         </span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>         <span class="at">palette =</span><span class="st">"Reds"</span>,</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>         <span class="at">by_year =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>         <span class="at">aggregate_time =</span> <span class="st">"all"</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>         <span class="at">aggregate_time_fun =</span> <span class="st">"mean"</span>,         </span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>         <span class="at">palette =</span><span class="st">"Reds"</span>,</span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>         <span class="at">var_label=</span> <span class="st">"Min Temp."</span>)</span>
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Categorical covariate</span></span>
@@ -325,10 +340,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>         <span class="at">var =</span> <span class="st">"biome_name"</span>,        </span>
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>         <span class="at">time =</span> <span class="st">"date"</span>,      </span>
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>         <span class="at">area =</span> <span class="st">"micro_code"</span>, </span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>         <span class="at">map =</span> map_MS,       </span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>         <span class="at">map_area =</span> <span class="st">"code"</span>,  </span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>         <span class="at">palette =</span><span class="st">"Viridis"</span>,</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>         <span class="at">by_year =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>         <span class="at">aggregate_time =</span> <span class="st">"all"</span>,</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>         <span class="at">map =</span> map_MS,       </span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>         <span class="at">map_area =</span> <span class="st">"code"</span>,  </span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>         <span class="at">palette =</span><span class="st">"Viridis"</span>,</span>
 <span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>         <span class="at">var_label=</span> <span class="st">"Biome"</span>)</span>
 <span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Case counts by year (log)</span></span>

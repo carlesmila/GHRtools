@@ -65,6 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
+<link href="../../../figures/bsc-logo.png" rel="icon" type="image/png">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
@@ -74,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-8c9d7cae4c6a691b33fc068c945d91cc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-407a5dda253cbe202b6876a852b9dc2a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -137,9 +138,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="../../../docs/data4health/data4health.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Vignettes</li>
         <li>
     <a class="dropdown-item" href="../../../docs/data4health/data4health-vignette1.html">
- <span class="dropdown-text">Tutorial</span></a>
+ <span class="dropdown-text">Getting started</span></a>
   </li>  
     </ul>
   </li>
@@ -152,9 +155,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="../../../docs/clim4health/clim4health.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Vignettes</li>
         <li>
     <a class="dropdown-item" href="../../../docs/clim4health/clim4health-vignette1.html">
- <span class="dropdown-text">Tutorial</span></a>
+ <span class="dropdown-text">Getting started</span></a>
   </li>  
     </ul>
   </li>
@@ -171,9 +176,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="../../../docs/GHRexplore/GHRexplore-index.html">
  <span class="dropdown-text">Reference</span></a>
   </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Vignettes</li>
         <li>
     <a class="dropdown-item" href="../../../docs/GHRexplore/GHRexplore-vignette.html">
- <span class="dropdown-text">Tutorial</span></a>
+ <span class="dropdown-text">Getting started</span></a>
   </li>  
     </ul>
   </li>
@@ -186,9 +193,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="../../../docs/GHRmodel/GHRmodel.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Vignettes</li>
         <li>
     <a class="dropdown-item" href="../../../docs/GHRmodel/GHRmodel-vignette1.html">
- <span class="dropdown-text">Tutorial</span></a>
+ <span class="dropdown-text">Getting started</span></a>
   </li>  
     </ul>
   </li>
@@ -201,9 +210,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="../../../docs/GHRpredict/GHRpredict.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Vignettes</li>
         <li>
     <a class="dropdown-item" href="../../../docs/GHRpredict/GHRpredict-vignette1.html">
- <span class="dropdown-text">Tutorial</span></a>
+ <span class="dropdown-text">Getting started</span></a>
   </li>  
     </ul>
   </li>
@@ -339,7 +350,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>  <span class="at">palette =</span> <span class="fu">c</span>(<span class="st">"Reds"</span>, <span class="st">"Blues"</span>),</span>
 <span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>  <span class="at">map =</span> map_MS,        </span>
 <span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>  <span class="at">map_area =</span> <span class="st">"code"</span>, </span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>  <span class="at">by_year =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>  <span class="at">aggregate_time =</span> <span class="st">"all"</span>,</span>
 <span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>  <span class="at">ncol_legend =</span> <span class="dv">1</span>,</span>
 <span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>  <span class="at">combine_xaxis =</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 

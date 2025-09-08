@@ -10,53 +10,24 @@ toc: false
 <!-- badges: end -->
 
 ```{=html}
-<img src="/figures/GHRexplore.svg" align="right" width="13%" style="margin-top: -80px;" style="margin-bottom: -130px;">
+<img src="/figures/GHRexplore.svg" align="right" width="14%" style="margin-top: -130px; style="margin-top: 0px;>
 <br><br>
 ```
 
-## Plotting functions
-
-- [`plot_bivariate()`](GHRexplore-reference/plot_bivariate.Rd.qmd): Plots a bivariate graph to visually assess associations.
-
-- [`plot_combine()`](GHRexplore-reference/plot_combine.Rd.qmd): Combines plots, each representing one variable, into a single plot.
-
-- [`plot_compare()`](GHRexplore-reference/plot_compare.Rd.qmd): Combines multiple plots of several variables in a single graph.
-
-- [`plot_correlation()`](GHRexplore-reference/plot_correlation.Rd.qmd): Plots a correlation matrix of a series of variables.
-
-- [`plot_heatmap()`](GHRexplore-reference/plot_heatmap.Rd.qmd): Plots temporal heatmaps of covariates, case counts, or
- incidence rates.
-
-- [`plot_map()`](GHRexplore-reference/plot_map.Rd.qmd): Plots a choropleth map of covariates, case counts, or incidence
- rates.
-
-- [`plot_multiple()`](GHRexplore-reference/plot_multiple.Rd.qmd): Produces a list of multiple plots of the same type, each
- representing one variable.
-
-- [`plot_seasonality()`](GHRexplore-reference/plot_seasonality.Rd.qmd): Plots yearly time series of covariates, case counts, or incidence
- rates to explore seasonality patterns.
-
-- [`plot_timeseries()`](GHRexplore-reference/plot_timeseries.Rd.qmd): Plots time series of covariates, case counts, or incidence rates.
-
-
-## Utils
-
-- [`GHR_palette()`](GHRexplore-reference/GHR_palette.Rd.qmd): Generates color palettes including custom, ColorBrewer and
+- [`GHR_palette`](GHRexplore-reference/GHR_palette.Rd.qmd): Generates color palettes including custom, ColorBrewer and
  colorspace palettes.
 
+- [`GHRexplore-package`](GHRexplore-reference/GHRexplore-package.Rd.qmd): A collection of commonly used visualizations of temporal and spatio-temporal health data including case counts, incidence rates, and covariates.
 
-- [`aggregate_cases()`](GHRexplore-reference/aggregate_cases.Rd.qmd): Aggregates a data frame containing disease cases in space and/or
+- [`aggregate_cases`](GHRexplore-reference/aggregate_cases.Rd.qmd): Aggregates a data frame containing disease cases in space and/or
  time.
 
-- [`aggregate_cov()`](GHRexplore-reference/aggregate_cov.Rd.qmd): Aggregates a data frame containing a covariate of interest in
+- [`aggregate_cov`](GHRexplore-reference/aggregate_cov.Rd.qmd): Aggregates a data frame containing a covariate of interest in
  space and/or time.
 
-
-
-## Datasets
-
-- [`dengue_MS`](GHRexplore-reference/dengue_MS.Rd.qmd): Data frame containing the monthly number of notified dengue cases by
- municipality in the  Mato Grosso do Sul  state of Brazil.
+- [`dengue_MS`](GHRexplore-reference/dengue_MS.Rd.qmd): Monthly number of notified dengue cases by
+ municipality in the  Mato Grosso do Sul  state of Brazil and a set
+ of spatial and spatio-temporal covariates.
 
 - [`dengue_SP`](GHRexplore-reference/dengue_SP.Rd.qmd): Data frame containing the weekly number of notified dengue cases in
  the municipality of  Sao Paulo , as well as a set of climatic covariates.
@@ -64,4 +35,28 @@ toc: false
 - [`map_MS`](GHRexplore-reference/map_MS.Rd.qmd): Administrative boundaries (polygon geometries) of the 11 municipalities
  in  Mato Grosso do Sul  (Brazil) to be used with the  dengue_MS  data set.
 
+- [`plot_bivariate`](GHRexplore-reference/plot_bivariate.Rd.qmd): Plots a bivariate graph to visually assess associations.
+
+- [`plot_combine`](GHRexplore-reference/plot_combine.Rd.qmd): Combines plots, each representing one variable, into a single plot.
+
+- [`plot_compare`](GHRexplore-reference/plot_compare.Rd.qmd): Combines multiple plots of several variables in a single graph.
+
+- [`plot_correlation`](GHRexplore-reference/plot_correlation.Rd.qmd): Plots a correlation matrix of a series of variables.
+
+- [`plot_heatmap`](GHRexplore-reference/plot_heatmap.Rd.qmd): Plots temporal heatmaps of covariates, case counts, or
+ incidence rates.
+
+- [`plot_map`](GHRexplore-reference/plot_map.Rd.qmd): Plots a choropleth map of covariates, case counts, or incidence
+ rates.
+
+- [`plot_multiple`](GHRexplore-reference/plot_multiple.Rd.qmd): Produces a list of multiple plots of the same type, each
+ representing one variable.
+
+- [`plot_seasonality`](GHRexplore-reference/plot_seasonality.Rd.qmd): Plots yearly time series of covariates, case counts, or incidence
+ rates to explore seasonality patterns.
+
+- [`plot_timeseries`](GHRexplore-reference/plot_timeseries.Rd.qmd): Plots time series of covariates, case counts, or incidence rates.
+
+- [`plot_timeseries2`](GHRexplore-reference/plot_timeseries2.Rd.qmd): Plots time series of two covariates, case counts, or incidence
+ rates in two different axes.
 

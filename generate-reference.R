@@ -1,8 +1,10 @@
 library(rd2markdown)
+library("tools")
 
 # -------- SETTINGS --------
 pkg <- "GHRexplore"            # Your package name here
 base_dir <- "docs/reference" # Base folder where everything will go
+rd_files <- Rd_db(pkg)
 
 # Define paths
 functions_dir <- file.path(base_dir, paste0(pkg, "-reference"))   # e.g., docs/reference/GHRtools-reference
@@ -22,6 +24,23 @@ get_rd_title <- function(rd) {
   if (length(title_tag) == 0) return("No title available.")
   # Collapse all text inside title tag
   paste(sapply(title_tag[[1]], function(x) if(is.character(x)) x else paste(unlist(x), collapse = " ")), collapse = " ")
+}
+
+# Helper: extract first sentence of description from Rd object
+get_first_sentence_desc <- function(rd) {
+  # Rd tags are lists, search for \description tag
+  desc_tag <- rd[sapply(rd, function(x) attr(x, "Rd_tag")) == "\\description"]
+  if (length(desc_tag) == 0) return("No description available.")
+  
+  # Collapse the description content into text
+  desc_text <- paste(sapply(desc_tag[[1]], function(x) {
+    if (is.character(x)) x else paste(unlist(x), collapse = " ")
+  }), collapse = " ")
+  
+  # Extract first sentence (up to first period + space or end)
+  first_sentence <- sub("([^.]*\\.).*", "\\1", desc_text)
+  first_sentence <- trimws(first_sentence)
+  first_sentence
 }
 
 # Prepare list for index links
@@ -57,18 +76,16 @@ for (fn in names(rd_files)) {
   rel_path <- file.path(paste0(pkg, "-reference"), paste0(fn, ".qmd"))
 
   # Compose a bullet point with function name and description
-  fn_links <- c(fn_links, paste0("- [`", clean_name, "()`](", rel_path, "): ", desc_snippet, "\n"))
+  fn_links <- c(fn_links, paste0("- [`", clean_name, "`](", rel_path, "): ", desc_snippet, "\n"))
 }
 
 # Create the index .qmd file with extra spacing between items (adding an empty line between bullets)
 index_content <- paste(
   "---",
-  paste0("title: \"", pkg, " Reference\""),
+  paste0("title: \"", pkg, " reference\""),
   "format: html",
   "toc: false",
   "---",
-  "",
-  paste0("Function reference for the **", pkg, "** package:"),
   "",
   paste(fn_links, collapse = "\n"),
   sep = "\n"

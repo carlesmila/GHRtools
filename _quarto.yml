@@ -5,6 +5,7 @@ website:
   title: "GHRtools"
   back-to-top-navigation: false
   search: true
+  favicon: "figures/bsc-logo.png"
   navbar:
     title: "GHRtools"
     navigation-container: narrow
@@ -17,13 +18,17 @@ website:
         menu:
           - text: Overview
             href: docs/data4health/data4health.qmd
-          - text: Tutorial
+          - text: "------"
+          - text: "Vignettes"
+          - text: Getting started
             href: docs/data4health/data4health-vignette1.qmd 
       - text: "clim4health"
         menu:
           - text: Overview
             href: docs/clim4health/clim4health.qmd
-          - text: Tutorial
+          - text: "------"
+          - text: "Vignettes"
+          - text: Getting started
             href: docs/clim4health/clim4health-vignette1.qmd 
       - text: "GHRexplore"
         menu:
@@ -31,19 +36,25 @@ website:
             href: docs/GHRexplore/GHRexplore.qmd
           - text: Reference
             href: docs/GHRexplore/GHRexplore-index.qmd
-          - text: Tutorial
+          - text: "------"
+          - text: "Vignettes"
+          - text: Getting started
             href: docs/GHRexplore/GHRexplore-vignette.qmd         
       - text: "GHRmodel"
         menu:
           - text: Overview
             href: docs/GHRmodel/GHRmodel.qmd
-          - text: Tutorial
+          - text: "------"
+          - text: "Vignettes"
+          - text: Getting started
             href: docs/GHRmodel/GHRmodel-vignette1.qmd 
       - text: "GHRpredict"
         menu:
           - text: Overview
             href: docs/GHRpredict/GHRpredict.qmd
-          - text: Tutorial
+          - text: "------"
+          - text: "Vignettes"
+          - text: Getting started
             href: docs/GHRpredict/GHRpredict-vignette1.qmd 
       
     right:

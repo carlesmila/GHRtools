@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../figures/bsc-logo.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -102,9 +103,11 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../../docs/data4health/data4health.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Vignettes</li>
         <li>
     <a class="dropdown-item" href="../../docs/data4health/data4health-vignette1.html">
- <span class="dropdown-text">Tutorial</span></a>
+ <span class="dropdown-text">Getting started</span></a>
   </li>  
     </ul>
   </li>
@@ -117,9 +120,11 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../../docs/clim4health/clim4health.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Vignettes</li>
         <li>
     <a class="dropdown-item" href="../../docs/clim4health/clim4health-vignette1.html">
- <span class="dropdown-text">Tutorial</span></a>
+ <span class="dropdown-text">Getting started</span></a>
   </li>  
     </ul>
   </li>
@@ -136,9 +141,11 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../../docs/GHRexplore/GHRexplore-index.html">
  <span class="dropdown-text">Reference</span></a>
   </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Vignettes</li>
         <li>
     <a class="dropdown-item" href="../../docs/GHRexplore/GHRexplore-vignette.html">
- <span class="dropdown-text">Tutorial</span></a>
+ <span class="dropdown-text">Getting started</span></a>
   </li>  
     </ul>
   </li>
@@ -151,9 +158,11 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../../docs/GHRmodel/GHRmodel.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Vignettes</li>
         <li>
     <a class="dropdown-item" href="../../docs/GHRmodel/GHRmodel-vignette1.html">
- <span class="dropdown-text">Tutorial</span></a>
+ <span class="dropdown-text">Getting started</span></a>
   </li>  
     </ul>
   </li>
@@ -166,9 +175,11 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../../docs/GHRpredict/GHRpredict.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Vignettes</li>
         <li>
     <a class="dropdown-item" href="../../docs/GHRpredict/GHRpredict-vignette1.html">
- <span class="dropdown-text">Tutorial</span></a>
+ <span class="dropdown-text">Getting started</span></a>
   </li>  
     </ul>
   </li>
@@ -214,40 +225,29 @@ ul.task-list li input[type="checkbox"] {
 
 <!-- badges: start -->
 <p><a href="http://www.gnu.org/licenses/gpl-2.0.html"><img src="http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat" class="img-fluid" alt="License"></a> <a href="https://cran.r-project.org/package=GHRexplore"><img src="https://img.shields.io/cran/v/GHRexplore.png" class="img-fluid" alt="CRAN status"></a> <!-- badges: end --></p>
-<img src="../../figures/GHRexplore.svg" align="right" width="13%" style="margin-top: -80px;">
+<img src="../../figures/GHRexplore.svg" align="right" width="14%" style="margin-top: -130px; style=" margin-top:="" 0px;="">
 <br><br>
-<section id="plotting-functions" class="level2">
-<h2 class="anchored" data-anchor-id="plotting-functions">Plotting functions</h2>
 <ul>
-<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/plot_bivariate.Rd.html"><code>plot_bivariate()</code></a>: Plots a bivariate graph to visually assess associations.</p></li>
-<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/plot_combine.Rd.html"><code>plot_combine()</code></a>: Combines plots, each representing one variable, into a single plot.</p></li>
-<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/plot_compare.Rd.html"><code>plot_compare()</code></a>: Combines multiple plots of several variables in a single graph.</p></li>
-<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/plot_correlation.Rd.html"><code>plot_correlation()</code></a>: Plots a correlation matrix of a series of variables.</p></li>
-<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/plot_heatmap.Rd.html"><code>plot_heatmap()</code></a>: Plots temporal heatmaps of covariates, case counts, or incidence rates.</p></li>
-<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/plot_map.Rd.html"><code>plot_map()</code></a>: Plots a choropleth map of covariates, case counts, or incidence rates.</p></li>
-<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/plot_multiple.Rd.html"><code>plot_multiple()</code></a>: Produces a list of multiple plots of the same type, each representing one variable.</p></li>
-<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/plot_seasonality.Rd.html"><code>plot_seasonality()</code></a>: Plots yearly time series of covariates, case counts, or incidence rates to explore seasonality patterns.</p></li>
-<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/plot_timeseries.Rd.html"><code>plot_timeseries()</code></a>: Plots time series of covariates, case counts, or incidence rates.</p></li>
-</ul>
-</section>
-<section id="utils" class="level2">
-<h2 class="anchored" data-anchor-id="utils">Utils</h2>
-<ul>
-<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/GHR_palette.Rd.html"><code>GHR_palette()</code></a>: Generates color palettes including custom, ColorBrewer and colorspace palettes.</p></li>
-<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/aggregate_cases.Rd.html"><code>aggregate_cases()</code></a>: Aggregates a data frame containing disease cases in space and/or time.</p></li>
-<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/aggregate_cov.Rd.html"><code>aggregate_cov()</code></a>: Aggregates a data frame containing a covariate of interest in space and/or time.</p></li>
-</ul>
-</section>
-<section id="datasets" class="level2">
-<h2 class="anchored" data-anchor-id="datasets">Datasets</h2>
-<ul>
-<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/dengue_MS.Rd.html"><code>dengue_MS</code></a>: Data frame containing the monthly number of notified dengue cases by municipality in the Mato Grosso do Sul state of Brazil.</p></li>
+<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/GHR_palette.Rd.html"><code>GHR_palette</code></a>: Generates color palettes including custom, ColorBrewer and colorspace palettes.</p></li>
+<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/GHRexplore-package.Rd.html"><code>GHRexplore-package</code></a>: A collection of commonly used visualizations of temporal and spatio-temporal health data including case counts, incidence rates, and covariates.</p></li>
+<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/aggregate_cases.Rd.html"><code>aggregate_cases</code></a>: Aggregates a data frame containing disease cases in space and/or time.</p></li>
+<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/aggregate_cov.Rd.html"><code>aggregate_cov</code></a>: Aggregates a data frame containing a covariate of interest in space and/or time.</p></li>
+<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/dengue_MS.Rd.html"><code>dengue_MS</code></a>: Monthly number of notified dengue cases by municipality in the Mato Grosso do Sul state of Brazil and a set of spatial and spatio-temporal covariates.</p></li>
 <li><p><a href="../../docs/GHRexplore/GHRexplore-reference/dengue_SP.Rd.html"><code>dengue_SP</code></a>: Data frame containing the weekly number of notified dengue cases in the municipality of Sao Paulo , as well as a set of climatic covariates.</p></li>
 <li><p><a href="../../docs/GHRexplore/GHRexplore-reference/map_MS.Rd.html"><code>map_MS</code></a>: Administrative boundaries (polygon geometries) of the 11 municipalities in Mato Grosso do Sul (Brazil) to be used with the dengue_MS data set.</p></li>
+<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/plot_bivariate.Rd.html"><code>plot_bivariate</code></a>: Plots a bivariate graph to visually assess associations.</p></li>
+<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/plot_combine.Rd.html"><code>plot_combine</code></a>: Combines plots, each representing one variable, into a single plot.</p></li>
+<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/plot_compare.Rd.html"><code>plot_compare</code></a>: Combines multiple plots of several variables in a single graph.</p></li>
+<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/plot_correlation.Rd.html"><code>plot_correlation</code></a>: Plots a correlation matrix of a series of variables.</p></li>
+<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/plot_heatmap.Rd.html"><code>plot_heatmap</code></a>: Plots temporal heatmaps of covariates, case counts, or incidence rates.</p></li>
+<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/plot_map.Rd.html"><code>plot_map</code></a>: Plots a choropleth map of covariates, case counts, or incidence rates.</p></li>
+<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/plot_multiple.Rd.html"><code>plot_multiple</code></a>: Produces a list of multiple plots of the same type, each representing one variable.</p></li>
+<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/plot_seasonality.Rd.html"><code>plot_seasonality</code></a>: Plots yearly time series of covariates, case counts, or incidence rates to explore seasonality patterns.</p></li>
+<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/plot_timeseries.Rd.html"><code>plot_timeseries</code></a>: Plots time series of covariates, case counts, or incidence rates.</p></li>
+<li><p><a href="../../docs/GHRexplore/GHRexplore-reference/plot_timeseries2.Rd.html"><code>plot_timeseries2</code></a>: Plots time series of two covariates, case counts, or incidence rates in two different axes.</p></li>
 </ul>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
